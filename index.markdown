@@ -1,6 +1,18 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home
+layout: timeline
+title: My Personal Portfolio
 ---
+
+# Welcome to My Personal Portfolio
+
+Here you will find a timeline of my projects.
+
+<section class="timeline">
+  {% for project in site.data.projects %}
+  <div class="timeline-item">
+    <h2>{{ project.title }}</h2>
+    <p>{{ project.description }}</p>
+    <span class="date">{{ project.date }}</span>
+  </div>
+  {% endfor %}
+</section>
