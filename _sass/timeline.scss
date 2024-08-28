@@ -15,6 +15,12 @@
     }
 
     .timeline-item {
+        @media (max-width: 600px) {
+            .description {
+                display: none;
+            }
+        }
+
         padding: 10px 40px;
         position: relative;
         background-color: inherit;
@@ -48,19 +54,21 @@
             }
         }
 
-        h2,
-        p,
-        .date {
+        p {
             padding: 5px 0;
         }
 
-        h2 {
-            font-size: 1.5em;
+        h3 {
+            font-size: inherit;
+            .date {
+                font-size: 1.5em;
+            }
+            .title {
+                font-size: inherit; // Make the font size the same as the parent h2
+                color: #888;
+                display: block; // Start from a new line
+            }
         }
 
-        .date {
-            font-size: 0.9em;
-            color: #888;
-        }
     }
 }

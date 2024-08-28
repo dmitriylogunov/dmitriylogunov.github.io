@@ -1,8 +1,14 @@
-- title: Project Title 1
-  description: Description of project 1.
-  date: January 2023
+- title: JET Charge
+  description: I worked with a team of Developers, Designers, and DevOps to deliver an innovative charging management solution using technologies such as React JS, .NET, and Azure Cloud.
+  date: 2023
+  link: "/jetcharge/"
 
-- title: Project Title 2
-  description: Description of project 2.
-  date: February 2023
-# Add more projects as needed
+- title: TallBob
+  description: I led the UI overhaul for the customer portal, using React, Redux, Typescript, Laravel Mix, Jest/React Testing Library, npm, and AWS Lambda.
+  date: 2022
+  link: "/tallbob/"
+
+- title: Mahjong Solitaire
+  description: An early experiment in rich web application development, browser implementation of the Mahjong Solitaire, with Angular JS v2.
+  date: 2017
+  link: "/mahjong/"
