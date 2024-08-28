@@ -1,20 +1,26 @@
 $font-stack: Arial, sans-serif;
 
 $primary-color: #333333;
-$secondary-color: #264653;
+$secondary-color: #ffffff;
 
 $text-color: $primary-color;
-$header-bg-color: #f4a261;
+$header-bg-color:  #6B8E23;
 $header-text-color: $secondary-color;
 $link-color: $header-text-color;
 $contact-link-color: $secondary-color;
-$page-bg-color: lighten($header-bg-color, 50%);
+$page-bg-color: lighten($header-bg-color, 70%);
 
+$standard-interval: 1rem;
+
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 body {
     font-family: $font-stack;
-    margin: 0;
-    padding: 0;
     background-color: $page-bg-color;
     color: $text-color;
 }
@@ -45,6 +51,7 @@ header {
 
     p {
         color: $contact-link-color;
+        margin: 0.5rem 0 0;
 
         span {
             &+span::before {
@@ -56,18 +63,21 @@ header {
         }
     }
 
-}
+    h1 {
+        margin: 0;
+    }
 
-header h1 {
-    margin: 0;
-}
-
-header p {
-    margin: 0.5rem 0 0;
+    h2 {
+        font-size: 1em; /* Adjust this value to match the <p> font size if necessary */
+    }
 }
 
 main {
     padding: 2rem;
     margin: 20px auto;
     width: 100%;
+
+    .timeline {
+        margin-top: $standard-interval;
+    }
 }
