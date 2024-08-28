@@ -5,6 +5,9 @@ $border-color: #ddd;
 $shadow-color: rgba(0, 0, 0, 0.1);
 $text-color: #888;
 
+// Define a color variable for contacts and links
+$contact-link-color: $secondary-color;
+
 body {
     font-family: $font-stack;
     margin: 0;
@@ -17,6 +20,37 @@ header {
     color: #fff;
     padding: 1rem 0;
     text-align: center;
+
+    a {
+        text-decoration: none;
+
+        &:link {
+            color: $contact-link-color;
+        }
+
+        &:visited {
+            color: $contact-link-color;
+        }
+
+        &:hover {
+            color: $contact-link-color;
+            text-decoration: underline;
+        }
+    }
+
+    p {
+        color: $contact-link-color;
+
+        span {
+            &+span::before {
+                content: '•';
+                color: $text-color;
+                margin: 0 0.5rem;
+                text-decoration: none;
+            }
+        }
+    }
+
 }
 
 header h1 {

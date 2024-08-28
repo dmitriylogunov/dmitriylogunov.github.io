@@ -1,5 +1,5 @@
 ---
-layout: timeline
+layout: portfolio-title-page
 title: My Personal Portfolio
 ---
 
