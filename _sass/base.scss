@@ -1,0 +1,32 @@
+$font-stack: Arial, sans-serif;
+$primary-color: #333;
+$secondary-color: #f4f4f4;
+$border-color: #ddd;
+$shadow-color: rgba(0, 0, 0, 0.1);
+$text-color: #888;
+
+body {
+    font-family: $font-stack;
+    margin: 0;
+    padding: 0;
+    background-color: $secondary-color;
+}
+
+header {
+    background-color: $primary-color;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 0.5rem 0 0;
+}
+
+main {
+    padding: 2rem;
+}
