@@ -1,14 +1,35 @@
+- title: Personal and learning projects
+  technologies: Jekyll, React, Typescript, Redux, Redux Toolkit, RTK Query, SASS, HTML, Tailwind CSS, React Testing Library
+  description: I worked on the range of the projects, which can be found on my GitHub. Examples include this website, Open Street Map viewer, and a few others.
+  date: 2024
+  link: "https://github.com/dmitriylogunov"
+
 - title: JET Charge
+  technologies: React, Typescript, .NET, Azure Cloud
   description: I worked with a team of Developers, Designers, and DevOps to deliver an innovative charging management solution using technologies such as React JS, .NET, and Azure Cloud.
   date: 2023
   link: "/jetcharge/"
 
 - title: TallBob
-  description: I led the UI overhaul for the customer portal, using React, Redux, Typescript, Laravel Mix, Jest/React Testing Library, npm, and AWS Lambda.
+  technologies: React, Redux, Typescript, Laravel Mix, AWS, Jest Testing Library, npm.
+  description: I led the development of a new version of the company's primary B2B portal, as a React application.
   date: 2022
   link: "/tallbob/"
 
 - title: Mahjong Solitaire
+  technologies: Angular JS v2, HTML, Stylus, Webpack
   description: An early experiment in rich web application development, browser implementation of the Mahjong Solitaire, with Angular JS v2.
   date: 2017
-  link: "/mahjong/"
+  link: "https://mahjong.dmitriylogunov.info/"
+
+- title: Movember
+  technologies: PHP, Zend Framework, MySQL
+  description: I worked on the website for Movember, a charity event that raises funds for the Men's mental health and prostate cancer research.
+  date: 2016
+  link: "https://movember.com/"
+
+- title: Baltic Federal University named after Immanuel Kant
+  technologies: Computer programming theory, C++, SQL, Databases theory, Python, Assembly language, Computer graphics, Algorithms and data structures
+  description: Masters degree in the Applied mathematics with a focus on the informational technology, numerical methods and mathematical modeling.
+  date: 2003
+  link: "https://en.wikipedia.org/wiki/Immanuel_Kant_Baltic_Federal_University"

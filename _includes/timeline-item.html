@@ -5,5 +5,9 @@
     </h3>
 
     <p class="description">{{ project.description }}</p>
-    <a href="{{ item.link }}">Read more</a>
+    {% if project.link %}
+    <a href="{{ project.link }}" class="link-icon">
+        <i class="fas fa-link"></i>
+    </a>
+{% endif %}
 </div>
