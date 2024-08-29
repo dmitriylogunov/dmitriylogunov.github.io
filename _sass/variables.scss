@@ -1,0 +1,15 @@
+$font-stack: Arial, sans-serif;
+
+$primary-color: #333333;
+$secondary-color: #ffffff;
+
+$text-color: $primary-color;
+$header-bg-color: #6B8E23;
+$header-text-color: $secondary-color;
+$contact-link-color: $secondary-color;
+
+$link-color: $primary-color;
+
+$page-bg-color: lighten($header-bg-color, 70%);
+
+$standard-interval: 1rem;

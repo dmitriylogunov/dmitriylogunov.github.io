@@ -1,19 +1,8 @@
-$font-stack: Arial, sans-serif;
-
-$primary-color: #333333;
-$secondary-color: #ffffff;
-
-$text-color: $primary-color;
-$header-bg-color:  #6B8E23;
-$header-text-color: $secondary-color;
-$link-color: $header-text-color;
-$contact-link-color: $secondary-color;
-$page-bg-color: lighten($header-bg-color, 70%);
-
-$standard-interval: 1rem;
+@import 'variables';
 
 
-html, body {
+html,
+body {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -33,7 +22,7 @@ footer {
     text-align: center;
 
     a {
-        color: $link-color;
+        color: $contact-link-color;
         text-decoration: none;
 
         &:link {
@@ -73,7 +62,8 @@ footer {
     }
 
     h2 {
-        font-size: 1em; /* Adjust this value to match the <p> font size if necessary */
+        font-size: 1em;
+        /* Adjust this value to match the <p> font size if necessary */
     }
 }
 
@@ -84,5 +74,24 @@ main {
 
     .timeline {
         margin-top: $standard-interval;
+    }
+
+    p {
+        a {
+            color: $link-color;
+            text-decoration: none;
+            font-weight: bold;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            &::after {
+                font-family: 'Font Awesome 6 Free';
+                content: '\f358';
+                font-weight: 900;
+                padding-left: 0.25rem;
+            }
+        }
     }
 }
