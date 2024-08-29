@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,25 +11,33 @@
     <!-- Favicon -->
     <link rel="icon" href="{{ "/assets/images/favicon.ico" | relative_url }}" type="image/x-icon">
 </head>
+
 <body>
     <header>
         <h1>{{ site.name }}</h1>
-        <span class="description">{{ site.profession }}</span>
         <p>
-            <span><a href="mailto:{{ site.email }}">{{ site.email }}</a></span>
-            <span><a href="{{ site.linkedin }}" target="_blank">LinkedIn</a></span>
-            <span><a href="{{ site.github }}" target="_blank">GitHub</a></span>
-            {% for contact in site.contacts %}
-                {% if forloop.first %}
-                    <span><a href="tel:{{ contact }}">{{ contact }}</a></span>
-                {% else %}
-                    <span>{{ contact }}</span>
-                {% endif %}
+            {% for profession in site.profession %}
+            <span>{{ profession }}</span>
             {% endfor %}
         </p>
     </header>
     <main>
         {{ content }}
     </main>
+    <footer>
+        <div>
+            <span><a href="mailto:{{ site.email }}">{{ site.email }}</a></span>
+            <span><a href="{{ site.linkedin }}" target="_blank">LinkedIn</a></span>
+            <span><a href="{{ site.github }}" target="_blank">GitHub</a></span>
+            {% for contact in site.contacts %}
+            {% if forloop.first %}
+            <span><a href="tel:{{ contact }}">{{ contact }}</a></span>
+            {% else %}
+            <span>{{ contact }}</span>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </footer>
 </body>
+
 </html>

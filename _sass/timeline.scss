@@ -21,7 +21,7 @@
         .timeline-item {
             // Reset styles for child elements
             h3, p, .link-icon {
-                color: $primary-color;
+                color: initial;
                 text-decoration: none;
             }
         }
