@@ -86,12 +86,12 @@ main {
                 text-decoration: underline;
             }
 
-            &::after {
-                font-family: 'Font Awesome 6 Free';
-                content: '\f358';
-                font-weight: 900;
-                padding-left: 0.25rem;
-            }
+            // &::after {
+            //     font-family: 'Font Awesome 6 Free';
+            //     content: '\f358';
+            //     font-weight: 900;
+            //     padding-left: 0.25rem;
+            // }
         }
     }
 }
