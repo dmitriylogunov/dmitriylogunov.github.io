@@ -43,6 +43,12 @@
         width: 50%;
         box-sizing: border-box;
 
+        &:hover::before {
+            background-color: $header-bg-color; // Replace with the color you want
+            content: '';
+            display: block;
+        }
+
         &::after {
             content: '';
             position: absolute;
@@ -57,6 +63,19 @@
             z-index: 1;
         }
 
+        &::before {
+            content: '';
+            position: absolute;
+            width: 19px; // Adjust size as needed
+            height: 19px; // Adjust size as needed
+            right: -10px; // Adjust position as needed
+            background-color: white;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 50%;
+            z-index: 2;
+        }
+
         &.left {
             left: 0;
             text-align: right;
@@ -67,6 +86,10 @@
 
             &::after {
                 left: -16px;
+            }
+
+            &::before {
+                left: -9px;
             }
         }
 
