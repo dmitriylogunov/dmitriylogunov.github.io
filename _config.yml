@@ -31,7 +31,7 @@ contacts:
   - "+61466966828"
   - "Blackburn South"
   - "VIC"
-  - "Australian Citizen"
+  - "Full work rights in AU"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://dmitriylogunov.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
