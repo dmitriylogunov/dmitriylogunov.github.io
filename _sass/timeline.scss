@@ -14,12 +14,26 @@
         margin-left: -3px;
     }
 
+    .timeline-item-link {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        .timeline-item {
+            // Reset styles for child elements
+            h3, p, .link-icon {
+                color: $primary-color;
+                text-decoration: none;
+            }
+        }
+    }
+
     .timeline-item {
         @media (max-width: 600px) {
             .description {
                 display: none;
             }
         }
+
 
         padding: 10px 40px;
         position: relative;

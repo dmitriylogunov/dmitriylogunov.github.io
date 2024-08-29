@@ -1,13 +1,14 @@
-<div class="timeline-item {% cycle 'left', 'right' %}">
-    <h3>
-        <span class="date">{{ project.date }}</span>
-        <span class="title">{{ project.title }}</span>
-    </h3>
-
-    <p class="description">{{ project.description }}</p>
-    {% if project.link %}
-    <a href="{{ project.link }}" class="link-icon">
-        <i class="fas fa-link"></i>
-    </a>
+{% if project.link %}
+<a href="{{ project.link }}" class="timeline-item-link">
 {% endif %}
-</div>
+    <div class="timeline-item {% cycle 'left', 'right' %}">
+        <h3>
+            <span class="date">{{ project.date }}</span>
+            <span class="title">{{ project.title }}</span>
+        </h3>
+
+        <p class="description">{{ project.description }}</p>
+    </div>
+    {% if project.link %}
+</a>
+{% endif %}
