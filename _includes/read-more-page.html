@@ -1,11 +1,11 @@
 <section class="read-more-page">
-    <p>{{ page.description }}</p>
-    <div class="items">
-      {% for item in page.items %}
-        <div class="item">
-          <img src="{{ item.image }}" alt="{{ item.description }}">
-          <p>{{ item.description }}</p>
-        </div>
-      {% endfor %}
+  <p>{{ include.data.description }}</p>
+  <div class="items">
+    {% for item in include.data.items %}
+    <div class="item">
+      <img src="{{ item.image }}" alt="{{ item.description }}">
+      <p>{{ item.description }}</p>
     </div>
-  </section>
+    {% endfor %}
+  </div>
+</section>

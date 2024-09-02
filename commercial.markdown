@@ -8,7 +8,7 @@ title: Professional Portfolio - Dmitriy Logunov
 This page highlights some of the projects that I have built as a paid employee and that I am proud of.
 
 <section class="timeline">
-  {% for project in site.data.professional-timeline %}
+  {% for project in site.data.commercial %}
     {% include timeline-item.html project=project %}
   {% endfor %}
 </section>
