@@ -1,15 +1,19 @@
 $font-stack: Arial, sans-serif;
 
+$header-bg-color: #6B8E23;
+
 $primary-color: #333333;
 $secondary-color: #ffffff;
+$tertiary-color: darken($header-bg-color, 10%);
 
 $text-color: $primary-color;
-$header-bg-color: #6B8E23;
 $header-text-color: $secondary-color;
 $contact-link-color: $secondary-color;
 
-$link-color: $primary-color;
+$link-color: $tertiary-color;
 
 $page-bg-color: lighten($header-bg-color, 70%);
 
 $standard-interval: 1rem;
+
+$mobile-breakpoint: 600px;

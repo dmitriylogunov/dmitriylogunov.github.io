@@ -30,7 +30,7 @@
     }
 
     .timeline-item {
-        @media (max-width: 600px) {
+        @media (max-width: $mobile-breakpoint) {
             .description {
                 display: none;
             }

@@ -14,13 +14,29 @@
 
 <body>
     <header>
-        <h1>{{ site.name }}</h1>
-        <p>
-            {% for profession in site.profession %}
-            <span>{{ profession }}</span>
-            {% endfor %}
-        </p>
+        <a href="{{ '/' | relative_url }}" class="mobile-header">
+            <h1>{{ site.name }}</h1>
+            <p>
+                {% for profession in site.profession %}
+                <span>{{ profession }}</span>
+                {% endfor %}
+            </p>
+        </a>
+        <div class="desktop-header">
+            <h1>{{ site.name }}</h1>
+            <p>
+                {% for profession in site.profession %}
+                <span>{{ profession }}</span>
+                {% endfor %}
+            </p>
+        </div>
     </header>
+    <nav class="main-menu">
+        <ul>
+            <li><a href="{{ '/' | relative_url }}">Home</a></li>
+            <li><a href="{{ '/professional/' | relative_url }}">Professional Timeline</a></li>
+        </ul>
+    </nav>
     <main>
         {{ content }}
     </main>
