@@ -1,21 +1,20 @@
-companies:
-  - name: CompanyA
-    technologies:
-      - React
-      - Typescript
-      - Redux
-  - name: CompanyB
-    technologies:
-      - PHP
-      - Laravel
-      - Tailwind JS
-  - name: CompanyC
-    technologies:
-      - Jekyll
-      - RTK
-      - React
-  - name: CompanyD
-    technologies:
-      - Typescript
-      - Redux
-      - Tailwind JS
+- name: CompanyA
+  technologies:
+    - React
+    - Typescript
+    - Redux
+- name: CompanyB
+  technologies:
+    - PHP
+    - Laravel
+    - Tailwind JS
+- name: CompanyC
+  technologies:
+    - Jekyll
+    - RTK
+    - React
+- name: CompanyD
+  technologies:
+    - Typescript
+    - Redux
+    - Tailwind JS

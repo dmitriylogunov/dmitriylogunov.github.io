@@ -1,14 +1,35 @@
 ---
 layout: main
-title: My Personal Portfolio - Dmitriy Logunov
+title: Skills  - Dmitriy Logunov
 ---
 
-# Welcome
+# Skills matrix
 
-This site is dedicated to my personal projects, education and life. For the career snapshot, please [download my CV](https://docs.google.com/document/d/1-d7ez5A321XL0EQmPcus7xGPVTAtTdeblUMEsGa6Wq4/export?format=docx), or see the commercial [project highlights](/professional), [skills matrix](/skills) or [test assignments](/assignments) from my earlier job applications. Feel free to reach out via the contacts below.
-
-<section class="timeline">
-  {% for project in site.data.projects %}
-    {% include timeline-item.html project=project %}
-  {% endfor %}
+<section class="skills-matrix">
+  <table>
+    <thead>
+      <tr>
+        <th>Skill</th>
+        <th>Rating</th>
+        <th>Years</th>
+        {% for company in site.data.skills_matrix[0] %}
+          {% if company != '' %}
+            <th>{{ company }}</th>
+          {% endif %}
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in site.data.skills_matrix %}
+        {% if forloop.first %}
+          {% continue %}
+        {% endif %}
+        <tr>
+          {% for cell in row %}
+            <td>{{ cell }}</td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 </section>

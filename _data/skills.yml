@@ -1,0 +1,24 @@
+- name: React
+  years: 3
+  rating: 9
+- name: Typescript
+  years: 2
+  rating: 8
+- name: Redux
+  years: 2
+  rating: 7
+- name: RTK
+  years: 1
+  rating: 6
+- name: Jekyll
+  years: 4
+  rating: 8
+- name: PHP
+  years: 5
+  rating: 7
+- name: Laravel
+  years: 3
+  rating: 8
+- name: Tailwind JS
+  years: 1
+  rating: 7
