@@ -15,14 +15,14 @@ module Jekyll
 
       skills_sorted = skills.sort_by { |skill| -skill['rating'] }
 
-      matrix = [[''] + company_names]
+      matrix = [company_names]
       skills_sorted.each do |skill|
         row = [skill['name'], skill['rating'], skill['years']]
         company_names.each do |company|
           if company_technologies[company].include?(skill['name'])
-            row << '[x]'
+            row << '1'
           else
-            row << '[ ]'
+            row << '0'
           end
         end
         matrix << row

@@ -7,31 +7,37 @@ title: Skills  - Dmitriy Logunov
 
 <section class="skills-matrix">
   {% assign skills_matrix = site.data.matrix %}
+  {% assign row_length = skills_matrix[0].size | plus: 3 %}
 
-  <table>
-    <thead>
-      <tr>
-        <th>Skill</th>
-        <th>Rating</th>
-        <th>Years</th>
-        {% for company in skills_matrix[0] %}
-          {% if company != '' %}
-            <th>{{ company }}</th>
+  <div class="grid-container" style="grid-template-columns: repeat({{ row_length }}, 1fr);">
+    <div class="grid-header">Skill</div>
+    <div class="grid-header">Rating</div>
+    <div class="grid-header">Years</div>
+    {% for company in skills_matrix[0] %}
+      {% if company != '' %}
+        <div class="grid-header">{{ company }}</div>
+      {% endif %}
+    {% endfor %}
+
+    {% for row in skills_matrix %}
+      {% if forloop.first %}
+        {% continue %}
+      {% endif %}
+      {% for cell in row %}
+        {% if forloop.index <= 3 %}
+          <div class="grid-item">{{ cell }}</div>
+        {% else %}
+          {% if cell == '1' %}
+            <div class="grid-item with-checkbox">
+              <i class="fa fa-check-square" aria-hidden="true"></i>
+              <noscript>#</noscript>
+            </div>
+          {% else %}
+            <div class="grid-item">&nbsp;</div>
           {% endif %}
-        {% endfor %}
-      </tr>
-    </thead>
-    <tbody>
-      {% for row in skills_matrix %}
-        {% if forloop.first %}
-          {% continue %}
         {% endif %}
-        <tr>
-          {% for cell in row %}
-            <td>{{ cell }}</td>
-          {% endfor %}
-        </tr>
       {% endfor %}
-    </tbody>
-  </table>
+    {% endfor %}
+
+  </div>
 </section>
