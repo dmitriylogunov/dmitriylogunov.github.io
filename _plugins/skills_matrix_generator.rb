@@ -2,11 +2,10 @@ require 'yaml'
 
 module Jekyll
   class SkillsMatrixGenerator < Generator
-    safe true
-
     def generate(site)
       skills_file = File.join(site.source, '_data', 'skills.yml')
       companies_file = File.join(site.source, '_data', 'companies.yml')
+      matrix_file = File.join(site.source, '_data', 'matrix.yml')
 
       skills = YAML.load_file(skills_file)
       companies = YAML.load_file(companies_file)
@@ -29,7 +28,8 @@ module Jekyll
         matrix << row
       end
 
-      site.data['skills_matrix'] = matrix
+# Writing to YML, instead of setting the site data, for compatibility with GitHub Pages
+      File.open(matrix_file, 'w') { |file| file.write(matrix.to_yaml) }
     end
   end
 end

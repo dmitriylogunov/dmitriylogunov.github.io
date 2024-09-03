@@ -6,13 +6,15 @@ title: Skills  - Dmitriy Logunov
 # Skills matrix
 
 <section class="skills-matrix">
+  {% assign skills_matrix = site.data.matrix %}
+
   <table>
     <thead>
       <tr>
         <th>Skill</th>
         <th>Rating</th>
         <th>Years</th>
-        {% for company in site.data.skills_matrix[0] %}
+        {% for company in skills_matrix[0] %}
           {% if company != '' %}
             <th>{{ company }}</th>
           {% endif %}
@@ -20,7 +22,7 @@ title: Skills  - Dmitriy Logunov
       </tr>
     </thead>
     <tbody>
-      {% for row in site.data.skills_matrix %}
+      {% for row in skills_matrix %}
         {% if forloop.first %}
           {% continue %}
         {% endif %}
