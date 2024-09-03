@@ -1,20 +1,85 @@
-- name: CompanyA
+- name: JET Charge
+  technologies:
+    - React JS
+    - .NET
+    - Azure Cloud
+- name: TallBob
+  technologies:
+    - React
+    - Redux
+    - Typescript
+    - Laravel Mix
+    - Jest/React Testing Library
+    - npm
+    - AWS Lambda
+- name: Illion
   technologies:
     - React
     - Typescript
-    - Redux
-- name: CompanyB
+    - Laravel 6.x
+    - Eloquent
+    - PHP 7.2
+    - SASS
+    - Material UI
+- name: EstimateOne
   technologies:
     - PHP
-    - Laravel
-    - Tailwind JS
-- name: CompanyC
-  technologies:
-    - Jekyll
-    - RTK
-    - React
-- name: CompanyD
-  technologies:
-    - Typescript
+    - React/Typescript
     - Redux
-    - Tailwind JS
+    - GraphQL
+    - Gatsby
+- name: Bayside City Council
+  technologies:
+    - PHP
+    - Drupal
+    - Typescript
+- name: National Heart Foundation of Australia
+  technologies:
+    - PHP
+    - Javascript
+    - ExpressionEngine
+- name: FanHub Media
+  technologies:
+    - Angular JS
+    - Backbone JS
+    - SASS
+- name: IE Digital
+  technologies:
+    - PHP
+    - Zend
+    - Magento
+    - Javascript
+    - 3rd party integrations
+- name: Aussie Farmers Direct
+  technologies:
+    - Javascript
+    - Javascript MVC
+    - SASS
+- name: Iedex
+  technologies:
+    - PHP
+    - Office integrations
+- name: Australian Council for Educational Research (ACER)
+  technologies:
+    - PHP
+    - Zend framework
+- name: Procision
+  technologies:
+    - PHP
+    - Bitrix CMS
+- name: Bitrix
+  technologies:
+    - PHP
+    - SQL
+- name: Intenium GmbH
+  technologies:
+    - C++
+    - Python
+- name: HeroCraft
+  technologies:
+    - Java ME
+- name: TiS Dialog
+  technologies:
+    - PHP
+    - HTML
+    - CSS
