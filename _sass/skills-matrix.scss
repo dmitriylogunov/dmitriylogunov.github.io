@@ -8,6 +8,7 @@
         background-color: $header-bg-color; // Header background color
         padding: 10px;
         border-right: 1px solid $tertiary-color; // Vertical lines between header cells with tertiary color
+        color: $secondary-color;
     }
 
     .grid-header:last-child {
