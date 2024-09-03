@@ -3,8 +3,8 @@
   <div class="items">
     {% for item in include.data.items %}
     <div class="item">
+      <h3>{{ item.description }}</h3>
       <img src="{{ item.image }}" alt="{{ item.description }}">
-      <p>{{ item.description }}</p>
     </div>
     {% endfor %}
   </div>

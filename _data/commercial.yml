@@ -1,11 +1,11 @@
 - title: JET Charge
   technologies: React, Typescript, .NET, Azure Cloud
-  description: I worked with a team of Developers, Designers, and DevOps to deliver an innovative charging management solution using technologies such as React JS, .NET, and Azure Cloud.
+  description: I worked with a team of Developers, Hardware Engineers, and DevOps to deliver a B2B charging management platform.
   date: 2023
   link: "/jetcharge"
 
 - title: TallBob
   technologies: React, Redux, Typescript, Laravel Mix, AWS, Jest Testing Library, npm.
-  description: I led the development of a new version of the company's primary B2B portal, as a React application.
+  description: I developed the new version of the customer self-service portal.
   date: 2022
   link: "/tallbob"
