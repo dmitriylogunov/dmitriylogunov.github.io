@@ -1,141 +1,192 @@
 - name: TypeScript
-  years: 0
-  rating: 7.3
+  rating: 9
+  years: 6
 - name: JavaScript
-  years: 0
-  rating: 6.8
+  rating: 9
+  years: 10 +
 - name: PHP
-  years: 0
-  rating: 5.4
+  rating: 8.5
+  years: 10 +
 - name: Java
-  years: 0
-  rating: 8.1
+  rating: 7
+  years: 2
 - name: C++
-  years: 0
-  rating: 4.7
+  rating: 4
+  years: 1
 - name: Python
-  years: 0
   rating: 9.2
-- name: CSS3
-  years: 0
-  rating: 7.6
+  years: 6
 - name: SASS
-  years: 0
-  rating: 6.3
-- name: HTML5
-  years: 0
-  rating: 8.9
-- name: React.JS
-  years: 0
-  rating: 7.1
+  rating: 9
+  years: 5
 - name: Redux
-  years: 0
-  rating: 5.8
+  rating: 8
+  years: 3
 - name: Redux Toolkit
-  years: 0
-  rating: 6.4
+  rating: 7
+  years: 1
 - name: RTK Query
-  years: 0
-  rating: 7.7
+  rating: 7
+  years: 1
 - name: Node.js
-  years: 0
   rating: 8.5
+  years: 3
 - name: Express
-  years: 0
-  rating: 6.9
+  rating: 5
+  years: 1
 - name: JQuery
-  years: 0
-  rating: 5.2
+  rating: 9
+  years: 6
 - name: VueJS
-  years: 0
-  rating: 7.4
+  rating: 4
+  years: 1
 - name: DevExpress
-  years: 0
-  rating: 6.1
+  rating: 6
+  years: 1
 - name: Symfony
-  years: 0
-  rating: 8.0
+  rating: 7
+  years: 2
 - name: Laravel
-  years: 0
-  rating: 7.3
+  rating: 7
+  years: 2
 - name: Zend
-  years: 0
-  rating: 5.9
-- name: WordPress
-  years: 0
-  rating: 6.7
-- name: Gatsby
-  years: 0
-  rating: 7.8
-- name: Jekyll
-  years: 0
-  rating: 8.4
-- name: JAMStack
-  years: 0
-  rating: 6.5
-- name: Drupal
-  years: 0
-  rating: 7.0
-- name: Jest
-  years: 0
-  rating: 8.2
-- name: React Testing Library
-  years: 0
-  rating: 7.6
-- name: GraphQL
-  years: 0
-  rating: 9.1
-- name: Elasticsearch
-  years: 0
-  rating: 6.3
-- name: MongoDB
-  years: 0
-  rating: 7.9
-- name: OData
-  years: 0
-  rating: 5.4
-- name: Docker
-  years: 0
-  rating: 8.7
-- name: Webpack
-  years: 0
-  rating: 6.8
-- name: Copilot / AI
-  years: 0
-  rating: 7.2
-- name: Node
-  years: 0
-  rating: 8.3
-- name: SQL
-  years: 0
   rating: 7.5
-- name: Document Databases
-  years: 0
-  rating: 6.0
-- name: Agile
-  years: 0
-  rating: 8.6
-- name: Pair programming
-  years: 0
-  rating: 7.1
-- name: CI/CD
-  years: 0
-  rating: 8.4
-- name: Code reviews
-  years: 0
-  rating: 7.3
-- name: Testing
-  years: 0
-  rating: 6.9
-- name: MVC
-  years: 0
-  rating: 8.0
-- name: CMS
-  years: 0
-  rating: 7.2
-- name: AWS
-  years: 0
+  years: 3
+- name: WordPress
   rating: 8.5
+  years: 4
+- name: Gatsby
+  rating: 8
+  years: 1
+- name: Jekyll
+  rating: 8
+  years: 1
+- name: JAMStack
+  rating: 8.5
+  years: 2
+- name: Drupal
+  rating: 8
+  years: 4
+- name: Jest
+  rating: 6
+  years: 5
+- name: React Testing Library
+  rating: 6
+  years: 5
+- name: GraphQL
+  rating: 7
+  years: 2
+- name: Elasticsearch
+  rating: 7
+  years: 1
+- name: MongoDB
+  rating: 7
+  years: 1
+- name: OData
+  rating: 7
+  years: 1
+- name: Docker
+  rating: 7
+  years: 3
+- name: Webpack
+  rating: 6
+  years: 2
+- name: Copilot
+  rating: 6
+  years: 1
+- name: AI
+  rating: 6
+  years: 1
+- name: Node
+  rating: 6
+  years: 2
+- name: SQL
+  rating: 8
+  years: 10 +
+- name: Document Databases
+  rating: 5
+  years: 1
+- name: Agile
+  rating: 9.5
+  years: 10 +
+- name: Pair programming
+  rating: 5
+  years: 2
+- name: CI/CD
+  rating: 5
+  years: 2
+- name: Code reviews
+  rating: 5
+  years: 2
+- name: Testing
+  rating: 7
+  years: 10 +
+- name: MVC
+  rating: 9
+  years: 10 +
+- name: CMS
+  rating: 8
+  years: 10 +
+- name: AWS
+  rating: 2
+  years: 1
 - name: Azure
-  years: 0
-  rating: 7.4
+  rating: 2
+  years: 1
+- name: JavaScript MVC
+  rating: 5
+  years: 2
+- name: Angular JS
+  rating: 4
+  years: 1
+- name: Java ME
+  rating: 9
+  years: 2
+- name: HTML
+  rating: 10
+  years: 10 +
+- name: Eloquent
+  rating: 5
+  years: 1
+- name: Material UI
+  rating: 5
+  years: 1
+- name: .NET
+  rating: 3
+  years: 1
+- name: Office integrations
+  rating: 5
+  years: 1
+- name: Bitrix CMS
+  rating: 7
+  years: 2
+- name: CSS
+  rating: 8
+  years: 10 +
+- name: 3rd party integrations
+  rating: 5
+  years: 1
+- name: React
+  rating: 9.5
+  years: 6
+- name: Magento
+  rating: 3
+  years: 1
+- name: AWS Lambda
+  rating: 2
+  years: 1
+- name: Backbone JS
+  rating: 5
+  years: 1
+- name: npm
+  rating: 9
+  years: 6
+- name: Laravel Mix
+  rating: 6
+  years: 1
+- name: ExpressionEngine
+  rating: 4
+  years: 1
+- name: SignalR
+  rating: 5
+  years: 1

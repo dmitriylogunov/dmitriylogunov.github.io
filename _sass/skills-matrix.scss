@@ -1,51 +1,49 @@
-.grid-container {
-    display: grid;
-    gap: 0;
-    border: 3px solid $primary-color;
-    background-color: $header-bg-color; // Header background color
+.skills-matrix {
+    min-width: 1024px; // To ensure the grid fits all roles
 
-    .grid-header {
-        font-weight: bold;
-        padding: 10px;
-        //border-right: 1px solid $tertiary-color; // Vertical lines between header cells with tertiary color
-        color: $secondary-color;
-        align-self: end;
-    }
+    .grid-container {
+        display: grid;
+        gap: 0;
+        border: 3px solid $primary-color;
+        background-color: $header-bg-color;
 
-    .grid-header:last-child {
-        border-right: none; // Remove right border for the last header item
-    }
-
-    .grid-header:nth-child(n+4) {
-        writing-mode: vertical-lr;
-        text-orientation: sideways;
-    }
-
-    .grid-item {
-        padding: 10px;
-        border: none; // Remove borders of the grid cells
-        background-color: $page-bg-color;
-
-        &.with-checkbox {
-            color: $tertiary-color;
+        .grid-header {
+            font-weight: bold;
+            padding: 10px;
+            color: $secondary-color;
+            align-self: end;
         }
-    }
 
-    .grid-item {
-        border-bottom: 1px solid $tertiary-color; // Horizontal lines between cells with tertiary color
-        border-right: 1px solid $tertiary-color; // Vertical lines between cells with tertiary color
-    }
+        .grid-header:last-child {
+            border-right: none; // Remove right border for the last header item
+        }
 
-    .grid-item:last-child {
-        border-bottom: none; // Remove bottom border for the last item
-        border-right: none; // Remove right border for the last item
-    }
+        .grid-header:nth-child(n+4) {
+            writing-mode: vertical-lr;
+            text-orientation: sideways;
+        }
 
-    .grid-item:nth-child(-n+4) { // Adjust this selector based on the number of columns
-        border-top: none; // Remove top border for the first row
-    }
+        .grid-item {
+            padding: 10px;
+            border: none;
+            background-color: $page-bg-color;
 
-    .grid-item:nth-child(4n+1) { // Adjust this selector based on the number of columns
-        border-left: none; // Remove left border for the first column
+            &.with-checkbox {
+                color: $tertiary-color;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .grid-item {
+            border-bottom: 1px solid $tertiary-color; // Horizontal lines between cells with tertiary color
+            border-right: 1px solid $tertiary-color; // Vertical lines between cells with tertiary color
+        }
+
+        .grid-item:last-child {
+            border-bottom: none;
+            border-right: none;
+        }
     }
 }

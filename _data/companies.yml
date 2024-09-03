@@ -1,42 +1,63 @@
 - name: JET Charge
   technologies:
-    - React JS
+    - React
     - .NET
-    - Azure Cloud
+    - Azure
+    - OData
+    - DevExpress
+    - SignalR
+    - TypeScript
+    - SASS
+    - Copilot
+    - AI
+    - Pair programming
+    - Agile
 - name: TallBob
   technologies:
     - React
     - Redux
-    - Typescript
+    - TypeScript
+    - Laravel
     - Laravel Mix
-    - Jest/React Testing Library
+    - Jest
+    - React Testing Library
     - npm
     - AWS Lambda
+    - Node.js
+    - Express
+    - SASS
+    - Agile
 - name: Illion
   technologies:
     - React
-    - Typescript
-    - Laravel 6.x
+    - TypeScript
+    - Laravel
     - Eloquent
-    - PHP 7.2
+    - PHP
     - SASS
     - Material UI
+    - Agile
 - name: EstimateOne
   technologies:
     - PHP
-    - React/Typescript
+    - React
+    - TypeScript
     - Redux
     - GraphQL
     - Gatsby
+    - Symfony
+    - Pair programming
+    - Agile
 - name: Bayside City Council
   technologies:
     - PHP
     - Drupal
-    - Typescript
+    - TypeScript
+    - Agile
 - name: National Heart Foundation of Australia
   technologies:
     - PHP
-    - Javascript
+    - JavaScript
     - ExpressionEngine
 - name: FanHub Media
   technologies:
@@ -48,13 +69,15 @@
     - PHP
     - Zend
     - Magento
-    - Javascript
+    - JavaScript
     - 3rd party integrations
+    - Agile
 - name: Aussie Farmers Direct
   technologies:
-    - Javascript
-    - Javascript MVC
-    - SASS
+    - JavaScript
+    - JavaScript MVC
+    - CSS
+    - JQuery
 - name: Iedex
   technologies:
     - PHP
@@ -62,7 +85,7 @@
 - name: Australian Council for Educational Research (ACER)
   technologies:
     - PHP
-    - Zend framework
+    - Zend
 - name: Procision
   technologies:
     - PHP
@@ -78,6 +101,7 @@
 - name: HeroCraft
   technologies:
     - Java ME
+    - Python
 - name: TiS Dialog
   technologies:
     - PHP
