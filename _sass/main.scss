@@ -112,7 +112,11 @@ nav.main-menu {
 /* Mobile styles */
 @media (max-width: $mobile-breakpoint) {
     nav.main-menu {
-        display: none;
+        padding: 0.35rem 1.5rem;
+
+        .skills-matrix {
+            display: none;
+        }
     }
 
     .mobile-header {
