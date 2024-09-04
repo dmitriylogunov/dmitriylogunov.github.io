@@ -120,12 +120,65 @@
         }
 
         .link-icon i {
-            font-size: 16px; /* Adjust size as needed */
+            font-size: 16px;
             vertical-align: middle;
+        }
+
+        a {
+            color: $primary-color;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        
+            .overlay-content {
+                width: 90%;
+                max-width: 500px;
+                max-height: 600px;
+                overflow: auto;
+                border: 2px solid $tertiary-color;
+                background-color: $page-bg-color;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                color: $primary-color;
+                padding: 10px;
+                
+                .description,
+                .technologies {
+                    margin-bottom: 10px;
+                    text-align: left;
+                }
+        
+                .controls {
+                    align-self: flex-end;
+                    margin-top: auto;
+                }
+            }
+        
+            .close-button {
+                background-color: $header-bg-color;
+                color: $secondary-color;
+                border: 1px solid $primary-color;
+                padding: 5px 10px;
+                cursor: pointer;
+                border-radius: $round-corner-radius;
+            }
         }
     }
 }
-
 
 // .timeline {
 //     display: flex;

@@ -16,5 +16,7 @@ $page-bg-color: lighten($header-bg-color, 70%);
 
 $standard-interval: 1rem;
 
-$mobile-breakpoint: 600px;
+$mobile-breakpoint: 600px; // Remember to update where window.matchMedia is used in timeline.html
 $content-max-width: 960px;
+
+$round-corner-radius: 5px;
