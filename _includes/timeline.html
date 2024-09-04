@@ -1,16 +1,16 @@
 <section class="timeline">
     {% for item in include.data %}
-        {% include timeline-item.html item=item %}
+    {% include timeline-item.html item=item %}
     {% endfor %}
 </section>
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         if (window.matchMedia("(max-width: 600px)").matches) {
-            document.querySelectorAll('.timeline-item').forEach(function (item) {
+            document.querySelectorAll('.timeline-inline').forEach(function (item) {
                 item.addEventListener('click', function (event) {
                     event.preventDefault();
-                    const overlay = item.querySelector('.overlay');
+                    const overlay = item.parentElement.querySelector('.overlay');
                     if (overlay) {
                         overlay.style.display = 'flex';
                     }
@@ -28,11 +28,13 @@
             });
         });
 
-        document.querySelectorAll('.overlay').forEach(function (overlay) {
-            overlay.addEventListener('click', function (event) {
-                event.stopPropagation();
-                event.target.style.display = 'none';
-            });
-        });
+        // document.querySelectorAll('.overlay').forEach(function (overlay) {
+        //     overlay.addEventListener('click', function (event) {
+        //         if (event.target === event.currentTarget) {
+        //             event.stopPropagation();
+        //             event.currentTarget.style.display = 'none';
+        //         }
+        //     });
+        // });
     });
 </script>

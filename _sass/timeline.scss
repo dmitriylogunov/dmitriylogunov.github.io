@@ -20,9 +20,13 @@
         display: block;
         text-decoration: none;
         color: inherit;
+
         .timeline-item {
+
             // Reset styles for child elements
-            h3, p, .link-icon {
+            h3,
+            p,
+            .link-icon {
                 color: initial;
                 text-decoration: none;
             }
@@ -31,7 +35,8 @@
 
     .timeline-item {
         @media (max-width: $mobile-breakpoint) {
-            .description {
+            .description,
+            .timeline-link {
                 display: none;
             }
         }
@@ -105,7 +110,8 @@
                 font-size: 1.5em;
             }
 
-            .title, .technologies {
+            .title,
+            .technologies {
                 font-size: inherit; // Make the font size the same as the parent h2
                 display: block; // Start from a new line
             }
@@ -141,7 +147,7 @@
             z-index: 1000;
             justify-content: center;
             align-items: center;
-        
+
             .overlay-content {
                 width: 90%;
                 max-width: 500px;
@@ -155,19 +161,20 @@
                 align-items: flex-start;
                 color: $primary-color;
                 padding: 10px;
-                
+
                 .description,
                 .technologies {
+                    display: inline;
                     margin-bottom: 10px;
                     text-align: left;
                 }
-        
+
                 .controls {
                     align-self: flex-end;
                     margin-top: auto;
                 }
             }
-        
+
             .close-button {
                 background-color: $header-bg-color;
                 color: $secondary-color;

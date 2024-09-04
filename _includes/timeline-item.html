@@ -1,4 +1,5 @@
 <div class="timeline-item {% cycle 'left', 'right' %}">
+    <div class="timeline-inline">
         <h3>
             <span class="date">{{ item.date }}</span>
             <span class="title">{{ item.title }}</span>
@@ -8,15 +9,16 @@
         <p class="description">{{ item.description }}</p>
 
         {% if item.link %}
-        <a href="{{ item.link }}" class="timeline-item-link">Click to View</a>
+        <a href="{{ item.link }}" class="timeline-link">Click to View</a>
         {% endif %}
+    </div>
 
     <div class="overlay">
         <div class="overlay-content">
             <span class="description">{{ item.description }}</span>
             <span class="technologies">Technologies: {{ item.technologies }}</span>
             {% if item.link %}
-            <a href="{{ item.link }}" class="timeline-item-link">Tap to View</a>
+            <a href="{{ item.link }}">Tap to View</a>
             {% endif %}
             <span class="controls"><button class="close-button">Close</button></span>
         </div>
