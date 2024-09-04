@@ -101,13 +101,21 @@
             font-size: inherit;
 
             .date {
+                color: $tertiary-color;
                 font-size: 1.5em;
             }
 
-            .title {
+            .title, .technologies {
                 font-size: inherit; // Make the font size the same as the parent h2
-                color: #888;
                 display: block; // Start from a new line
+            }
+
+            .title {
+                color: $primary-color;
+            }
+
+            .technologies {
+                color: #888;
             }
         }
 

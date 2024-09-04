@@ -12,10 +12,12 @@
     - AI
     - Pair programming
     - Agile
+    - HTML
 - name: TallBob
   technologies:
     - React
     - Redux
+    - Redux Toolkit
     - TypeScript
     - Laravel
     - Laravel Mix
@@ -27,6 +29,7 @@
     - Express
     - SASS
     - Agile
+    - HTML
 - name: Illion
   technologies:
     - React
@@ -37,6 +40,7 @@
     - SASS
     - Material UI
     - Agile
+    - HTML
 - name: EstimateOne
   technologies:
     - PHP
@@ -48,22 +52,26 @@
     - Symfony
     - Pair programming
     - Agile
+    - HTML
 - name: Bayside City Council
   technologies:
     - PHP
     - Drupal
     - TypeScript
     - Agile
+    - HTML
 - name: National Heart Foundation of Australia
   technologies:
     - PHP
     - JavaScript
     - ExpressionEngine
+    - HTML
 - name: FanHub Media
   technologies:
     - Angular JS
     - Backbone JS
     - SASS
+    - HTML
 - name: IE Digital
   technologies:
     - PHP
@@ -72,36 +80,49 @@
     - JavaScript
     - 3rd party integrations
     - Agile
+    - Laravel
+    - HTML
 - name: Aussie Farmers Direct
   technologies:
     - JavaScript
     - JavaScript MVC
     - CSS
     - JQuery
+    - HTML
 - name: Iedex
   technologies:
     - PHP
     - Office integrations
+    - HTML
 - name: Australian Council for Educational Research (ACER)
   technologies:
     - PHP
     - Zend
+    - HTML
+    - SQL
 - name: Procision
   technologies:
     - PHP
     - Bitrix CMS
+    - HTML
+    - Javascript
 - name: Bitrix
   technologies:
     - PHP
     - SQL
+    - HTML
+    - Javascript
 - name: Intenium GmbH
   technologies:
     - C++
     - Python
+    - HTML
+    - XML
 - name: HeroCraft
   technologies:
     - Java ME
     - Python
+    - XML
 - name: TiS Dialog
   technologies:
     - PHP

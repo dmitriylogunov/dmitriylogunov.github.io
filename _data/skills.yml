@@ -140,7 +140,7 @@
   rating: 4
   years: 1
 - name: Java ME
-  rating: 9
+  rating: 6
   years: 2
 - name: HTML
   rating: 10
@@ -190,3 +190,6 @@
 - name: SignalR
   rating: 5
   years: 1
+- name: XML
+  rating: 8
+  years: 2

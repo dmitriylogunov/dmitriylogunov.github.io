@@ -1,10 +1,8 @@
 description: "Tallbob provider of the customer engagement solutions based on SMS messaging. Below you can find some screenshots of my work."
 items:
   - image: "/assets/images/tallbob1.png"
-    description: ""
+    description: "Video gallery for the landing page"
   - image: "/assets/images/tallbob2.png"
-    description: ""
+    description: "Message editor"
   - image: "/assets/images/tallbob3.png"
-    description: ""
-  - image: "/assets/images/tallbob4.png"
-    description: ""
+    description: "Campaign scheduling"
