@@ -147,26 +147,40 @@ main {
         margin-top: $standard-interval;
     }
 
-    p {
-        a {
-            color: $link-color;
-            font-weight: bold;
+
+    a {
+        color: $link-color;
+        font-weight: bold;
+        text-decoration: underline;
+
+        &:hover {
             text-decoration: underline;
 
-            &:hover {
-                text-decoration: underline;
-            }
-
-            &:visited {
-                color: $link-color;
-            }
+            // Uncomment for the "link" icon
+            // position: relative;
+            // color: $link-color;
 
             // &::after {
             //     font-family: 'Font Awesome 6 Free';
-            //     content: '\f358';
+            //     content: '\f0c1';
             //     font-weight: 900;
+            //     margin-left: 0.5rem;
+            //     position: absolute;
+            //     right: -2.25rem;
+            //     top: -0.4rem;
+            //     background-color: $page-bg-color;
+            //     border: $link-color 1px solid;
+            //     padding: 0.1rem;
             //     padding-left: 0.25rem;
+            //     border-radius: 50%;
+            //     width: 1.5rem;
+            //     height: 1.5rem;
             // }
         }
+
+        &:visited {
+            color: $link-color;
+        }
     }
+
 }

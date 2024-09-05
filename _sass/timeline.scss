@@ -131,9 +131,15 @@
         }
 
         a {
-            color: $primary-color;
+            color: $link-color;
             text-decoration: underline;
             font-weight: bold;
+            &:visited {
+                color: $link-color;
+            }
+            &:hover {
+                color: $link-color;
+            }
         }
 
         .overlay {
