@@ -12,7 +12,7 @@
                     event.preventDefault();
                     const overlay = item.parentElement.querySelector('.overlay');
                     if (overlay) {
-                        overlay.style.display = 'flex';
+                        overlay.classList.add('visible');
                     }
                 });
             });
@@ -23,7 +23,7 @@
                 event.stopPropagation();
                 const overlay = button.closest('.overlay');
                 if (overlay) {
-                    overlay.style.display = 'none';
+                    overlay.classList.remove('visible');
                 }
             });
         });
