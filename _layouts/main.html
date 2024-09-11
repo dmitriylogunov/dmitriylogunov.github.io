@@ -59,9 +59,10 @@
     </main>
     <footer>
         <div>
-            <span><a href="mailto:{{ site.email }}">{{ site.email }}</a></span>
+            <span><a href="mailto:{{ site.email }}">{{ site.email }}</a></span><br/>
             <span><a href="{{ site.linkedin }}" target="_blank">LinkedIn</a></span>
             <span><a href="{{ site.github }}" target="_blank">GitHub</a></span>
+            <span><a href="{{ site.stack_overflow }}" target="_blank">StackOverflow</a></span><br/>
             {% for contact in site.contacts %}
             {% if forloop.first %}
             <span><a href="tel:{{ contact }}">{{ contact }}</a></span>
