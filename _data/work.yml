@@ -20,3 +20,9 @@
   technologies: PHP, Zend Framework, MVC, HTML, MySQL
   description: In the role of a back-end developer, in a 5-person team, I developed an automated exam grading system for the PISA tests. The system enhanced the scoring process by providing a single-page interface for reviewers to view student answers and input scores.
   date: 2011
+
+- title: Baltic Federal University named after Immanuel Kant
+  technologies: Computer programming theory, C++, SQL, Databases theory, Python, Assembly language, Computer graphics, Algorithms and data structures
+  description: Masters degree in the Applied mathematics with a focus on the informational technology, numerical methods and mathematical modeling.
+  date: 2003
+  link: "https://en.wikipedia.org/wiki/Immanuel_Kant_Baltic_Federal_University"
