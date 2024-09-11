@@ -1,9 +1,3 @@
-- title: Demo app for the job application
-  technologies: React, Typescript, Redux, SASS, HTML, Tailwind CSS, React Testing Library
-  description: Create a Javascript application in which you can simulate controlling a robot. The robot should be placed on a 5x5 grid. Supply controls that let you move the robot forwards in the direction it is facing, and rotate the robot in place to face any cardinal direction.
-  date: 2024
-  link: "https://roybell-robot.vercel.app"
-
 - title: JET Charge
   technologies: React, Typescript, .NET, Azure Cloud
   description: I worked with a team of Developers, Hardware Engineers, and DevOps to deliver a B2B charging management platform.
