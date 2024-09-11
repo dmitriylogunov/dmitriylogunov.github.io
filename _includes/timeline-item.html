@@ -16,7 +16,9 @@
     <div class="overlay">
         <div class="overlay-content">
             <span class="description">{{ item.description }}</span>
+            {% if item.technologies %}
             <span class="technologies">Technologies: {{ item.technologies }}</span>
+            {% endif %}
             {% if item.link %}
             <a href="{{ item.link }}">Tap to View</a>
             {% endif %}
