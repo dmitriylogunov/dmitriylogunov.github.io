@@ -13,13 +13,13 @@
 - title: Movember
   technologies: PHP, Zend Framework, HTML, CSS, JavaScript, MySQL
   description: Working for Movember is special for me. Our team's efforts have made a real difference in men's health. We've helped raise awareness about important issues like prostate cancer and mental health. It's amazing to see more men talking openly about their health because of our work. Knowing that we've helped save lives and improve men's well-being makes me feel that my job truly matters.
-  date: 2021
+  date: 2015
   link: "https://movember.com/"
 
-- title: Online courses with MongoDB Academy (now MongoDB University)
+- title: Online courses with MongoDB University
   technologies: MongoDB, Mongoose
   description: I took a series of online courses to learn how to run MongoDB in the web applications. This translated to a better knowledge of cloud document databases later.
-  date: 2012
+  date: 2014
   link: "https://learn.mongodb.com/"
 
 - title: ACER (Australian Council for Educational Research)
@@ -30,6 +30,18 @@
 - title: Move to Melbourne
   description: A courageous decision to leave everything behind and call Melbourne home. I consider myself a Melburninian now and have lived there more of my adult life than anywhere else.
   date: 2009
+
+- title: Intenium GMBH
+  technologies: C++, Python, HTML, CSS, JavaScript, MySQL
+  description: I worked on the backend for the multiplayer game "Alamandi". My role was focused around real-time game data collection, analysis and visualization.
+  date: 2008
+  link: "https://en.wikipedia.org/wiki/Intenium"
+
+- title: HeroCraft
+  technologies: Java ME, J2ME, MySQL, XML
+  description: With the passion for video games development, I joined Herocraft, a mobile game development company, where I worked on the mobile client for Jamango social network.
+  date: 2007
+  link: "https://herocraft.com/"
 
 - title: Baltic Federal University named after Immanuel Kant
   technologies: Computer programming theory, C++, SQL, Databases theory, Python, Assembly language, Computer graphics, Algorithms and data structures
