@@ -16,6 +16,10 @@
   date: 2017
   link: "https://mahjong.dmitriylogunov.info/"
 
+- title: Move to Melbourne permanently
+  description: A courageous decision to leave everything behind and call Melbourne home. I consider myself a Melburninian now and have lived there more of my adult life than anywhere else.
+  date: 2009
+
 - title: Koenig Bicycle Team website
   technologies: PHP, Slim framework, MySQL, HTML, CSS, JavaScript, React
   description: A website for a local bicycle team, with a focus on the team's achievements and upcoming events. I maintained the website and added new features as needed, up until 2022.
