@@ -33,8 +33,15 @@
         }
     }
 
+    @media (max-width: $mobile-breakpoint) {
+        &::after {
+            left: 5%; // this overrides the position of the line
+        }
+    }
+
     .timeline-item {
         @media (max-width: $mobile-breakpoint) {
+
             .description,
             .timeline-link {
                 display: none;
@@ -71,9 +78,9 @@
         &::before {
             content: '';
             position: absolute;
-            width: 19px; // Adjust size as needed
-            height: 19px; // Adjust size as needed
-            right: -10px; // Adjust position as needed
+            width: 19px;
+            height: 19px;
+            right: -10px;
             background-color: white;
             top: 50%;
             transform: translateY(-50%);
@@ -95,6 +102,26 @@
 
             &::before {
                 left: -9px;
+            }
+        }
+
+        @media (max-width: $mobile-breakpoint) {
+            width: 100%;
+
+            &.left,
+            &.right {
+                left: 5%; // this overrides the position of the dot
+                text-align: left;
+
+                &::after {
+                    left: -16px;
+                    right: auto;
+                }
+
+                &::before {
+                    left: -9px;
+                    right: auto;
+                }
             }
         }
 
@@ -134,9 +161,11 @@
             color: $link-color;
             text-decoration: underline;
             font-weight: bold;
+
             &:visited {
                 color: $link-color;
             }
+
             &:hover {
                 color: $link-color;
             }
@@ -193,29 +222,3 @@
         }
     }
 }
-
-// .timeline {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-// }
-
-// .timeline-item {
-//     background-color: #fff;
-//     border: 1px solid $border-color;
-//     border-radius: 5px;
-//     margin: 1rem 0;
-//     padding: 1rem;
-//     width: 80%;
-//     box-shadow: 0 2px 4px $shadow-color;
-// }
-
-// .timeline-item h2 {
-//     margin-top: 0;
-// }
-
-// .timeline-item .date {
-//     color: $text-color;
-//     font-size: 0.9rem;
-//     margin-top: 0.5rem;
-// }
