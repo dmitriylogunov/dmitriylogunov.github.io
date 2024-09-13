@@ -1,5 +1,4 @@
-description: "I worked with a team of Developers, Hardware Engineers, and DevOps specialists to deliver a B2B charging management platform. I took the project from a prototype stage and developed the UI to the point of the first alpha client onboarding. I collaborated with a UI designer to improve the product's usability. Below you can find some screenshots of my work."
-items:
+gallery:
   - image: "/assets/images/jetcharge1.png"
     description: "Asset overview"
   - image: "/assets/images/jetcharge2.png"

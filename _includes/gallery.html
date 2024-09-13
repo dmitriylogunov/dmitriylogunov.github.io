@@ -1,7 +1,6 @@
-<section class="read-more-page">
-  <p>{{ include.data.description }}</p>
+<section class="gallery">
   <div class="items">
-    {% for item in include.data.items %}
+    {% for item in include.data.gallery %}
     <div class="item">
       <h3>{{ item.description }}</h3>
       <img src="{{ item.image }}" alt="{{ item.description }}">
