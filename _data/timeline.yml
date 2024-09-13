@@ -5,13 +5,13 @@
   link: "https://roybell-robot.vercel.app"
 
 - title: Portfolio website
-  technologies: Jekyll, HTML, SASS, YML
+  technologies: Jekyll, HTML, SASS, YML, Javascript
   description: The idea of this website was long in the making, but finally I decided to put it together. It is a static website, built with Jekyll, and hosted on GitHub Pages.
   date: 2024
   link: "https://github.com/dmitriylogunov/dmitriylogunov.github.io"
 
 - title: Mahjong Solitaire
-  technologies: Angular JS v2, HTML, Stylus, Webpack
+  technologies: Angular JS v2, Typescript, SASS, Stylus, HTML, Webpack
   description: An early experiment in rich web application development, browser implementation of the Mahjong Solitaire, with Angular JS v2.
   date: 2017
   link: "https://mahjong.dmitriylogunov.info/"
