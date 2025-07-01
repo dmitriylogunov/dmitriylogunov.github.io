@@ -4,6 +4,8 @@ Personal portfolio site hosted on Github Pages, built using Jekyll framework
 
 # quickstart
 
+Install Ruby if not yet installed (instructions below)
+
 Install Jekyll and Bundler:
 `gem install jekyll bundler`
 
