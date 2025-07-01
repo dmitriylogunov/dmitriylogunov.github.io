@@ -1,5 +1,4 @@
-@use 'sass:color';
-@use 'variables' as *;
+// Variables are imported globally via styles.scss
 
 
 html {
@@ -11,7 +10,7 @@ html {
 
 body {
     font-family: $font-stack;
-    background: linear-gradient(135deg, $off-white 0%, color.adjust($off-white, $lightness: -3%) 100%);
+    background: linear-gradient(135deg, $off-white 0%, darken($off-white, 3%) 100%);
     background-attachment: fixed;
     color: $text-color;
     margin: 0;
@@ -66,7 +65,7 @@ header {
         span {
             &+span::before {
                 content: '•';
-                color: color.adjust($contact-link-color, $lightness: 20%);
+                color: lighten($contact-link-color, 20%);
                 margin: 0 0.5rem;
                 text-decoration: none;
             }
@@ -253,7 +252,7 @@ main {
         }
         
         &:visited {
-            color: color.adjust($link-color, $lightness: -10%);
+            color: darken($link-color, 10%);
         }
     }
     

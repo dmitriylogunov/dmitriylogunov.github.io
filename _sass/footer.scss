@@ -1,5 +1,4 @@
-@use 'sass:color';
-@use 'variables' as *;
+// Variables are imported globally via styles.scss
 
 // Modern footer design
 footer {
@@ -55,7 +54,7 @@ footer {
         
         &+span::before {
             content: '|';
-            color: color.adjust($contact-link-color, $lightness: -20%);
+            color: darken($contact-link-color, 20%);
             margin: 0 $spacing-md;
             opacity: 0.4;
         }

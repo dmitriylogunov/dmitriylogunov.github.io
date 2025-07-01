@@ -2,8 +2,10 @@
 ---
 
 // @import "minima";  // Removed to use custom styles
-@use "typography";
-@use "main";
-@use "footer";
-@use "gallery";
-@use "timeline";
+// Using @import for GitHub Pages compatibility
+@import "variables";
+@import "typography";
+@import "main";
+@import "footer";
+@import "gallery";
+@import "timeline";
