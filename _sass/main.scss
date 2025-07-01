@@ -1,4 +1,5 @@
-@import 'variables';
+@use 'sass:color';
+@use 'variables' as *;
 
 
 html {
@@ -50,7 +51,7 @@ footer {
         span {
             &+span::before {
                 content: '•';
-                color: lighten($contact-link-color, 20%);
+                color: color.adjust($contact-link-color, $lightness: 20%);
                 margin: 0 0.5rem;
                 text-decoration: none;
             }
@@ -70,7 +71,7 @@ footer {
 
 /* Main menu styles */
 nav.main-menu {
-    background-color: darken($header-bg-color, 10%);
+    background-color: color.adjust($header-bg-color, $lightness: -10%);
     margin: 0;
     padding: 0.35rem 2rem;
     display: flex;    

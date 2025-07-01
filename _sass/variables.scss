@@ -1,10 +1,12 @@
+@use "sass:color";
+
 $font-stack: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", Roboto, Helvetica, Arial, sans-serif;
 
 $header-bg-color: #6B8E23;
 
 $primary-color: #333333;
 $secondary-color: #ffffff;
-$tertiary-color: darken($header-bg-color, 10%);
+$tertiary-color: color.adjust($header-bg-color, $lightness: -10%);
 
 $text-color: $primary-color;
 $header-text-color: $secondary-color;
@@ -12,7 +14,7 @@ $contact-link-color: $secondary-color;
 
 $link-color: $tertiary-color;
 
-$page-bg-color: lighten($header-bg-color, 70%);
+$page-bg-color: color.adjust($header-bg-color, $lightness: 70%);
 
 $standard-interval: 1rem;
 

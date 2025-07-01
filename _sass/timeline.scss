@@ -1,4 +1,4 @@
-@import 'variables';
+@use 'variables' as *;
 
 .timeline {
     position: relative;
@@ -40,6 +40,12 @@
     }
 
     .timeline-item {
+        padding: 10px 40px;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+        box-sizing: border-box;
+
         @media (max-width: $mobile-breakpoint) {
 
             .description,
@@ -47,13 +53,6 @@
                 display: none;
             }
         }
-
-
-        padding: 10px 40px;
-        position: relative;
-        background-color: inherit;
-        width: 50%;
-        box-sizing: border-box;
 
         &:hover::before {
             background-color: $header-bg-color; // Replace with the color you want

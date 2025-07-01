@@ -2,7 +2,7 @@
 ---
 
 // @import "minima";  // Removed to use custom styles
-@import "typography";
-@import "main";
-@import "gallery";
-@import "timeline";
+@use "typography";
+@use "main";
+@use "gallery";
+@use "timeline";
