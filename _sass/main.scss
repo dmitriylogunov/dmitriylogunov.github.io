@@ -6,21 +6,36 @@ html {
     width: 100%;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: $font-stack;
-    background-color: $page-bg-color;
+    background: linear-gradient(135deg, $off-white 0%, color.adjust($off-white, $lightness: -3%) 100%);
+    background-attachment: fixed;
     color: $text-color;
+    margin: 0;
     // Typography settings are now in typography.scss
 }
 
-header,
-footer {
-    background-color: $header-bg-color;
+// Modern header with gradient and better spacing
+header {
+    background: linear-gradient(135deg, $primary-dark 0%, $primary-accent 100%);
     color: $header-text-color;
-    padding: 1rem 0;
+    padding: $spacing-xxl 0 $spacing-xl;
     text-align: center;
+    position: relative;
+    box-shadow: $shadow-md;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, $accent-color, $accent-light, $highlight);
+    }
 
     a {
         color: $contact-link-color;
@@ -60,42 +75,86 @@ footer {
 
     h1 {
         margin: 0;
-        font-size: 2.25em; // Keep header h1 size consistent
+        font-size: clamp(2.5rem, 6vw, 3.5rem);
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        color: $white;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
     }
 
-    h2 {
-        font-size: 1em;
-        margin: 0; // Preserve your header h2 styling
+    p {
+        font-size: 1.25rem;
+        margin-top: $spacing-md;
+        opacity: 0.9;
+        font-weight: 300;
+        letter-spacing: 0.02em;
+        
+        span {
+            &+span::before {
+                content: '•';
+                color: $highlight;
+                margin: 0 $spacing-md;
+                opacity: 0.6;
+            }
+        }
     }
 }
 
-/* Main menu styles */
+/* Modern navigation with hover effects */
 nav.main-menu {
-    background-color: color.adjust($header-bg-color, $lightness: -10%);
+    background-color: $nav-bg-color;
     margin: 0;
-    padding: 0.35rem 2rem;
+    padding: 0;
     display: flex;    
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+    box-shadow: $shadow-sm;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    background-color: rgba($nav-bg-color, 0.95);
 
     ul {
         list-style: none;
         margin: 0;
         padding: 0;
         display: flex;
+        gap: $spacing-xs;
 
         li {
-            margin-right: 1rem;
+            margin: 0;
 
             a {
-                padding: 0.25rem;
+                display: inline-block;
+                padding: $spacing-lg $spacing-xl;
                 color: $header-text-color;
                 text-decoration: none;
+                font-weight: 500;
+                font-size: 1rem;
+                letter-spacing: 0.02em;
+                position: relative;
+                transition: all $transition-base;
+                
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    width: 0;
+                    height: 3px;
+                    background: $highlight;
+                    transition: all $transition-base;
+                    transform: translateX(-50%);
+                }
 
                 &:hover {
-                    color: $header-bg-color;
-                    background-color: $secondary-color;
-                    border-radius: 0.25em;
+                    color: $highlight;
+                    transform: translateY(-2px);
+                    
+                    &::after {
+                        width: 80%;
+                    }
                 }
             }
         }
@@ -129,31 +188,47 @@ nav.main-menu {
 }
 
 
+// Modern main content area with better spacing
 main {
-    padding: 2rem;
-    margin: 20px auto;
+    flex: 1;
+    padding: $spacing-xxl $spacing-xl;
+    margin: 0 auto;
     max-width: $content-max-width;
+    width: 100%;
+    animation: fadeInUp 0.6s ease-out;
 
     @media (max-width: $mobile-breakpoint) {
-        margin: 0 auto;
-        h1 {
-            font-size: 1.5em;
-        }
-
+        padding: $spacing-xl $spacing-lg;
     }
 
-    .timeline {
-        margin-top: $standard-interval;
-    }
-
-
+    // Modern link styling
     a {
         color: $link-color;
-        font-weight: bold;
-        text-decoration: underline;
+        font-weight: 600;
+        text-decoration: none;
+        position: relative;
+        transition: all $transition-base;
+        display: inline-block;
+        
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: $link-color;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform $transition-base;
+        }
 
         &:hover {
-            text-decoration: underline;
+            color: $link-hover-color;
+            
+            &::after {
+                transform: scaleX(1);
+            }
 
             // Uncomment for the "link" icon
             // position: relative;
@@ -176,10 +251,45 @@ main {
             //     height: 1.5rem;
             // }
         }
-
+        
         &:visited {
-            color: $link-color;
+            color: color.adjust($link-color, $lightness: -10%);
         }
     }
+    
+    // Content sections
+    h1, h2, h3 {
+        position: relative;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            left: -$spacing-xl;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 60%;
+            background: linear-gradient(to bottom, $accent-light, $accent-color);
+            opacity: 0;
+            transition: opacity $transition-base;
+        }
+        
+        @media (min-width: $tablet-breakpoint) {
+            &:hover::before {
+                opacity: 1;
+            }
+        }
+    }
+}
 
+// Animations
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

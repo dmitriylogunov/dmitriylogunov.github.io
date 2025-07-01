@@ -1,0 +1,70 @@
+@use 'sass:color';
+@use 'variables' as *;
+
+// Modern footer design
+footer {
+    background: linear-gradient(135deg, $primary-accent 0%, $primary-dark 100%);
+    color: $header-text-color;
+    padding: $spacing-xxl 0;
+    text-align: center;
+    margin-top: $spacing-xxl * 2;
+    position: relative;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, $highlight, $accent-light, $accent-color);
+    }
+
+    div {
+        max-width: $content-max-width;
+        margin: 0 auto;
+        padding: 0 $spacing-xl;
+    }
+
+    a {
+        color: $contact-link-color;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all $transition-base;
+        position: relative;
+
+        &:hover {
+            color: $white;
+            transform: translateY(-2px);
+            
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                right: 0;
+                height: 2px;
+                background: currentColor;
+            }
+        }
+    }
+
+    span {
+        display: inline-block;
+        margin: $spacing-xs $spacing-sm;
+        
+        &+span::before {
+            content: '|';
+            color: color.adjust($contact-link-color, $lightness: -20%);
+            margin: 0 $spacing-md;
+            opacity: 0.4;
+        }
+    }
+    
+    // Style for line breaks in footer
+    br + span {
+        &::before {
+            display: none;
+        }
+    }
+}

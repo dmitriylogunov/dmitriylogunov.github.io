@@ -1,13 +1,36 @@
+@use 'sass:color';
 @use 'variables' as *;
 
+// Modern gallery with hover effects
 .gallery {
+    margin-top: $spacing-xl;
+    
     h3 {
-        margin-top: 2rem;
-        margin-bottom: 0;
+        margin-top: $spacing-xxl;
+        margin-bottom: $spacing-lg;
+        color: $primary-dark;
+        font-weight: 600;
     }
 
     img {
-        border: 1px solid $tertiary-color;
-        padding: 5px;
+        border-radius: $round-corner-radius;
+        box-shadow: $shadow-md;
+        transition: all $transition-base;
+        width: 100%;
+        height: auto;
+        display: block;
+        
+        &:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: $shadow-lg;
+        }
+    }
+    
+    // Gallery grid for multiple images
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: $spacing-lg;
+        margin-top: $spacing-lg;
     }
 }

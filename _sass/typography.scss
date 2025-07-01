@@ -1,53 +1,76 @@
-// Typography settings from minima theme
-// Base font size and line height
+@use 'variables' as *;
+
+// Modern Typography
+// Base font settings with improved readability
 body {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.6;
+  letter-spacing: -0.011em;
   -webkit-text-size-adjust: 100%;
-  -webkit-font-feature-settings: "kern" 1;
-     -moz-font-feature-settings: "kern" 1;
-       -o-font-feature-settings: "kern" 1;
-          font-feature-settings: "kern" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
   font-kerning: normal;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 }
 
-// Headings
+// Modern heading hierarchy with better visual weight
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-top: 0;
+  margin-bottom: $spacing-md;
+  color: $primary-dark;
 }
 
 h1 {
-  font-size: 2.25em;
-  line-height: 1.2;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: $spacing-lg;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  line-height: 1.2;
+  margin-top: $spacing-xl;
 }
 
 h3 {
-  font-size: 1.75em;
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  line-height: 1.3;
+  margin-top: $spacing-lg;
 }
 
 h4 {
-  font-size: 1.5em;
+  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+  line-height: 1.4;
 }
 
 h5 {
-  font-size: 1.25em;
+  font-size: 1.25rem;
+  line-height: 1.4;
 }
 
 h6 {
-  font-size: 1.125em;
+  font-size: 1.125rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
 }
 
-// Paragraphs
+// Paragraphs with better spacing
 p {
-  margin-bottom: 15px;
+  margin-bottom: $spacing-lg;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 // Lists
