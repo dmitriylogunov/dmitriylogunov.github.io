@@ -39,7 +39,7 @@ url: "https://dmitriylogunov.info" # the base hostname & protocol for your site,
 github_username: dmitriylogunov
 
 # Build settings
-theme: minima
+# theme: minima  # Removed to use custom styles
 plugins:
   - jekyll-feed
 

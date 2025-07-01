@@ -1,8 +1,7 @@
 @import 'variables';
 
 
-html,
-body {
+html {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -12,6 +11,7 @@ body {
     font-family: $font-stack;
     background-color: $page-bg-color;
     color: $text-color;
+    // Typography settings are now in typography.scss
 }
 
 header,
@@ -59,10 +59,12 @@ footer {
 
     h1 {
         margin: 0;
+        font-size: 2.25em; // Keep header h1 size consistent
     }
 
     h2 {
         font-size: 1em;
+        margin: 0; // Preserve your header h2 styling
     }
 }
 
