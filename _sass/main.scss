@@ -163,10 +163,20 @@ nav.main-menu {
 /* Mobile and Desktop Header Visibility */
 .mobile-header {
     display: none;
+    text-decoration: none;
+    
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 .desktop-header {
     display: block;
+    text-decoration: none;
+    
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 

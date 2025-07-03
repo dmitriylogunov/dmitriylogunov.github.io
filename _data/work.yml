@@ -10,12 +10,6 @@
   date: 2024
   link: "https://roybell-robot.vercel.app"
 
-- title: Portfolio website
-  technologies: Jekyll, HTML, SASS, YML, Javascript
-  description: The idea of this website was long in the making, but finally I decided to put it together. It is a static website, built with Jekyll, and hosted on GitHub Pages.
-  date: 2024
-  link: "https://github.com/dmitriylogunov/dmitriylogunov.github.io"
-
 - title: JET Charge
   technologies: React, Typescript, .NET, Azure Cloud
   description: I worked with a team of Developers, Hardware Engineers, and DevOps to deliver a B2B charging management platform.
@@ -66,3 +60,4 @@
   description: Masters degree in the Applied mathematics with a focus on the informational technology, numerical methods and mathematical modeling.
   date: 2003
   link: "https://en.wikipedia.org/wiki/Immanuel_Kant_Baltic_Federal_University"
+

@@ -1,22 +1,18 @@
 
+- title: Mahjong Solitaire Remastered
+  technologies: Modern React, TypeScript, Tailwind CSS, Vite
+  description: Complete rewrite of my Mahjong Solitaire game with modern technologies, smooth animations, and enhanced gameplay.
+  date: 2025
+  link: "https://mahjong.dmitriylogunov.info/"
+
 - title: Mahjong Solitaire
   technologies: Angular JS v2, Typescript, SASS, Stylus, HTML, Webpack
   description: An early experiment in rich web application development, browser implementation of the Mahjong Solitaire, with Angular JS v2.
   date: 2017
   link: "https://mahjong.dmitriylogunov.info/"
 
-- title: Move to Melbourne
-  description: A courageous decision to leave everything behind and call Melbourne home. I consider myself a Melburninian now and have lived there more of my adult life than anywhere else.
-  date: 2009
-
 - title: Koenig Bicycle Team website
   technologies: PHP, Slim framework, MySQL, HTML, CSS, JavaScript, React
   description: A website for a local bicycle team, with a focus on the team's achievements and upcoming events. I maintained the website and added new features as needed, up until 2022.
   date: 2004
   link: "http://koenigbicycle.ru"
-
-- title: Baltic Federal University named after Immanuel Kant
-  technologies: Computer programming theory, C++, SQL, Databases theory, Python, Assembly language, Computer graphics, Algorithms and data structures
-  description: Masters degree in the Applied mathematics with a focus on the informational technology, numerical methods and mathematical modeling.
-  date: 2003
-  link: "https://en.wikipedia.org/wiki/Immanuel_Kant_Baltic_Federal_University"

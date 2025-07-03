@@ -32,25 +32,18 @@
     <header>
         <a href="{{ '/' | relative_url }}" class="mobile-header">
             <h1>{{ site.name }}</h1>
-            <p>
-                {% for profession in site.profession %}
-                <span>{{ profession }}</span>
-                {% endfor %}
-            </p>
+            <p>{{ site.profession }}</p>
         </a>
-        <div class="desktop-header">
+        <a href="{{ '/' | relative_url }}" class="desktop-header">
             <h1>{{ site.name }}</h1>
-            <p>
-                {% for profession in site.profession %}
-                <span>{{ profession }}</span>
-                {% endfor %}
-            </p>
-        </div>
+            <p>{{ site.profession }}</p>
+        </a>
     </header>
     <nav class="main-menu">
         <ul>
-            <li><a href="{{ '/' | relative_url }}">Projects</a></li>
-            <li><a href="{{ '/work' | relative_url }}">Work</a></li>
+            <li><a href="{{ '/' | relative_url }}">Home</a></li>
+            <li><a href="{{ '/projects' | relative_url }}">Projects</a></li>
+            <li><a href="{{ '/work' | relative_url }}">Work and Education</a></li>
         </ul>
     </nav>
     <main>
