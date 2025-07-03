@@ -30,7 +30,7 @@
 
 <body>
     <header>
-        <a href="{{ '/' | relative_url }}" class="mobile-header">
+        <a href="{{ '/' | relative_url }}" class="mobile-header" draggable="false">
             <h1>{{ site.name }}</h1>
             <p>
                 {%- for profession in site.profession -%}
@@ -38,7 +38,7 @@
                 {%- endfor -%}
             </p>
         </a>
-        <a href="{{ '/' | relative_url }}" class="desktop-header">
+        <a href="{{ '/' | relative_url }}" class="desktop-header" draggable="false">
             <h1>{{ site.name }}</h1>
             <p>
                 {%- for profession in site.profession -%}

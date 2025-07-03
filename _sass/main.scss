@@ -43,6 +43,11 @@ header {
         -webkit-user-select: text;
         -moz-user-select: text;
         -ms-user-select: text;
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
+        user-drag: none;
 
         &:link {
             color: $contact-link-color;
