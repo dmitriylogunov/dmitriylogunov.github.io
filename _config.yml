@@ -32,7 +32,7 @@ contacts:
   - "Blackburn South"
   - "VIC"
   - "Full working rights in AU"
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://dmitriylogunov.info" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: dmitriylogunov
 
