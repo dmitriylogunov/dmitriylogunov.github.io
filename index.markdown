@@ -3,7 +3,7 @@ layout: main
 title: Dmitriy Logunov - Writing about everything
 ---
 
-# Recent Posts
+# What's new
 
 <div class="posts-ribbon">
   <article class="post-card">
