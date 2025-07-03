@@ -20,7 +20,9 @@
 
 name: Dmitriy Logunov
 title: Dmitriy Logunov
-profession: Writing about everything
+profession: 
+  - Writing about everything
+  - Coding with Purpose and Passion
 email: logunovdm@gmail.com
 linkedin: https://www.linkedin.com/in/dmitriylogunov/
 github: https://github.com/dmitriylogunov

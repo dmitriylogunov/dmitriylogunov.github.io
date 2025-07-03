@@ -39,6 +39,10 @@ header {
     a {
         color: $contact-link-color;
         text-decoration: none;
+        user-select: text;
+        -webkit-user-select: text;
+        -moz-user-select: text;
+        -ms-user-select: text;
 
         &:link {
             color: $contact-link-color;
@@ -79,6 +83,11 @@ header {
         letter-spacing: -0.03em;
         color: $white;
         text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+        user-select: text !important;
+        -webkit-user-select: text !important;
+        -moz-user-select: text !important;
+        -ms-user-select: text !important;
+        cursor: text;
     }
 
     p {
@@ -87,13 +96,26 @@ header {
         opacity: 0.9;
         font-weight: 300;
         letter-spacing: 0.02em;
+        user-select: text !important;
+        -webkit-user-select: text !important;
+        -moz-user-select: text !important;
+        -ms-user-select: text !important;
+        cursor: text;
         
         span {
+            user-select: text !important;
+            -webkit-user-select: text !important;
+            -moz-user-select: text !important;
+            -ms-user-select: text !important;
+            cursor: text;
+            
             &+span::before {
                 content: '•';
                 color: $highlight;
-                margin: 0 $spacing-md;
+                margin-left: $spacing-md;
+                margin-right: $spacing-md;
                 opacity: 0.6;
+                user-select: text !important;
             }
         }
     }
@@ -164,6 +186,10 @@ nav.main-menu {
 .mobile-header {
     display: none;
     text-decoration: none;
+    user-select: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
     
     &:hover {
         text-decoration: none;
@@ -173,6 +199,10 @@ nav.main-menu {
 .desktop-header {
     display: block;
     text-decoration: none;
+    user-select: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
     
     &:hover {
         text-decoration: none;
