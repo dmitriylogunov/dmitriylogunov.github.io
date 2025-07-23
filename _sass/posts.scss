@@ -10,10 +10,14 @@
         box-shadow: $shadow-sm;
         transition: all $transition-base;
         border: 1px solid rgba($primary-dark, 0.1);
+        overflow-x: hidden;
+        
+        @media (max-width: $mobile-breakpoint) {
+            padding: $spacing-lg;
+        }
         
         &:hover {
             box-shadow: $shadow-md;
-            transform: translateY(-2px);
             border-color: rgba($primary-dark, 0.2);
         }
         
@@ -43,6 +47,8 @@
             margin-bottom: $spacing-lg;
             line-height: 1.7;
             color: $text-color;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
             
             &:last-child {
                 margin-bottom: 0;
@@ -52,6 +58,20 @@
                 font-style: italic;
                 color: $primary-accent;
                 font-weight: 500;
+            }
+        }
+        
+        ul {
+            padding-left: $spacing-lg;
+            
+            @media (max-width: $mobile-breakpoint) {
+                padding-left: $spacing-md;
+            }
+            
+            li {
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                margin-bottom: $spacing-sm;
             }
         }
     }

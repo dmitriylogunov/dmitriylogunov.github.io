@@ -1,11 +1,16 @@
 // Variables are imported globally via styles.scss
 
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     width: 100%;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -14,6 +19,7 @@ body {
     background-attachment: fixed;
     color: $text-color;
     margin: 0;
+    overflow-x: hidden;
     // Typography settings are now in typography.scss
 }
 
@@ -162,6 +168,11 @@ nav.main-menu {
                 position: relative;
                 transition: all $transition-base;
                 
+                @media (max-width: $mobile-breakpoint) {
+                    padding: $spacing-md $spacing-lg;
+                    font-size: 0.9rem;
+                }
+                
                 &::after {
                     content: '';
                     position: absolute;
@@ -218,7 +229,13 @@ nav.main-menu {
 /* Mobile styles */
 @media (max-width: $mobile-breakpoint) {
     nav.main-menu {
-        padding: 0.35rem 1.5rem;
+        padding: 0.35rem 0.5rem;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        
+        ul {
+            gap: 0;
+        }
     }
 
     .mobile-header {
@@ -240,6 +257,7 @@ main {
     max-width: $content-max-width;
     width: 100%;
     animation: fadeInUp 0.6s ease-out;
+    box-sizing: border-box;
 
     @media (max-width: $mobile-breakpoint) {
         padding: $spacing-xl $spacing-lg;
