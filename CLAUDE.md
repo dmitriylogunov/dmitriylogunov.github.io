@@ -117,3 +117,7 @@ bundle update
 2. Use legacy color functions (`darken`, `lighten`) instead of `color.adjust`
 3. Import variables globally in the main styles.scss file
 4. Test builds locally before pushing to ensure GitHub Pages compatibility
+
+### Vibe Coding Post Note
+
+"Keep my style but feel free to re-phrase to better follow the english language general structure."
