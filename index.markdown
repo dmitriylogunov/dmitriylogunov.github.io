@@ -7,9 +7,23 @@ title: Dmitriy Logunov - Writing about everything
 
 <div class="posts-ribbon">
   <article class="post-card">
-    <time datetime="2025-01-03">May 3, 2025</time>
+    <time datetime="2025-07-23">July 23, 2025</time>
+    <h2>Why I Still Choose a Desktop Computer in 2025</h2>
+    <p>Despite the mobile-first world we live in, I've chosen a desktop computer as my main work PC. Here's why:</p>
+    <ul>
+      <li><strong>Best bang for the buck:</strong> Dollar for dollar, desktops offer significantly more computing power than laptops</li>
+      <li><strong>Whisper quiet:</strong> My desktop runs virtually silent even under heavy loads</li>
+      <li><strong>Serviceable and upgradeable:</strong> Ever had to throw away a perfectly good laptop just because the power module on the motherboard failed? I have. With a desktop, I can replace or upgrade any component</li>
+      <li><strong>Multi-monitor productivity:</strong> Runs three screens effortlessly, creating an immersive workspace that laptops struggle to match</li>
+      <li><strong>Ideal for gaming:</strong> When work is done, it transforms into a high-performance gaming machine</li>
+      <li><strong>It just feels good:</strong> There's something satisfying about a proper workstation setup - the ergonomics, the space, the control over your environment</li>
+    </ul>
+  </article>
+  
+  <article class="post-card">
+    <time datetime="2025-01-03">January 3, 2025</time>
     <h2>Vibe Coding</h2>
-    <p>It's 2025 and the vibe coding trend is here. Of course I took my time to experiment. So far, I'm happy with the results, if you know what to expect, where to use it, and where not to use it.</p>
+    <p>The vibe coding trend is here. Of course I took my time to experiment. So far, I'm happy with the results, if you know what to expect, where to use it, and where not to use it.</p>
     <p><strong>How it has blown my mind:</strong></p>
     <ul>
       <li>It refactored my old web Mahjong project from Angular 2 to Vue JS. Yes, the initial version had errors but was a very solid start. From there, through iterations and tracking down the issues, I've got it working in a few days. I was able to finally address all todos and small glitches, too. Just wow.</li>
@@ -32,6 +46,7 @@ title: Dmitriy Logunov - Writing about everything
       <li>A good high level understanding by the user (developer) of what is being built, why and how. Yes, it shifts you up from basic coding to a more... senior or project designer level, but still requires you to be there and think critically</li>
     </ul>
   </article>
+  
   
   <article class="post-card">
     <time datetime="2024-05-20">May 20, 2024</time>
