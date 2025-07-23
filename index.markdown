@@ -18,6 +18,7 @@ title: Dmitriy Logunov - Writing about everything
       <li><strong>Ideal for gaming:</strong> When work is done, it transforms into a high-performance gaming machine</li>
       <li><strong>It just feels good:</strong> There's something satisfying about a proper workstation setup - the ergonomics, the space, the control over your environment</li>
     </ul>
+    <p>It also doesn't take much space on the desk or on the floor, sitting neatly in the holder bracket underneath my desktop. And if I want to work at a cafe? I have an old lo-fi laptop to which I sync my work via GitHub.</p>
   </article>
   
   <article class="post-card">
