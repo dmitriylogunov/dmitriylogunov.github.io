@@ -9,7 +9,7 @@ title: Dmitriy Logunov - Writing about everything
   <article class="post-card">
     <time datetime="2025-07-23">July 23, 2025</time>
     <h2>Why I Still Choose a Desktop Computer in 2025</h2>
-    <p>Despite the mobile-first world we live in, I've chosen a desktop computer as my main work PC. Here's why:</p>
+    <p>In the world where laptops define the modern workstation, I've chosen a desktop computer as my main work PC. Here's why:</p>
     <ul>
       <li><strong>Best bang for the buck:</strong> Dollar for dollar, desktops offer significantly more computing power than laptops</li>
       <li><strong>Whisper quiet:</strong> My desktop runs virtually silent even under heavy loads. This is due to optimized component selection based on noise levels.</li>
