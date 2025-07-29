@@ -3,6 +3,73 @@ layout: main
 title: Dmitriy Logunov - Writing about everything
 ---
 
+# Projects
+
+<div class="projects-section">
+  <div class="projects-grid" id="projects-grid">
+    {% assign projects = site.data.timeline %}
+    {% for project in projects %}
+    <div class="project-card" data-project-url="{{ project.link }}">
+      <button class="project-close" aria-label="Close">×</button>
+      <div class="project-image" style="background-image: url('/assets/images/projects/{{ project.image }}');"></div>
+      <div class="project-content">
+        <div class="project-title">{{ project.title }}</div>
+        <div class="project-technologies">{{ project.technologies }}</div>
+        <div class="project-description">{{ project.description }}</div>
+        <div class="project-actions">
+          <a href="{{ project.link }}" class="project-button visit-btn" target="_blank">Visit Project</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const projectCards = document.querySelectorAll('.project-card');
+  
+  projectCards.forEach(card => {
+    const closeBtn = card.querySelector('.project-close');
+    
+    // Handle close button click
+    closeBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      card.classList.remove('expanded');
+    });
+    
+    // Handle card click to expand/collapse
+    card.addEventListener('click', function(e) {
+      // Don't handle clicks on buttons, links, or close button
+      if (e.target.classList.contains('project-button') || 
+          e.target.classList.contains('project-close') ||
+          e.target.tagName === 'A' || 
+          e.target.closest('.project-actions')) {
+        return;
+      }
+      
+      const isExpanded = card.classList.contains('expanded');
+      
+      if (isExpanded) {
+        // Collapse this card
+        card.classList.remove('expanded');
+      } else {
+        // Close all other expanded cards first
+        projectCards.forEach(c => {
+          if (c !== card) {
+            c.classList.remove('expanded');
+          }
+        });
+        
+        // Expand this card
+        card.classList.add('expanded');
+      }
+    });
+  });
+});
+</script>
+
 # What's new
 
 <div class="posts-ribbon">
