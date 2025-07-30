@@ -1,6 +1,6 @@
 
 - title: Mahjong Solitaire Remastered
-  technologies: Modern React, TypeScript, Tailwind CSS, Vite
+  technologies: Vue, TypeScript, Vite
   short_description: Modern rewrite with smooth animations and enhanced graphics
   description: Complete rewrite of my Mahjong Solitaire game with modern technologies, smooth animations, and enhanced gameplay.
   date: 2025
