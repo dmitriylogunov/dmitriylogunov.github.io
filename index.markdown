@@ -11,7 +11,11 @@ title: Dmitriy Logunov - Writing about everything
     {% for project in projects %}
     <div class="project-card" data-project-url="{{ project.link }}">
       <button class="project-close" aria-label="Close">×</button>
-      <div class="project-image" {% if project.image %}style="background-image: url('/assets/images/projects/{{ project.image }}');"{% endif %}></div>
+      <div class="project-image" {% if project.image %}style="background-image: url('/assets/images/projects/{{ project.image }}');"{% endif %}>
+        {% if project.overlay_text %}
+        <div class="project-overlay-text">{{ project.overlay_text }}</div>
+        {% endif %}
+      </div>
       <div class="project-content">
         <div class="project-title">{{ project.title }}</div>
         <div class="project-technologies">{{ project.technologies }}</div>
