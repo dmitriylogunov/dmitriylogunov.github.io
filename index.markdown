@@ -92,6 +92,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="posts-ribbon">
   <article class="post-card">
+    <time datetime="2025-07-30">July 30, 2025</time>
+    <h2>Mahjong Solitaire Remastered - Fun First</h2>
+    <p>Just updated the Mahjong Solitaire Remastered game with a fresh philosophy: fun comes first. All puzzles are now guaranteed to be solvable, and I've slightly reduced the difficulty level. Why? Because it's not about the challenge - it's about how much enjoyment you get from playing. Sometimes the best games are the ones that just make you smile.</p>
+    <p><a href="https://mahjong.dmitriylogunov.info/">Play Mahjong Solitaire Remastered</a></p>
+  </article>
+
+  <article class="post-card">
     <time datetime="2025-07-23">July 23, 2025</time>
     <h2>Why I Still Choose a Desktop Computer in 2025</h2>
     <p>In the world where laptops define the modern workstation, I've chosen a desktop computer as my main work PC. Here's why:</p>

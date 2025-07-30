@@ -2,7 +2,7 @@
 - title: Mahjong Solitaire Remastered
   technologies: Vue, TypeScript, Vite
   short_description: Modern rewrite with smooth animations and enhanced graphics
-  description: Complete rewrite of my Mahjong Solitaire game with modern technologies, smooth animations, and enhanced gameplay.
+  description: Complete rewrite of my Mahjong Solitaire game with modern technologies, smooth animations, and enhanced gameplay. Designed with enjoyment in mind - all puzzles are guaranteed solvable with slightly reduced difficulty, because having fun matters more than the challenge.
   date: 2025
   link: "https://mahjong.dmitriylogunov.info/"
   image: "mahjong-remastered.jpg"
