@@ -22,7 +22,9 @@ title: Dmitriy Logunov - Writing about everything
         <div class="project-technologies">{{ project.technologies }}</div>
         <div class="project-description">{{ project.description }}</div>
         <div class="project-actions">
+          {% if project.link %}
           <a href="{{ project.link }}" class="project-button visit-btn" target="_blank">Visit Project</a>
+          {% endif %}
         </div>
       </div>
     </div>
