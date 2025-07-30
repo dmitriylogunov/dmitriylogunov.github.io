@@ -72,6 +72,17 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+  
+  // Handle clicks outside project cards to collapse expanded cards
+  document.addEventListener('click', function(e) {
+    // Check if the click was outside any project card
+    if (!e.target.closest('.project-card')) {
+      // Collapse all expanded cards
+      projectCards.forEach(card => {
+        card.classList.remove('expanded');
+      });
+    }
+  });
 });
 </script>
 
