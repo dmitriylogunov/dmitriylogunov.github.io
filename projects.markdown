@@ -8,5 +8,5 @@ permalink: /projects/
 
 Here you can find the summary of my personal projects and education milestones.
 
-{% assign main_timeline = site.data.timeline %}
+{% assign main_timeline = site.data.projects %}
 {% include timeline.html data=main_timeline %}
