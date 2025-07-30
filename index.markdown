@@ -18,6 +18,7 @@ title: Dmitriy Logunov - Writing about everything
       </div>
       <div class="project-content">
         <div class="project-title">{{ project.title }}</div>
+        <div class="project-short-description">{{ project.short_description }}</div>
         <div class="project-technologies">{{ project.technologies }}</div>
         <div class="project-description">{{ project.description }}</div>
         <div class="project-actions">
