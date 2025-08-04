@@ -1,0 +1,55 @@
+- date: 2025-08-04
+  title: Game Asset Creation
+  content: >
+    As a developer, I always believed coding was the hardest part of making video games. That was before I created my first game asset pack. The entire process - creating with AI assistance, post-processing, and preparing the graphical assets - involves so much more than I anticipated. Gimp proved to be an excellent editor for this work; I'd definitely underestimated it before.
+
+- date: 2025-07-30
+  title: Mahjong Solitaire Remastered - Fun First
+  content: >
+    I just updated the Mahjong Solitaire Remastered game with a fresh philosophy: fun comes first. All puzzles are now guaranteed to be solvable, and I've slightly reduced the difficulty level. Why? Because it's not about the challenge - it's about how much enjoyment you get from playing. Sometimes the best games are the ones that just make you smile.
+  link: https://mahjong.dmitriylogunov.info/
+  link_text: Play Mahjong Solitaire Remastered
+
+- date: 2025-07-23
+  title: Why I Still Choose a Desktop Computer in 2025
+  content: >
+    In the world where laptops define the modern workstation, I've chosen a desktop computer as my main work PC. Here's why:
+  list:
+    - "<strong>Best bang for the buck:</strong> Dollar for dollar, desktops offer significantly more computing power than laptops"
+    - "<strong>Whisper quiet:</strong> My desktop runs virtually silent even under heavy loads. This is due to optimized component selection based on noise levels."
+    - "<strong>Serviceable and upgradeable:</strong> Ever had to throw away a perfectly good laptop just because the power module on the motherboard failed? I have. With a desktop, I can replace or upgrade any component"
+    - "<strong>Multi-monitor capability:</strong> Runs three screens effortlessly, creating an immersive workspace that laptops struggle to match"
+    - "<strong>Ideal for gaming:</strong> When work is done, it transforms into a high-performance gaming machine"
+    - "<strong>It just feels good:</strong> There's something satisfying about a proper workstation setup - the ergonomics, the space, the control over your environment"
+  content_after: >
+    It also doesn't take much space on the desk or on the floor, sitting neatly in the holder bracket underneath my desktop. And if I want to work at a cafe? I have an old lo-fi laptop to which I sync my work via GitHub.
+
+- date: 2025-01-03
+  title: Vibe Coding
+  content: >
+    The vibe coding trend is here. Of course I took my time to experiment. So far, I'm happy with the results, if you know what to expect, where to use it, and where not to use it.
+  sections:
+    - title: "How it has blown my mind:"
+      list:
+        - "It refactored my old web Mahjong project from Angular 2 to Vue JS. Yes, the initial version had errors but was a very solid start. From there, through iterations and tracking down the issues, I've got it working in a few days. I was able to finally address all todos and small glitches, too. Just wow."
+    - title: "What it won't do for you:"
+      list:
+        - "Write an entire project from scratch, or remove the need for developers altogether"
+        - "Do *everything*. Occasionally you need to jump back into the IDE and do things the old school manual way"
+    - title: "What it did well for me:"
+      list:
+        - "Analysing existing codebases. Ever wondered where this text is coming from, or where this piece of logic is implemented? It finds it in a breeze."
+        - "Updating this website, it saves me significant time on mechanical work regarding design, structure, and wording"
+        - "At work, it created a code structure diagram for a web front end project. The initial generated version was very obviously wrong, but served as a good starting point. From there, it took just a couple of hours to create a perfect and correct Mermaid diagram - a task that would have taken a full day otherwise"
+    - title: "What it requires for success:"
+      list:
+        - "A good high level understanding by the user (developer) of what is being built, why and how. Yes, it shifts you up from basic coding to a more... senior or project designer level, but still requires you to be there and think critically"
+
+- date: 2024-05-20
+  title: Portfolio website
+  content: >
+    <strong>Technologies:</strong> Jekyll, HTML, SASS, YML, Javascript
+  content_after: >
+    The idea of this website was long in the making, but finally I decided to put it together. It is a static website, built with Jekyll, and hosted on GitHub Pages.
+  link: https://github.com/dmitriylogunov/dmitriylogunov.github.io
+  link_text: View on GitHub
