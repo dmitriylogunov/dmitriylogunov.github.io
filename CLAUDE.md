@@ -121,3 +121,10 @@ bundle update
 ### Vibe Coding Post Note
 
 "Keep my style but feel free to re-phrase to better follow the english language general structure."
+
+### Writing Style Instructions
+
+When creating or editing posts:
+- Re-word minimally, for style only
+- Do not add anything else as it makes too obvious that the text is AI generated
+- Keep the original voice and intention intact

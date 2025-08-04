@@ -92,6 +92,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="posts-ribbon">
   <article class="post-card">
+    <time datetime="2025-08-04">August 4, 2025</time>
+    <h2>Game Asset Creation</h2>
+    <p>As a developer, I always believed coding was the hardest part of making video games. That was before I created my first game asset pack. The entire process - creating with AI assistance, post-processing, and preparing the graphical assets - involves so much more than I anticipated. Gimp proved to be an excellent editor for this work; I'd definitely underestimated it before.</p>
+  </article>
+
+  <article class="post-card">
     <time datetime="2025-07-30">July 30, 2025</time>
     <h2>Mahjong Solitaire Remastered - Fun First</h2>
     <p>I just updated the Mahjong Solitaire Remastered game with a fresh philosophy: fun comes first. All puzzles are now guaranteed to be solvable, and I've slightly reduced the difficulty level. Why? Because it's not about the challenge - it's about how much enjoyment you get from playing. Sometimes the best games are the ones that just make you smile.</p>
