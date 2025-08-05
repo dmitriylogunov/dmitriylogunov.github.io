@@ -31,17 +31,10 @@
 <body>
     <header>
         <a href="{{ '/' | relative_url }}" class="mobile-header" draggable="false">
-            <div class="header-content">
-                <div class="header-text">
-                    <h1>{{ site.name }}</h1>
-                    <p>
-                        {%- for profession in site.profession -%}
-                        <span>{{ profession }}</span>
-                        {%- endfor -%}
-                    </p>
-                </div>
-                <div class="header-smile">
-                    <img src="{{ '/assets/images/smile.png' | relative_url }}" alt="Clay cat with quote" style="max-width: 120px; width: 100%; height: auto;">
+            <div class="header-content-mobile">
+                <h1>{{ site.name }}</h1>
+                <div class="header-smile-mobile">
+                    <img src="{{ '/assets/images/smile.png' | relative_url }}" alt="Clay cat with quote" style="max-width: 80px; width: 100%; height: auto;">
                 </div>
             </div>
         </a>
