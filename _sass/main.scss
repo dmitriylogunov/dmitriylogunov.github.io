@@ -411,6 +411,75 @@ main {
     }
 }
 
+// Call-to-action section
+.cta-section {
+    background: linear-gradient(135deg, $primary-accent, $accent-color);
+    border-radius: $round-corner-radius-lg;
+    padding: $spacing-xxl;
+    margin: $spacing-xl 0 $spacing-xxl;
+    text-align: center;
+    box-shadow: $shadow-lg;
+    
+    h2 {
+        color: $white;
+        margin: 0 0 $spacing-md;
+        font-size: 2rem;
+        font-weight: 700;
+        
+        &::before {
+            display: none;
+        }
+    }
+    
+    p {
+        color: $white;
+        opacity: 0.9;
+        margin-bottom: $spacing-xl;
+        font-size: 1.125rem;
+    }
+    
+    .cta-button {
+        display: inline-block;
+        background: $highlight;
+        color: $primary-dark;
+        padding: $spacing-md $spacing-xl;
+        border-radius: $round-corner-radius;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.125rem;
+        transition: all $transition-base;
+        box-shadow: $shadow-md;
+        
+        &::after {
+            display: none;
+        }
+        
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: $shadow-lg;
+            background: darken($highlight, 10%);
+            color: $primary-dark;
+        }
+    }
+    
+    @media (max-width: $mobile-breakpoint) {
+        padding: $spacing-xl $spacing-lg;
+        
+        h2 {
+            font-size: 1.5rem;
+        }
+        
+        p {
+            font-size: 1rem;
+        }
+        
+        .cta-button {
+            font-size: 1rem;
+            padding: $spacing-sm $spacing-lg;
+        }
+    }
+}
+
 // Animations
 @keyframes fadeInUp {
     from {
