@@ -37,6 +37,11 @@
                     <img src="{{ '/assets/images/smile.png' | relative_url }}" alt="Clay cat with quote" style="max-width: 80px; width: 100%; height: auto;">
                 </div>
             </div>
+            <p>
+                {%- for profession in site.profession -%}
+                <span>{{ profession }}</span>
+                {%- endfor -%}
+            </p>
         </a>
         <a href="{{ '/' | relative_url }}" class="desktop-header" draggable="false">
             <div class="header-content">
