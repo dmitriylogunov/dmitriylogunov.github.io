@@ -41,6 +41,44 @@ header {
         height: 4px;
         background: linear-gradient(90deg, $accent-color, $accent-light, $highlight);
     }
+    
+    .header-content {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .header-text {
+        text-align: center;
+        display: inline-block;
+    }
+    
+    .header-smile {
+        position: absolute;
+        top: 50%;
+        transform: translateY(calc(-50% - 5px));
+        left: calc(100% + 15px);
+        width: 120px;
+        height: auto;
+        
+        @media (max-width: $tablet-breakpoint) {
+            width: 80px;
+        }
+        
+        @media (max-width: $mobile-breakpoint) {
+            position: static;
+            transform: none;
+            width: 60px;
+            margin: $spacing-md auto 0;
+            display: block;
+        }
+        
+        img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.3));
+            animation: gentle-float 2s ease-out;
+        }
+    }
 
     a {
         color: $contact-link-color;
@@ -353,5 +391,14 @@ main {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes gentle-float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
     }
 }
