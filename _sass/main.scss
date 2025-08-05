@@ -438,6 +438,13 @@ main {
         font-size: 1.125rem;
     }
     
+    .cta-buttons {
+        display: flex;
+        gap: $spacing-md;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
     .cta-button {
         display: inline-block;
         background: $highlight;
