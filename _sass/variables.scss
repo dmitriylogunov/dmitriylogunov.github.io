@@ -4,17 +4,17 @@
 $font-stack: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", Roboto, Helvetica, Arial, sans-serif;
 $font-stack-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
 
-// Modern color palette - sophisticated and professional
-$primary-dark: #1a1a2e;    // Deep blue-black
-$primary-accent: #16213e;  // Midnight blue
-$accent-color: #0f4c75;    // Ocean blue
-$accent-light: #3282b8;    // Sky blue
-$highlight: #bbe1fa;       // Light blue
+// Game-inspired color palette - fun yet professional
+$primary-dark: #2d1b69;    // Deep violet (gaming purple)
+$primary-accent: #4a2c8e;  // Royal purple
+$accent-color: #6b46c1;    // Bright purple
+$accent-light: #9061d9;    // Light purple
+$highlight: #dec616;       // Golden yellow (from cat image)
 $white: #ffffff;
-$off-white: #f8f9fa;
-$gray-light: #e9ecef;
-$gray-medium: #6c757d;
-$gray-dark: #343a40;
+$off-white: #faf8ff;       // Slightly purple-tinted white
+$gray-light: #e6e2f0;
+$gray-medium: #7e6d9a;
+$gray-dark: #2e2640;
 
 // Semantic color assignments
 $header-bg-color: $primary-dark;
@@ -24,8 +24,8 @@ $secondary-color: $white;
 $text-color: $primary-color;
 $header-text-color: $white;
 $contact-link-color: $highlight;
-$link-color: $accent-light;
-$link-hover-color: $accent-color;
+$link-color: $accent-color;
+$link-hover-color: $highlight;
 
 // Modern background with subtle gradient
 $page-bg-color: $off-white;
