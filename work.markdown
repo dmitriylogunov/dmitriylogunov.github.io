@@ -9,8 +9,8 @@ title: Professional Portfolio - Dmitriy Logunov
     <h2>Looking to hire a passionate developer?</h2>
     <p>Get my complete professional background</p>
     <div class="cta-buttons">
-        <a href="https://docs.google.com/document/d/1-d7ez5A321XL0EQmPcus7xGPVTAtTdeblUMEsGa6Wq4/export?format=pdf" class="cta-button">Download CV (PDF)</a>
-        <a href="https://docs.google.com/document/d/1-d7ez5A321XL0EQmPcus7xGPVTAtTdeblUMEsGa6Wq4/export?format=docx" class="cta-button">Download CV (DOCX)</a>
+        <a href="https://docs.google.com/document/d/e/2PACX-1vTOKQjzBBJ0xk5kv8A-9qRyqHXlq-APnTekXd7LV3efnzB9c-MfZbgOB88msDvHUZ3CYNak46uaZ0rm/pub?output=pdf" class="cta-button">Download CV (PDF)</a>
+        <a href="https://docs.google.com/document/d/e/2PACX-1vTOKQjzBBJ0xk5kv8A-9qRyqHXlq-APnTekXd7LV3efnzB9c-MfZbgOB88msDvHUZ3CYNak46uaZ0rm/pub?output=docx" class="cta-button">Download CV (DOCX)</a>
     </div>
 </div>
 
