@@ -132,5 +132,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="page-links">
   <p>Looking for my work? Check out my <a href="/work">work and education</a> history.</p>
-  <p>You can also <a href="https://docs.google.com/document/d/1-d7ez5A321XL0EQmPcus7xGPVTAtTdeblUMEsGa6Wq4/export?format=docx">download my CV</a> or reach out via the contacts below.</p>
 </div>
