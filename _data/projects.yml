@@ -2,7 +2,7 @@
 - title: Prototype for Guitar Practice Assistant
   technologies: .NET, BasicPitch Neural Network, MIDI
   short_description: AI-powered guitar practice assistant that scores accuracy and tempo
-  description: A .NET application built as a proof of concept for an app that listens to you playing guitar and scores your accuracy and correct tempo. It uses the open-source BasicPitch neural network from Spotify to convert played recordings into MIDI notes, then compares them with the expected performance. It's a long road from this prototype to an actual playable and sellable app, but maybe someday...
+  description: A .NET application built as a proof of concept for an app that listens to you playing guitar and scores your accuracy and correct tempo. It uses the open-source BasicPitch neural network from Spotify to convert played recordings into MIDI notes, then compares them with the expected performance. It's a long road from this prototype to an actual playable app, though.
   date: 2025
   link: "https://github.com/dmitriylogunov/guitar-trainer-prototype"
   image: "guitar-performance-prototype.jpg"
