@@ -213,3 +213,59 @@
     gap: 1rem;
   }
 }
+
+// Image overlay styles
+.image-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  
+  &.active {
+    display: flex;
+  }
+  
+  .overlay-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    z-index: 1001;
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+  
+  .overlay-image {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+  }
+}
+
+// Make expanded project image look clickable
+.project-card.expanded .project-image {
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  
+  &:hover {
+    opacity: 0.95;
+  }
+}

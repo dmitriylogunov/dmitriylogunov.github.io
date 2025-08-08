@@ -11,7 +11,7 @@ title: Dmitriy Logunov - Writing about everything
     {% for project in projects %}
     <div class="project-card" data-project-url="{{ project.link }}">
       <button class="project-close" aria-label="Close">×</button>
-      <div class="project-image" {% if project.image %}style="background-image: url('/assets/images/projects/{{ project.image }}');"{% endif %}>
+      <div class="project-image" {% if project.image %}style="background-image: url('/assets/images/projects/{{ project.image }}');" data-full-image="/assets/images/projects/{{ project.image }}"{% endif %}>
         {% if project.overlay_text %}
         <div class="project-overlay-text">{{ project.overlay_text }}</div>
         {% endif %}
@@ -38,9 +38,18 @@ title: Dmitriy Logunov - Writing about everything
   </div>
 </div>
 
+<!-- Image overlay -->
+<div id="image-overlay" class="image-overlay">
+  <button class="overlay-close" aria-label="Close">×</button>
+  <img class="overlay-image" alt="Full size image">
+</div>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const projectCards = document.querySelectorAll('.project-card');
+  const imageOverlay = document.getElementById('image-overlay');
+  const overlayImage = imageOverlay.querySelector('.overlay-image');
+  const overlayClose = imageOverlay.querySelector('.overlay-close');
   
   projectCards.forEach(card => {
     const closeBtn = card.querySelector('.project-close');
@@ -50,6 +59,16 @@ document.addEventListener('DOMContentLoaded', function() {
       e.preventDefault();
       e.stopPropagation();
       card.classList.remove('expanded');
+    });
+    
+    // Handle image click when expanded
+    const projectImage = card.querySelector('.project-image');
+    projectImage.addEventListener('click', function(e) {
+      if (card.classList.contains('expanded') && this.dataset.fullImage) {
+        e.stopPropagation();
+        overlayImage.src = this.dataset.fullImage;
+        imageOverlay.classList.add('active');
+      }
     });
     
     // Handle card click to expand/collapse
@@ -64,10 +83,10 @@ document.addEventListener('DOMContentLoaded', function() {
       
       const isExpanded = card.classList.contains('expanded');
       
-      if (isExpanded) {
-        // Collapse this card
+      if (isExpanded && !e.target.closest('.project-image')) {
+        // Collapse this card if not clicking on image
         card.classList.remove('expanded');
-      } else {
+      } else if (!isExpanded) {
         // Close all other expanded cards first
         projectCards.forEach(c => {
           if (c !== card) {
@@ -89,6 +108,27 @@ document.addEventListener('DOMContentLoaded', function() {
       projectCards.forEach(card => {
         card.classList.remove('expanded');
       });
+    }
+  });
+  
+  // Handle overlay close
+  overlayClose.addEventListener('click', function(e) {
+    e.stopPropagation();
+    imageOverlay.classList.remove('active');
+  });
+  
+  // Close overlay on background click
+  imageOverlay.addEventListener('click', function(e) {
+    e.stopPropagation();
+    if (e.target === imageOverlay) {
+      imageOverlay.classList.remove('active');
+    }
+  });
+  
+  // Close overlay on Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && imageOverlay.classList.contains('active')) {
+      imageOverlay.classList.remove('active');
     }
   });
 });
