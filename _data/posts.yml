@@ -1,4 +1,9 @@
 - date: 2025-08-08
+  title: From Ubuntu to Windows 11
+  content: >
+    Being an Ubuntu enthusiast for a long period of time, I'm now sort of forced to use Windows 11. The reason - my tools like Unity, Android Studio, and .NET all run better on Windows. Gaming is also a big thing for me, and despite all the progress in Unix compatibility, Windows remains the go-to platform for it. And I must say, yes there's some tension, but overall it's not too bad. Especially paired with Ubuntu on WSL2 where I run all the familiar tools.
+
+- date: 2025-08-08
   title: On AI-Generated Content
   content: >
     I don't mind using AI-generated posts. Why? If there's a party that does something better than me, it makes perfect sense to delegate the task to them. As long as it follows my thoughts, my ideas, and my style, I let the LLM cook.
