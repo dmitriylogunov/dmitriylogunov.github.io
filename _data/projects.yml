@@ -28,5 +28,6 @@
   short_description: Early experiment in rich web apps with Angular JS v2
   description: An early experiment in rich web application development, browser implementation of the Mahjong Solitaire, with Angular JS v2.
   date: 2017
+  link: "https://github.com/dmitriylogunov/mahjong/tree/pre-vue-refactor"
   image: "mahjong-original.jpg"
   overlay_text: "2017"

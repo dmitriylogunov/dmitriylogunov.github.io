@@ -23,7 +23,13 @@ title: Dmitriy Logunov - Writing about everything
         <div class="project-description">{{ project.description }}</div>
         <div class="project-actions">
           {% if project.link %}
-          <a href="{{ project.link }}" class="project-button visit-btn" target="_blank">Visit Project</a>
+          <a href="{{ project.link }}" class="project-button visit-btn" target="_blank">
+            {% if project.link contains 'github' %}
+              View on GitHub
+            {% else %}
+              Visit Project
+            {% endif %}
+          </a>
           {% endif %}
         </div>
       </div>
