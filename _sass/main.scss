@@ -72,11 +72,53 @@ header {
             display: block;
         }
         
+        .header-smile-inner {
+            position: relative;
+            animation: gentle-float 2s ease-out;
+        }
+        
         img {
             width: 100%;
             height: auto;
             filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.3));
-            animation: gentle-float 2s ease-out;
+        }
+        
+        .image-text-overlay {
+            position: absolute;
+            bottom: 25%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            width: 100%;
+            font-family: 'Comic Sans MS', 'Marker Felt', 'Kalam', cursive, sans-serif;
+            text-transform: uppercase;
+            color: #2c2c2c;
+            font-size: 0.55rem;
+            line-height: 1.2;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-shadow: 
+                1px 1px 0 rgba(255,255,255,0.8),
+                -1px -1px 0 rgba(255,255,255,0.8),
+                1px -1px 0 rgba(255,255,255,0.8),
+                -1px 1px 0 rgba(255,255,255,0.8);
+            
+            span {
+                display: block;
+                
+                &::before {
+                    content: none;
+                }
+            }
+            
+            @media (max-width: $tablet-breakpoint) {
+                font-size: 0.45rem;
+            }
+            
+            @media (max-width: $mobile-breakpoint) {
+                font-size: 0.35rem;
+                bottom: 20%;
+            }
         }
     }
 
@@ -281,10 +323,45 @@ nav.main-menu {
     
     .header-smile-mobile {
         flex-shrink: 0;
+        position: relative;
+        
+        .header-smile-mobile-inner {
+            position: relative;
+            animation: gentle-float 2s ease-out;
+        }
         
         img {
             display: block;
             filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.3));
+        }
+        
+        .image-text-overlay {
+            position: absolute;
+            bottom: 25%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            width: 100%;
+            font-family: 'Comic Sans MS', 'Marker Felt', 'Kalam', cursive, sans-serif;
+            text-transform: uppercase;
+            color: #2c2c2c;
+            font-size: 0.35rem;
+            line-height: 1.2;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-shadow: 
+                1px 1px 0 rgba(255,255,255,0.8),
+                -1px -1px 0 rgba(255,255,255,0.8),
+                1px -1px 0 rgba(255,255,255,0.8),
+                -1px 1px 0 rgba(255,255,255,0.8);
+            
+            span {
+                display: block;
+                
+                &::before {
+                    content: none;
+                }
+            }
         }
     }
 }
