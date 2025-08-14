@@ -13,20 +13,20 @@
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:title" content="{{ page.title | default: site.title }}">
     <meta property="og:description" content="Dmitriy Logunov - Software engineer. Coding with purpose and passion. View my portfolio, projects, and professional experience.">
-    <meta property="og:image" content="{{ site.url }}/assets/images/smile.png">
+    <meta property="og:image" content="{{ site.url }}/assets/images/smile.png?v={{ site.css_version }}">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="{{ site.url }}{{ page.url }}">
     <meta property="twitter:title" content="{{ page.title | default: site.title }}">
     <meta property="twitter:description" content="Dmitriy Logunov - Software engineer. Coding with purpose and passion. View my portfolio, projects, and professional experience.">
-    <meta property="twitter:image" content="{{ site.url }}/assets/images/smile.png">
+    <meta property="twitter:image" content="{{ site.url }}/assets/images/smile.png?v={{ site.css_version }}">
     
     <link rel="stylesheet" href="{{ "/assets/css/styles.css" | relative_url }}?v={{ site.css_version }}">
     <!-- Include Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Favicon -->
-    <link rel="icon" href="{{ "/assets/images/favicon.svg" | relative_url }}" type="image/svg+xml">
+    <link rel="icon" href="{{ "/assets/images/favicon.svg" | relative_url }}?v={{ site.css_version }}" type="image/svg+xml">
 
     <!-- Google Analytics -->
     <script>
@@ -51,7 +51,7 @@
                 <h1>{{ site.name }}</h1>
                 <div class="header-smile-mobile">
                     <div class="header-smile-mobile-inner">
-                        <img src="{{ '/assets/images/smile.png' | relative_url }}" alt="Clay cat with quote" style="max-width: 80px; width: 100%; height: auto;">
+                        <img src="{{ '/assets/images/smile.png' | relative_url }}?v={{ site.css_version }}" alt="Clay cat with quote" style="max-width: 80px; width: 100%; height: auto;">
                         <div class="image-text-overlay">
                             <span>smile</span>
                             <span>and watch the</span>
@@ -78,7 +78,7 @@
                 </div>
                 <div class="header-smile">
                     <div class="header-smile-inner">
-                        <img src="{{ '/assets/images/smile.png' | relative_url }}" alt="Clay cat with quote" style="max-width: 120px; width: 100%; height: auto;">
+                        <img src="{{ '/assets/images/smile.png' | relative_url }}?v={{ site.css_version }}" alt="Clay cat with quote" style="max-width: 120px; width: 100%; height: auto;">
                         <div class="image-text-overlay">
                             <span>smile</span>
                             <span>and watch the</span>

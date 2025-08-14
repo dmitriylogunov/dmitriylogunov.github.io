@@ -122,6 +122,10 @@ bundle update
 
 "Keep my style but feel free to re-phrase to better follow the english language general structure."
 
+### Git Commit Messages
+
+Keep commit messages concise - preferably one-liners.
+
 ### Writing Style Instructions
 
 When creating or editing posts:
