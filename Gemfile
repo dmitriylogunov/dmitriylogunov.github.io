@@ -20,6 +20,10 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
 end
 
+# CV generation gems
+gem "prawn", "~> 2.5"
+gem "caracal", "~> 1.4"
+
 # Specify the required version of bigdecimal
 gem "bigdecimal", "3.1.8"
 

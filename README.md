@@ -94,6 +94,56 @@ The site will be available at `http://localhost:4000`.
 - If you encounter permission errors, make sure you're not using `sudo` with gem commands when using rbenv
 - For other Ruby version requirements, use `rbenv install [version]` and `rbenv local [version]` in your project directory
 
+## Generating CV Files
+
+The project includes a CV generation system that creates PDF and DOCX files from the YAML data in `_data/work.yml` and site configuration.
+
+### Prerequisites
+
+The required gems (prawn and caracal) are already included in the Gemfile. Run `bundle install` if you haven't already.
+
+### Generating CVs
+
+There are three ways to generate CV files:
+
+#### Method 1: Direct Ruby Script
+```bash
+ruby scripts/generate_cv.rb
+```
+
+#### Method 2: Using Rake (Recommended)
+```bash
+rake generate_cv
+```
+
+#### Method 3: Using Bundle Exec
+```bash
+bundle exec ruby scripts/generate_cv.rb
+```
+
+### Output Files
+
+The generated CV files will be saved in:
+- `assets/cv/dmitriy-logunov-cv.pdf` - PDF version
+- `assets/cv/dmitriy-logunov-cv.docx` - Microsoft Word version
+
+### Customizing the CV
+
+To customize the CV content:
+1. Edit `_data/work.yml` for work experience and education
+2. Edit `_config.yml` for personal information and contact details
+3. Modify `scripts/templates/cv_template.rb` for data processing
+4. Modify `scripts/generate_cv.rb` for layout and styling
+
+### Available Rake Tasks
+
+```bash
+rake generate_cv    # Generate CV files (PDF and DOCX)
+rake serve         # Serve Jekyll site locally
+rake build         # Build Jekyll site
+rake full_build    # Generate CV and build site
+```
+
 ## Image Optimization
 
 ### Installing ImageMagick on Ubuntu/WSL2
