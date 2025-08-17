@@ -127,13 +127,33 @@ The generated CV files will be saved in:
 - `assets/cv/dmitriy-logunov-cv.pdf` - PDF version
 - `assets/cv/dmitriy-logunov-cv.docx` - Microsoft Word version
 
+### How the CV Generation Works
+
+The CV generation system consists of three main components:
+
+1. **Data Sources**:
+   - `_data/work.yml` - Contains work experience, education, and career milestones
+   - `_config.yml` - Contains personal information (name, email, phone, location, links)
+
+2. **Template Module** (`scripts/templates/cv_template.rb`):
+   - Loads and parses YAML data from the above sources
+   - Provides helper methods to access and format the data
+   - Filters work experience from education entries
+   - Handles data transformation for consistent output
+
+3. **Generation Script** (`scripts/generate_cv.rb`):
+   - Defines the actual CV layout and styling
+   - PDF generation using Prawn (fonts, spacing, colors)
+   - DOCX generation using Caracal (headings, paragraphs, links)
+   - Both formats share the same content structure but with format-appropriate styling
+
 ### Customizing the CV
 
 To customize the CV content:
 1. Edit `_data/work.yml` for work experience and education
 2. Edit `_config.yml` for personal information and contact details
-3. Modify `scripts/templates/cv_template.rb` for data processing
-4. Modify `scripts/generate_cv.rb` for layout and styling
+3. Modify `scripts/templates/cv_template.rb` for data processing and filtering logic
+4. Modify `scripts/generate_cv.rb` for layout, styling, and document structure
 
 ### Available Rake Tasks
 
