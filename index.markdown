@@ -1,6 +1,6 @@
 ---
 layout: main
-title: Dmitriy Logunov - Writing about everything
+title: Dmitriy Logunov - Delivering solutions
 ---
 
 # Projects
