@@ -94,6 +94,76 @@ The site will be available at `http://localhost:4000`.
 - If you encounter permission errors, make sure you're not using `sudo` with gem commands when using rbenv
 - For other Ruby version requirements, use `rbenv install [version]` and `rbenv local [version]` in your project directory
 
+## Generating CV Files
+
+The project includes a CV generation system that creates PDF and DOCX files from the YAML data in `_data/work.yml` and site configuration.
+
+### Prerequisites
+
+The required gems (prawn and caracal) are already included in the Gemfile. Run `bundle install` if you haven't already.
+
+### Generating CVs
+
+There are three ways to generate CV files:
+
+#### Method 1: Direct Ruby Script
+```bash
+ruby scripts/generate_cv.rb
+```
+
+#### Method 2: Using Rake (Recommended)
+```bash
+rake generate_cv
+```
+
+#### Method 3: Using Bundle Exec
+```bash
+bundle exec ruby scripts/generate_cv.rb
+```
+
+### Output Files
+
+The generated CV files will be saved in:
+- `assets/cv/dmitriy-logunov-cv.pdf` - PDF version
+- `assets/cv/dmitriy-logunov-cv.docx` - Microsoft Word version
+
+### How the CV Generation Works
+
+The CV generation system consists of three main components:
+
+1. **Data Sources**:
+   - `_data/work.yml` - Contains work experience, education, and career milestones
+   - `_config.yml` - Contains personal information (name, email, phone, location, links)
+
+2. **Template Module** (`scripts/templates/cv_template.rb`):
+   - Loads and parses YAML data from the above sources
+   - Provides helper methods to access and format the data
+   - Filters work experience from education entries
+   - Handles data transformation for consistent output
+
+3. **Generation Script** (`scripts/generate_cv.rb`):
+   - Defines the actual CV layout and styling
+   - PDF generation using Prawn (fonts, spacing, colors)
+   - DOCX generation using Caracal (headings, paragraphs, links)
+   - Both formats share the same content structure but with format-appropriate styling
+
+### Customizing the CV
+
+To customize the CV content:
+1. Edit `_data/work.yml` for work experience and education
+2. Edit `_config.yml` for personal information and contact details
+3. Modify `scripts/templates/cv_template.rb` for data processing and filtering logic
+4. Modify `scripts/generate_cv.rb` for layout, styling, and document structure
+
+### Available Rake Tasks
+
+```bash
+rake generate_cv    # Generate CV files (PDF and DOCX)
+rake serve         # Serve Jekyll site locally
+rake build         # Build Jekyll site
+rake full_build    # Generate CV and build site
+```
+
 ## Image Optimization
 
 ### Installing ImageMagick on Ubuntu/WSL2
