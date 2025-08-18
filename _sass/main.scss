@@ -179,6 +179,15 @@ header {
         -moz-user-select: text !important;
         -ms-user-select: text !important;
         cursor: text;
+        
+        &.name-scroll {
+            cursor: pointer;
+            transition: transform $transition-base;
+            
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
     }
 
     p {
@@ -278,31 +287,66 @@ nav.main-menu {
     }
 }
 
+/* Contact Popup */
+.contact-popup {
+    position: absolute;
+    background: rgba($white, 0.5);
+    backdrop-filter: blur(10px);
+    padding: $spacing-lg $spacing-xl;
+    border-radius: $round-corner-radius;
+    box-shadow: $shadow-xl;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity $transition-base, visibility $transition-base;
+    cursor: pointer;
+    
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    &:hover {
+        background: rgba($white, 0.7);
+        
+        span {
+            color: $accent-color;
+        }
+    }
+    
+    span {
+        color: $primary-dark;
+        font-size: 1.25rem;
+        font-weight: 600;
+        display: block;
+        transition: color $transition-base;
+        user-select: none;
+    }
+    
+    @media (max-width: $mobile-breakpoint) {
+        padding: $spacing-md $spacing-lg;
+        
+        span {
+            font-size: 1.125rem;
+        }
+    }
+}
+
 /* Mobile and Desktop Header Visibility */
 .mobile-header {
     display: none;
-    text-decoration: none;
     user-select: text;
     -webkit-user-select: text;
     -moz-user-select: text;
     -ms-user-select: text;
-    
-    &:hover {
-        text-decoration: none;
-    }
 }
 
 .desktop-header {
     display: block;
-    text-decoration: none;
     user-select: text;
     -webkit-user-select: text;
     -moz-user-select: text;
     -ms-user-select: text;
-    
-    &:hover {
-        text-decoration: none;
-    }
 }
 
 
