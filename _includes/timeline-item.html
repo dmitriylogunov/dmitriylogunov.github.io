@@ -8,8 +8,20 @@
 
         <p class="description">{{ item.description }}</p>
 
+        {% if item.image %}
+        <div class="timeline-image" data-full-image="/assets/images/{{ item.image }}">
+            <img src="/assets/images/{{ item.image }}" alt="{{ item.title }}" style="max-width: 100%; height: auto; cursor: pointer;">
+        </div>
+        {% endif %}
+
         {% if item.link %}
-        <a href="{{ item.link }}" class="timeline-link">Click to View</a>
+        <a href="{{ item.link }}" class="timeline-link">
+            {% if item.link contains 'http' %}
+                Click to View
+            {% else %}
+                More...
+            {% endif %}
+        </a>
         {% endif %}
     </div>
 
@@ -20,7 +32,13 @@
             <span class="technologies">Technologies: {{ item.technologies }}</span>
             {% endif %}
             {% if item.link %}
-            <a href="{{ item.link }}">Tap to View</a>
+            <a href="{{ item.link }}">
+                {% if item.link contains 'http' %}
+                    Tap to View
+                {% else %}
+                    More...
+                {% endif %}
+            </a>
             {% endif %}
             <span class="controls"><button class="close-button">Close</button></span>
         </div>
