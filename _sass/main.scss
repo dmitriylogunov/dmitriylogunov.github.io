@@ -56,7 +56,7 @@ header {
         position: absolute;
         top: 50%;
         transform: translateY(calc(-50% - 5px));
-        left: calc(100% + 15px);
+        left: calc(100% + 30px);
         width: 120px;
         height: auto;
         
@@ -81,6 +81,14 @@ header {
             width: 100%;
             height: auto;
             filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.3));
+        }
+        
+        img.profile-image {
+            border-radius: 50%;
+            object-fit: cover;
+            filter: blur(0.5px) drop-shadow(2px 4px 8px rgba(0,0,0,0.3));
+            -webkit-filter: blur(0.5px) drop-shadow(2px 4px 8px rgba(0,0,0,0.3));
+            aspect-ratio: 1;
         }
         
         .image-text-overlay {
@@ -355,7 +363,7 @@ nav.main-menu {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
     padding: 0 $spacing-lg;
     
     h1 {
@@ -377,6 +385,14 @@ nav.main-menu {
         img {
             display: block;
             filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.3));
+        }
+        
+        img.profile-image {
+            border-radius: 50%;
+            object-fit: cover;
+            filter: blur(0.5px) drop-shadow(2px 4px 8px rgba(0,0,0,0.3));
+            -webkit-filter: blur(0.5px) drop-shadow(2px 4px 8px rgba(0,0,0,0.3));
+            aspect-ratio: 1;
         }
         
         .image-text-overlay {
