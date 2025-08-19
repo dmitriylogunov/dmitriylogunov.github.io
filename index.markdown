@@ -24,7 +24,9 @@ title: Dmitriy Logunov - Delivering solutions
         <div class="project-actions">
           {% if project.link %}
           <a href="{{ project.link }}" class="project-button visit-btn" target="_blank">
-            {% if project.link contains 'github' %}
+            {% if project.cta_text %}
+              {{ project.cta_text }}
+            {% elsif project.link contains 'github' %}
               View on GitHub
             {% else %}
               Visit Project

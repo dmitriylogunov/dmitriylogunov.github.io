@@ -14,6 +14,7 @@
   date: 2025
   link: "https://mahjong.dmitriylogunov.info/"
   image: "mahjong-remastered.jpg"
+  cta_text: "Play"
 
 - title: Koenig Bicycle Team website
   technologies: PHP, Slim framework, MySQL, HTML, CSS, JavaScript, React
