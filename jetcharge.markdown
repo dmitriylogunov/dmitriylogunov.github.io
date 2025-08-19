@@ -3,6 +3,8 @@ layout: main
 title: Jetcharge
 ---
 
-I worked with a team of Developers, Hardware Engineers, and DevOps specialists to deliver a B2B charging management platform. I took the project from a prototype stage and developed the UI to the point of the first alpha client onboarding. I collaborated with a UI designer to improve the product's usability. Below you can find some screenshots of my work. For more information on JETCharge, visit [jetcharge.com.au](https://jetcharge.com.au).
+[← Back to homepage](/)
+
+I took the prototype for the EV Charging Management Software from the previous developer and built the UI up to the Early Access testing stage with customers. I worked in close collaboration with the backend team and hardware engineers, and performed usability testing with user interviews and iterative design refinements based on feedback. Below you can find some screenshots of my work. For more information on the platform, visit [jetcharge.com.au/illuminate](https://jetcharge.com.au/illuminate/).
 
 {% include gallery.html data=site.data.jetcharge %}
