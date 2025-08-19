@@ -40,18 +40,11 @@ title: Dmitriy Logunov - Delivering solutions
   </div>
 </div>
 
-<!-- Image overlay -->
-<div id="image-overlay" class="image-overlay">
-  <button class="overlay-close" aria-label="Close">×</button>
-  <img class="overlay-image" alt="Full size image">
-</div>
+{% include image-overlay.html %}
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const projectCards = document.querySelectorAll('.project-card');
-  const imageOverlay = document.getElementById('image-overlay');
-  const overlayImage = imageOverlay.querySelector('.overlay-image');
-  const overlayClose = imageOverlay.querySelector('.overlay-close');
   
   projectCards.forEach(card => {
     const closeBtn = card.querySelector('.project-close');
@@ -68,8 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
     projectImage.addEventListener('click', function(e) {
       if (card.classList.contains('expanded') && this.dataset.fullImage) {
         e.stopPropagation();
-        overlayImage.src = this.dataset.fullImage;
-        imageOverlay.classList.add('active');
+        window.openImageOverlay(this.dataset.fullImage);
       }
     });
     
@@ -110,27 +102,6 @@ document.addEventListener('DOMContentLoaded', function() {
       projectCards.forEach(card => {
         card.classList.remove('expanded');
       });
-    }
-  });
-  
-  // Handle overlay close
-  overlayClose.addEventListener('click', function(e) {
-    e.stopPropagation();
-    imageOverlay.classList.remove('active');
-  });
-  
-  // Close overlay on background click
-  imageOverlay.addEventListener('click', function(e) {
-    e.stopPropagation();
-    if (e.target === imageOverlay) {
-      imageOverlay.classList.remove('active');
-    }
-  });
-  
-  // Close overlay on Escape key
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && imageOverlay.classList.contains('active')) {
-      imageOverlay.classList.remove('active');
     }
   });
 });
