@@ -5,7 +5,7 @@ title: Professional Portfolio - Dmitriy Logunov
 
 # Work
 
-When you have a problem, I have a solution. My work isn't just writing software. It's about delivering a holistic approach. It could be updating your web presence, writing an app, or something else. Technology choice is secondary. Impact before code.
+When you have a problem, I have a solution. My work is more than just writing software - it's about delivering a holistic approach. Whether it's updating your web presence, writing an app, or something else entirely. Technology choice is secondary; impact before code.
 
 <div class="cta-section">
     <h2>Looking to hire a passionate developer?</h2>
