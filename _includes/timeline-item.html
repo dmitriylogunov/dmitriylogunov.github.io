@@ -3,10 +3,11 @@
         <h3>
             <span class="date">{{ item.date }}</span>
             <span class="title">{{ item.title }}</span>
-            <span class="technologies">{{ item.technologies }}</span>
+            <span class="technologies desktop-only">{{ item.technologies }}</span>
         </h3>
 
-        <p class="description">{{ item.description }}</p>
+        <p class="description desktop-only">{{ item.description }}</p>
+        <p class="description-mobile mobile-only">{{ item.description }}</p>
 
         {% if item.image %}
         <div class="timeline-image" data-full-image="/assets/images/{{ item.image }}">
@@ -15,32 +16,20 @@
         {% endif %}
 
         {% if item.link %}
-        <a href="{{ item.link }}" class="timeline-link">
+        <a href="{{ item.link }}" class="timeline-link desktop-only">
             {% if item.link contains 'http' %}
                 Click to View
             {% else %}
                 More...
             {% endif %}
         </a>
+        <a href="{{ item.link }}" class="timeline-link-mobile mobile-only">
+            {% if item.link contains 'http' %}
+                View
+            {% else %}
+                More...
+            {% endif %}
+        </a>
         {% endif %}
-    </div>
-
-    <div class="overlay">
-        <div class="overlay-content">
-            <span class="description">{{ item.description }}</span>
-            {% if item.technologies %}
-            <span class="technologies">Technologies: {{ item.technologies }}</span>
-            {% endif %}
-            {% if item.link %}
-            <a href="{{ item.link }}">
-                {% if item.link contains 'http' %}
-                    Tap to View
-                {% else %}
-                    More...
-                {% endif %}
-            </a>
-            {% endif %}
-            <span class="controls"><button class="close-button">Close</button></span>
-        </div>
     </div>
 </div>

@@ -38,6 +38,9 @@
     }
 
     @media (max-width: $mobile-breakpoint) {
+        padding-top: 0.5rem;
+        margin-top: 1rem;
+        
         &::after {
             left: 5%; // this overrides the position of the line
         }
@@ -50,11 +53,51 @@
         width: 50%;
         box-sizing: border-box;
 
+        .desktop-only {
+            display: block;
+        }
+        
+        .mobile-only {
+            display: none;
+        }
+        
         @media (max-width: $mobile-breakpoint) {
-
-            .description,
-            .timeline-link {
+            .desktop-only {
                 display: none;
+            }
+            
+            .mobile-only {
+                display: block;
+            }
+            
+            .technologies {
+                display: none;
+            }
+            
+            .description-mobile {
+                font-size: 0.9rem;
+                color: $primary-color;
+                margin: 0.5rem 0;
+                line-height: 1.4;
+            }
+            
+            .timeline-link-mobile {
+                display: inline-block;
+                margin-top: 0.5rem;
+                padding: 0.4rem 1rem;
+                background-color: $accent-color;
+                color: white;
+                text-decoration: none;
+                font-weight: 600;
+                border-radius: $round-corner-radius;
+                border: 2px solid $accent-color;
+                transition: all $transition-base;
+                
+                &:hover {
+                    background-color: darken($accent-color, 10%);
+                    border-color: darken($accent-color, 10%);
+                    text-decoration: none;
+                }
             }
         }
 
@@ -110,6 +153,10 @@
 
         @media (max-width: $mobile-breakpoint) {
             width: 100%;
+
+            &:first-child {
+                padding-top: 5px;
+            }
 
             &.left,
             &.right {
@@ -174,66 +221,5 @@
             }
         }
 
-        .overlay {
-            visibility: hidden;
-            opacity: 0;
-            display: flex;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-            transition: opacity 0.2s ease-in-out;
-
-            @media (min-width: calc($mobile-breakpoint + 1px)) {
-                display: none;
-            }
-
-            &.visible {
-                visibility: visible;
-                opacity: 1;
-            }
-
-            .overlay-content {
-                width: 90%;
-                max-width: 500px;
-                max-height: 600px;
-                overflow: auto;
-                border: 2px solid $accent-color;
-                background-color: $page-bg-color;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: flex-start;
-                color: $primary-color;
-                padding: 10px;
-                border-radius: $round-corner-radius;
-
-                .description,
-                .technologies {
-                    display: inline;
-                    margin-bottom: 10px;
-                    text-align: left;
-                }
-
-                .controls {
-                    align-self: flex-end;
-                    margin-top: auto;
-                }
-            }
-
-            .close-button {
-                background-color: $header-bg-color;
-                color: $secondary-color;
-                border: 1px solid $primary-color;
-                padding: 5px 10px;
-                cursor: pointer;
-                border-radius: $round-corner-radius;
-            }
-        }
     }
 }
