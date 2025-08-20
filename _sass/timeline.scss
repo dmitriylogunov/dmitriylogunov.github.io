@@ -61,6 +61,18 @@
             display: none;
         }
         
+        .timeline-image {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            
+            img {
+                max-width: 100%;
+                height: auto;
+                cursor: pointer;
+                border-radius: $round-corner-radius;
+            }
+        }
+        
         @media (max-width: $mobile-breakpoint) {
             .desktop-only {
                 display: none;
@@ -162,7 +174,7 @@
         }
 
         @media (max-width: $mobile-breakpoint) {
-            width: 100%;
+            width: 90%;
 
             &:first-child {
                 padding-top: 5px;
