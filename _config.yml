@@ -74,3 +74,29 @@ sass:
 
 # Cache busting version - update this when CSS changes
 css_version: "2.4"
+
+# Color scheme configuration
+colors:
+  # Core colors
+  primary_dark: "#2d1b69"      # Deep violet (gaming purple)
+  primary_accent: "#4a2c8e"    # Royal purple
+  accent_color: "#6b46c1"      # Bright purple
+  accent_light: "#9061d9"      # Light purple
+  highlight: "#dec616"         # Golden yellow (from cat image)
+  white: "#ffffff"
+  off_white: "#faf8ff"         # Slightly purple-tinted white
+  gray_light: "#e6e2f0"
+  gray_medium: "#7e6d9a"
+  gray_dark: "#2e2640"
+  
+  # Semantic assignments
+  header_bg: "#2d1b69"
+  nav_bg: "#4a2c8e"
+  primary: "#2e2640"
+  secondary: "#ffffff"
+  text: "#2e2640"
+  header_text: "#ffffff"
+  contact_link: "#dec616"
+  link: "#6b46c1"
+  link_hover: "#dec616"
+  page_bg: "#faf8ff"
