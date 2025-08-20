@@ -67,24 +67,36 @@ footer {
         }
     }
     
-    .desktop-only {
-        display: inline-block;
-    }
-    
-    .mobile-break {
-        display: none;
-    }
-    
     @media (max-width: $mobile-breakpoint) {
-        .desktop-only {
-            display: none !important;
+        // Hide StackOverflow on mobile
+        .stack-overflow {
+            display: none;
         }
         
-        .mobile-break {
-            display: block;
+        // Remove all line breaks on mobile initially
+        br {
+            display: none;
         }
         
-        // Hide separator bars on mobile
+        // Add line breaks after specific elements on mobile
+        .email-line::after {
+            content: '\A';
+            white-space: pre;
+        }
+        
+        // Add line break after GitHub (last social link visible on mobile)
+        .social-line:nth-of-type(2)::after {
+            content: '\A';
+            white-space: pre;
+        }
+        
+        // Add line break after phone
+        .phone-line::after {
+            content: '\A';
+            white-space: pre;
+        }
+        
+        // Hide separator bars on mobile except between LinkedIn and GitHub
         span + span::before {
             display: none;
         }
