@@ -73,6 +73,11 @@
             }
         }
         
+        .timeline-link {
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+        
         @media (max-width: $mobile-breakpoint) {
             .desktop-only {
                 display: none;
@@ -174,7 +179,7 @@
         }
 
         @media (max-width: $mobile-breakpoint) {
-            width: 90%;
+            width: 100%;
 
             &:first-child {
                 padding-top: 5px;
