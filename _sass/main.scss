@@ -443,6 +443,29 @@ nav.main-menu {
 
     .mobile-header {
         display: block;
+        
+        p span {
+            display: block;
+            text-align: center;
+            
+            &::before {
+                content: '• ';
+                color: lighten($contact-link-color, 20%);
+                margin-right: 0.5rem;
+            }
+            
+            &::after {
+                content: ' •';
+                color: lighten($contact-link-color, 20%);
+                margin-left: 0.5rem;
+            }
+            
+            &+span::before {
+                content: '• ';
+                margin: 0;
+                margin-right: 0.5rem;
+            }
+        }
     }
 
     .desktop-header {
