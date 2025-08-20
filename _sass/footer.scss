@@ -70,44 +70,39 @@ footer {
     @media (max-width: $mobile-breakpoint) {
         // Hide StackOverflow on mobile
         .stack-overflow {
-            display: none;
+            display: none !important;
         }
         
-        // Remove all line breaks on mobile initially
-        br {
-            display: none;
+        // Make spans display as block on mobile for line breaks
+        .email-line,
+        .phone-line {
+            display: block;
+            margin: $spacing-xs 0;
+            
+            &::before {
+                display: none;
+            }
         }
         
-        // Add line breaks after specific elements on mobile
-        .email-line::after {
-            content: '\A';
-            white-space: pre;
+        // Social links stay inline but as a group
+        .social-line {
+            display: inline-block;
+            
+            // Only the first social link shouldn't have separator
+            &:first-of-type::before {
+                display: none;
+            }
         }
         
-        // Add line break after GitHub (last social link visible on mobile)
-        .social-line:nth-of-type(2)::after {
-            content: '\A';
-            white-space: pre;
-        }
-        
-        // Add line break after phone
-        .phone-line::after {
-            content: '\A';
-            white-space: pre;
-        }
-        
-        // Hide separator bars on mobile except between LinkedIn and GitHub
-        span + span::before {
-            display: none;
-        }
-        
-        // Re-add separator between LinkedIn and GitHub on mobile
-        .social-line + .social-line::before {
-            display: inline;
-            content: '|';
-            color: darken($contact-link-color, 20%);
-            margin: 0 $spacing-md;
-            opacity: 0.4;
+        // Location and work rights
+        .location,
+        .work-rights {
+            display: block;
+            margin: $spacing-xs 0;
+            
+            &::before {
+                display: none;
+            }
         }
     }
 }
