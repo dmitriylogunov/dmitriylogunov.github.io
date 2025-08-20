@@ -86,17 +86,22 @@
                 margin-top: 0.5rem;
                 padding: 0.4rem 1rem;
                 background-color: $accent-color;
-                color: white;
+                color: white !important;
                 text-decoration: none;
                 font-weight: 600;
                 border-radius: $round-corner-radius;
                 border: 2px solid $accent-color;
-                transition: all $transition-base;
+                transition: background-color $transition-base, border-color $transition-base;
+                
+                &:visited {
+                    color: white !important;
+                }
                 
                 &:hover {
                     background-color: darken($accent-color, 10%);
                     border-color: darken($accent-color, 10%);
                     text-decoration: none;
+                    color: white !important;
                 }
             }
         }
