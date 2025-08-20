@@ -19,10 +19,28 @@ footer {
         background: linear-gradient(90deg, $highlight, $accent-light, $accent-color);
     }
 
-    div {
+    .footer-container {
         max-width: $content-max-width;
         margin: 0 auto;
         padding: 0 $spacing-xl;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: $spacing-sm;
+    }
+    
+    .footer-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: $spacing-xs;
+    }
+    
+    .separator {
+        color: darken($contact-link-color, 20%);
+        opacity: 0.4;
+        margin: 0 $spacing-xs;
     }
 
     a {
@@ -47,62 +65,28 @@ footer {
             }
         }
     }
-
-    span {
-        display: inline-block;
-        margin: $spacing-xs $spacing-sm;
-        
-        &+span::before {
-            content: '|';
-            color: darken($contact-link-color, 20%);
-            margin: 0 $spacing-md;
-            opacity: 0.4;
-        }
+    
+    .desktop-only {
+        display: inline;
     }
     
-    // Style for line breaks in footer
-    br + span {
-        &::before {
-            display: none;
-        }
+    .mobile-only {
+        display: none;
     }
     
     @media (max-width: $mobile-breakpoint) {
-        // Hide StackOverflow on mobile
-        .stack-overflow {
+        .desktop-only {
             display: none !important;
         }
         
-        // Make spans display as block on mobile for line breaks
-        .email-line,
-        .phone-line {
-            display: block;
-            margin: $spacing-xs 0;
-            
-            &::before {
-                display: none;
-            }
+        .mobile-only {
+            display: flex !important;
         }
         
-        // Social links stay inline but as a group
-        .social-line {
-            display: inline-block;
-            
-            // Only the first social link shouldn't have separator
-            &:first-of-type::before {
-                display: none;
-            }
-        }
-        
-        // Location and work rights
-        .location,
-        .work-rights {
+        .mobile-block {
             display: block;
-            margin: $spacing-xs 0;
-            
-            &::before {
-                display: none;
-            }
+            width: 100%;
+            text-align: center;
         }
     }
 }

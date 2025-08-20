@@ -92,14 +92,30 @@
         {{ content }}
     </main>
     <footer id="footer">
-        <div>
-            <span class="email-line"><a href="mailto:{{ site.email }}">{{ site.email }}</a></span><br/>
-            <span class="social-line"><a href="{{ site.linkedin }}" target="_blank">LinkedIn</a></span>
-            <span class="social-line"><a href="{{ site.github }}" target="_blank">GitHub</a></span>
-            <span class="stack-overflow"><a href="{{ site.stack_overflow }}" target="_blank">StackOverflow</a></span><br/>
-            <span class="phone-line"><a href="tel:{{ site.contacts[0] }}">{{ site.contacts[0] }}</a></span>
-            <span class="location">Blackburn South, VIC</span>
-            <span class="work-rights">{{ site.contacts[3] }}</span>
+        <div class="footer-container">
+            <div class="footer-row">
+                <span><a href="mailto:{{ site.email }}">{{ site.email }}</a></span>
+            </div>
+            <div class="footer-row">
+                <span><a href="{{ site.linkedin }}" target="_blank">LinkedIn</a></span>
+                <span class="separator">|</span>
+                <span><a href="{{ site.github }}" target="_blank">GitHub</a></span>
+                <span class="separator desktop-only">|</span>
+                <span class="desktop-only"><a href="{{ site.stack_overflow }}" target="_blank">StackOverflow</a></span>
+            </div>
+            <div class="footer-row footer-row-combined">
+                <span class="mobile-block"><a href="tel:{{ site.contacts[0] }}">{{ site.contacts[0] }}</a></span>
+                <span class="separator desktop-only">|</span>
+                <span class="desktop-only">Blackburn South, VIC</span>
+                <span class="separator desktop-only">|</span>
+                <span class="desktop-only">{{ site.contacts[3] }}</span>
+            </div>
+            <div class="footer-row mobile-only">
+                <span>Blackburn South, VIC</span>
+            </div>
+            <div class="footer-row mobile-only">
+                <span>{{ site.contacts[3] }}</span>
+            </div>
         </div>
     </footer>
 </body>
