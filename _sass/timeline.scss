@@ -85,22 +85,27 @@
                 display: inline-block;
                 margin-top: 0.5rem;
                 padding: 0.4rem 1rem;
-                background-color: $accent-color;
+                background-color: $accent-color !important;
                 color: white !important;
-                text-decoration: none;
+                text-decoration: none !important;
                 font-weight: 600;
                 border-radius: $round-corner-radius;
                 border: 2px solid $accent-color;
                 transition: background-color $transition-base, border-color $transition-base;
                 
+                &:link,
                 &:visited {
                     color: white !important;
+                    background-color: $accent-color !important;
+                    text-decoration: none !important;
                 }
                 
-                &:hover {
-                    background-color: darken($accent-color, 10%);
+                &:hover,
+                &:active,
+                &:focus {
+                    background-color: darken($accent-color, 10%) !important;
                     border-color: darken($accent-color, 10%);
-                    text-decoration: none;
+                    text-decoration: none !important;
                     color: white !important;
                 }
             }
@@ -212,7 +217,7 @@
             vertical-align: middle;
         }
 
-        a {
+        a:not(.timeline-link-mobile) {
             color: $link-color;
             text-decoration: underline;
             font-weight: bold;
