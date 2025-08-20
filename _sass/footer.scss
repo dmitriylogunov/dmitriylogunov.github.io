@@ -66,4 +66,36 @@ footer {
             display: none;
         }
     }
+    
+    .desktop-only {
+        display: inline-block;
+    }
+    
+    .mobile-break {
+        display: none;
+    }
+    
+    @media (max-width: $mobile-breakpoint) {
+        .desktop-only {
+            display: none !important;
+        }
+        
+        .mobile-break {
+            display: block;
+        }
+        
+        // Hide separator bars on mobile
+        span + span::before {
+            display: none;
+        }
+        
+        // Re-add separator between LinkedIn and GitHub on mobile
+        .social-line + .social-line::before {
+            display: inline;
+            content: '|';
+            color: darken($contact-link-color, 20%);
+            margin: 0 $spacing-md;
+            opacity: 0.4;
+        }
+    }
 }

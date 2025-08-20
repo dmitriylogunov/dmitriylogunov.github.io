@@ -93,17 +93,13 @@
     </main>
     <footer id="footer">
         <div>
-            <span><a href="mailto:{{ site.email }}">{{ site.email }}</a></span><br/>
-            <span><a href="{{ site.linkedin }}" target="_blank">LinkedIn</a></span>
-            <span><a href="{{ site.github }}" target="_blank">GitHub</a></span>
-            <span><a href="{{ site.stack_overflow }}" target="_blank">StackOverflow</a></span><br/>
-            {% for contact in site.contacts %}
-            {% if forloop.first %}
-            <span><a href="tel:{{ contact }}">{{ contact }}</a></span>
-            {% else %}
-            <span>{{ contact }}</span>
-            {% endif %}
-            {% endfor %}
+            <span class="email-line"><a href="mailto:{{ site.email }}">{{ site.email }}</a></span><br class="mobile-break"/>
+            <span class="social-line"><a href="{{ site.linkedin }}" target="_blank">LinkedIn</a></span>
+            <span class="social-line"><a href="{{ site.github }}" target="_blank">GitHub</a></span>
+            <span class="stack-overflow desktop-only"><a href="{{ site.stack_overflow }}" target="_blank">StackOverflow</a></span><br class="mobile-break"/>
+            <span class="phone-line"><a href="tel:{{ site.contacts[0] }}">{{ site.contacts[0] }}</a></span><br class="mobile-break"/>
+            <span class="location">Blackburn South, VIC</span>
+            <span class="work-rights">{{ site.contacts[3] }}</span>
         </div>
     </footer>
 </body>
