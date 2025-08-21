@@ -1,8 +1,10 @@
 - title: La Trobe University
   technologies: Vue, Typescript
-  description: Created an Advanced Standing Credit application with modern and responsive UI.
+  description: I started from the specifications document and built the UI for the Advanced Standing Pre-Offer (ASPO) system at La Trobe University to the production and business acceptance stage. The platform handles credit assessments for international students and reduced admissions response times while improving student satisfaction ratings.
   date: 2025
   type: Contract
+  link: "/latrobe"
+  image: "latrobe/study-plan-guide.png"
 
 - title: JET Charge
   technologies: React, Typescript, .NET, Azure Cloud

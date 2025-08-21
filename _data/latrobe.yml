@@ -1,0 +1,9 @@
+gallery:
+  - image: "/assets/images/latrobe/precedent-matching.png"
+    description: "Precedent matching for credit assessment"
+  - image: "/assets/images/latrobe/study-plan-guide.png"
+    description: "Study Plan Guide showing course structure and credit allocation"
+  - image: "/assets/images/latrobe/communication-tab.png"
+    description: "Communication tab for academic assessment"
+  - image: "/assets/images/latrobe/studylink-integration.png"
+    description: "StudyLink integration showing outcome notes"
