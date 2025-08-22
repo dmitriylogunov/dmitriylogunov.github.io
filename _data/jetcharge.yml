@@ -6,6 +6,6 @@ gallery:
   - image: "/assets/images/jetcharge3.png"
     description: "Charging station details"
   - image: "/assets/images/jetcharge4.png"
-    description: "Usage statistics"
+    description: "Utilisation statistics"
   - image: "/assets/images/jetcharge5.png"
     description: "Energy consumption graph"
