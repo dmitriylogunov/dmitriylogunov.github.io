@@ -6,8 +6,8 @@
             <span class="technologies desktop-only">{{ item.technologies }}</span>
         </h3>
 
-        <p class="description desktop-only">{{ item.description }}</p>
-        <p class="description-mobile mobile-only">{{ item.description }}</p>
+        <p class="description desktop-only">{{ item.description | markdownify }}</p>
+        <p class="description-mobile mobile-only">{{ item.description | markdownify }}</p>
 
         {% if item.image %}
         <div class="timeline-image" data-full-image="/assets/images/{{ item.image }}">
