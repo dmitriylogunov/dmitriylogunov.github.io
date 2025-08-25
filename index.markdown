@@ -38,10 +38,8 @@ title: Dmitriy Logunov - Delivering solutions
     </div>
     {% endfor %}
   </div>
-  <div style="text-align: center; margin-top: 2rem;">
-    <a href="/projects" class="timeline-link desktop-only">More...</a>
-    <a href="/projects" class="timeline-link-mobile mobile-only">More...</a>
-  </div>
+  <a href="/projects" class="timeline-link desktop-only">More...</a>
+  <a href="/projects" class="timeline-link-mobile mobile-only">More...</a>
 </div>
 
 # Work
@@ -74,10 +72,8 @@ title: Dmitriy Logunov - Delivering solutions
     </div>
     {% endfor %}
   </div>
-  <div style="text-align: center; margin-top: 2rem;">
-    <a href="/work" class="timeline-link desktop-only">More...</a>
-    <a href="/work" class="timeline-link-mobile mobile-only">More...</a>
-  </div>
+  <a href="/work" class="timeline-link desktop-only">More...</a>
+  <a href="/work" class="timeline-link-mobile mobile-only">More...</a>
 </div>
 
 {% include image-overlay.html %}
