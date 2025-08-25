@@ -1,13 +1,13 @@
 ---
 layout: main
-title: Dmitriy Logunov - Delivering solutions
+title: All Projects - Dmitriy Logunov
 ---
 
 # Projects
 
 <div class="projects-section">
   <div class="projects-grid" id="projects-grid">
-    {% assign projects = site.data.projects | where: "is_highlight", true | limit: 3 %}
+    {% assign projects = site.data.projects %}
     {% for project in projects %}
     <div class="project-card" data-project-url="{{ project.link }}">
       <button class="project-close" aria-label="Close">×</button>
@@ -38,42 +38,6 @@ title: Dmitriy Logunov - Delivering solutions
     </div>
     {% endfor %}
   </div>
-  <a href="/projects" class="timeline-link desktop-only">More...</a>
-  <a href="/projects" class="timeline-link-mobile mobile-only">More...</a>
-</div>
-
-# Work
-
-<div class="projects-section">
-  <div class="projects-grid" id="work-grid">
-    {% assign work_items = site.data.work | where: "is_highlight", true | limit: 3 %}
-    {% for item in work_items %}
-    <div class="project-card" data-project-url="{{ item.link }}">
-      <button class="project-close" aria-label="Close">×</button>
-      <div class="project-image" {% if item.image %}style="background-image: url('/assets/images/{{ item.image }}');" data-full-image="/assets/images/{{ item.image }}"{% endif %}>
-      </div>
-      <div class="project-content">
-        <div class="project-title">{{ item.title }}</div>
-        <div class="project-short-description">{{ item.date }}{% if item.type %} • {{ item.type }}{% endif %}</div>
-        <div class="project-technologies">{{ item.technologies }}</div>
-        <div class="project-description">{{ item.description | markdownify | strip_html | truncate: 200 }}</div>
-        <div class="project-actions">
-          {% if item.link %}
-          <a href="{{ item.link }}" class="project-button visit-btn" {% if item.link contains 'http' %}target="_blank"{% endif %}>
-            {% if item.link contains 'http' %}
-              Visit Website
-            {% else %}
-              View Details
-            {% endif %}
-          </a>
-          {% endif %}
-        </div>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-  <a href="/work" class="timeline-link desktop-only">More...</a>
-  <a href="/work" class="timeline-link-mobile mobile-only">More...</a>
 </div>
 
 {% include image-overlay.html %}
@@ -94,14 +58,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Handle image click when expanded
     const projectImage = card.querySelector('.project-image');
-    if (projectImage) {
-      projectImage.addEventListener('click', function(e) {
-        if (card.classList.contains('expanded') && this.dataset.fullImage) {
-          e.stopPropagation();
-          window.openImageOverlay(this.dataset.fullImage);
-        }
-      });
-    }
+    projectImage.addEventListener('click', function(e) {
+      if (card.classList.contains('expanded') && this.dataset.fullImage) {
+        e.stopPropagation();
+        window.openImageOverlay(this.dataset.fullImage);
+      }
+    });
     
     // Handle card click to expand/collapse
     card.addEventListener('click', function(e) {
@@ -144,48 +106,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
-
-# What's new
-
-<div class="posts-ribbon">
-  {% assign posts = site.data.posts %}
-  {% for post in posts %}
-  <article class="post-card">
-    <time datetime="{{ post.date }}">{{ post.date | date: "%B %-d, %Y" }}</time>
-    <h2>{{ post.title }}</h2>
-    {% if post.content %}
-    <p>{{ post.content }}</p>
-    {% endif %}
-    
-    {% if post.sections %}
-      {% for section in post.sections %}
-        <p><strong>{{ section.title }}</strong></p>
-        <ul>
-          {% for item in section.list %}
-          <li>{{ item }}</li>
-          {% endfor %}
-        </ul>
-      {% endfor %}
-    {% endif %}
-    
-    {% if post.list %}
-    <ul>
-      {% for item in post.list %}
-      <li>{{ item }}</li>
-      {% endfor %}
-    </ul>
-    {% endif %}
-    
-    {% if post.content_after %}
-    <p>{{ post.content_after }}</p>
-    {% endif %}
-    
-    {% if post.link %}
-    <p><a href="{{ post.link }}">{{ post.link_text }}</a></p>
-    {% endif %}
-  </article>
-  {% endfor %}
-</div>
 
 <div class="page-links">
   <p>Looking for my work? Check out my <a href="/work">work and education</a> history.</p>

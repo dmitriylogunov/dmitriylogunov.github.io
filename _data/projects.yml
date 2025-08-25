@@ -6,6 +6,7 @@
   date: 2025
   link: "https://github.com/dmitriylogunov/guitar-trainer-prototype"
   image: "guitar-performance-prototype.jpg"
+  is_highlight: true
 
 - title: Mahjong Solitaire Remastered
   technologies: Vue, TypeScript, Vite
@@ -15,6 +16,7 @@
   link: "https://mahjong.dmitriylogunov.info/"
   image: "mahjong-remastered.jpg"
   cta_text: "Play"
+  is_highlight: true
 
 - title: Koenig Bicycle Team website
   technologies: PHP, Slim framework, MySQL, HTML, CSS, JavaScript, React
@@ -23,6 +25,7 @@
   date: 2004
   link: "http://koenigbicycle.ru"
   image: "koenig-bicycle.jpg"
+  is_highlight: true
   
 - title: Mahjong Solitaire
   technologies: Angular JS v2, Typescript, SASS, Stylus, HTML, Webpack
@@ -32,3 +35,4 @@
   link: "https://github.com/dmitriylogunov/mahjong/tree/pre-vue-refactor"
   image: "mahjong-original.jpg"
   overlay_text: "2017"
+  is_highlight: false

@@ -5,6 +5,7 @@
   type: Contract
   link: "/latrobe"
   image: "latrobe/study-plan-guide.png"
+  is_highlight: true
 
 - title: JET Charge
   technologies: React, Typescript, .NET, Azure Cloud
@@ -12,49 +13,59 @@
   date: 2023
   link: "/jetcharge"
   image: "jetcharge2.png"
+  is_highlight: true
 
 - title: TallBob
   technologies: React, Redux, Typescript, Laravel Mix, AWS, Jest Testing Library, npm.
   description: I created and implemented the enhanced version of the customer self-service portal.
   date: 2022
   link: "/tallbob"
+  image: "tallbob2.png"
+  is_highlight: true
 
 - title: Movember
   technologies: PHP, Zend Framework, HTML, CSS, JavaScript, MySQL
   description: Working for Movember is special for me. Our team's efforts have made a real difference in men's health. We've helped raise awareness about important issues like prostate cancer and mental health. It's amazing to see more men talking openly about their health because of our work. Knowing that we've helped save lives and improve men's well-being makes me feel that my job truly matters.
   date: 2015
   link: "https://movember.com/"
+  is_highlight: true
 
 - title: Online courses with MongoDB University
   technologies: MongoDB, Mongoose
   description: I took a series of online courses to learn how to run MongoDB in the web applications. This translated to a better knowledge of cloud document databases later.
   date: 2014
   link: "https://learn.mongodb.com/"
+  is_highlight: true
 
 - title: ACER (Australian Council for Educational Research)
   technologies: PHP, Zend Framework, MVC, HTML, MySQL
   description: In the role of a back-end developer, in a 5-person team, I developed an automated exam grading system for the PISA tests. The system enhanced the scoring process by providing a single-page interface for reviewers to view student answers and input scores.
   date: 2011
+  is_highlight: true
 
 - title: Move to Melbourne
   description: A courageous decision to leave everything behind and call Melbourne home. I consider myself a Melburninian now and have lived there more of my adult life than anywhere else.
   date: 2009
+  is_highlight: true
 
 - title: Intenium GMBH
   technologies: C++, Python, HTML, CSS, JavaScript, MySQL
   description: I worked on the backend for the multiplayer game "Alamandi". My role was focused around real-time game data collection, analysis and visualization.
   date: 2008
   link: "https://en.wikipedia.org/wiki/Intenium"
+  is_highlight: true
 
 - title: HeroCraft
   technologies: Java ME, J2ME, MySQL, XML
   description: With the passion for video games development, I joined Herocraft, a mobile game development company, where I worked on the mobile client for Jamango social network.
   date: 2007
   link: "https://herocraft.com/"
+  is_highlight: true
 
 - title: Baltic Federal University named after Immanuel Kant
   technologies: Computer programming theory, C++, SQL, Databases theory, Python, Assembly language, Computer graphics, Algorithms and data structures
   description: Masters degree in the Applied mathematics with a focus on the informational technology, numerical methods and mathematical modeling.
   date: 2003
   link: "https://en.wikipedia.org/wiki/Immanuel_Kant_Baltic_Federal_University"
+  is_highlight: true
 
