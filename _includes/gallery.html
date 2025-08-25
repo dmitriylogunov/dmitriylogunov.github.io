@@ -3,8 +3,23 @@
     {% for item in include.data.gallery %}
     <div class="item">
       <h3>{{ item.description }}</h3>
-      <img src="{{ item.image }}" alt="{{ item.description }}">
+      <img src="{{ item.image }}" alt="{{ item.description }}" class="gallery-image" data-full-image="{{ item.image }}">
     </div>
     {% endfor %}
   </div>
 </section>
+
+{% include image-overlay.html %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Handle gallery image clicks
+  document.querySelectorAll('.gallery-image').forEach(function(img) {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', function(e) {
+      e.stopPropagation();
+      window.openImageOverlay(this.dataset.fullImage);
+    });
+  });
+});
+</script>
