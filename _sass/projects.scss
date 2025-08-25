@@ -9,9 +9,6 @@
   // Style More links in projects sections
   .timeline-link {
     display: inline-block;
-    margin-top: 2rem;
-    text-align: center;
-    width: 100%;
     
     &.desktop-only {
       @media (max-width: 768px) {

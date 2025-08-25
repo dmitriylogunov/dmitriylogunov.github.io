@@ -666,3 +666,9 @@ main {
         transform: translateY(-10px);
     }
 }
+
+// Global timeline-link styles (for use outside timeline context)
+.timeline-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+}
