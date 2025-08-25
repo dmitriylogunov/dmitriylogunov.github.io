@@ -5,6 +5,50 @@
     margin-bottom: 2rem;
     text-align: center;
   }
+  
+  // Style More links in projects sections
+  .timeline-link {
+    display: inline-block;
+    margin-top: 2rem;
+    text-align: center;
+    width: 100%;
+    
+    &.desktop-only {
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+  
+  .timeline-link-mobile {
+    display: none;
+    margin-top: 2rem;
+    padding: 0.4rem 1rem;
+    background-color: #6b46c1 !important;
+    color: white !important;
+    text-decoration: none !important;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 2px solid #6b46c1;
+    text-align: center;
+    width: auto;
+    
+    @media (max-width: 768px) {
+      display: inline-block;
+    }
+    
+    &:link,
+    &:visited {
+      color: white !important;
+      background-color: #6b46c1 !important;
+      text-decoration: none !important;
+    }
+    
+    &:hover {
+      background-color: #5534a5 !important;
+      border-color: #5534a5 !important;
+    }
+  }
 }
 
 .projects-grid {
