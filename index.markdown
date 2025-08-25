@@ -7,8 +7,8 @@ title: Dmitriy Logunov - Delivering solutions
 
 <div class="projects-section">
   <div class="projects-grid" id="projects-grid">
-    {% assign projects = site.data.projects | where: "is_highlight", true | limit: 3 %}
-    {% for project in projects %}
+    {% assign highlighted_projects = site.data.projects | where: "is_highlight", true %}
+    {% for project in highlighted_projects limit: 3 %}
     <div class="project-card" data-project-url="{{ project.link }}">
       <button class="project-close" aria-label="Close">×</button>
       <div class="project-image" {% if project.image %}style="background-image: url('/assets/images/projects/{{ project.image }}');" data-full-image="/assets/images/projects/{{ project.image }}"{% endif %}>
@@ -38,16 +38,18 @@ title: Dmitriy Logunov - Delivering solutions
     </div>
     {% endfor %}
   </div>
-  <a href="/projects" class="timeline-link desktop-only">More...</a>
-  <a href="/projects" class="timeline-link-mobile mobile-only">More...</a>
+  <div style="text-align: center; margin-top: 2rem;">
+    <a href="/projects" class="timeline-link desktop-only">More...</a>
+    <a href="/projects" class="timeline-link-mobile mobile-only">More...</a>
+  </div>
 </div>
 
 # Work
 
 <div class="projects-section">
   <div class="projects-grid" id="work-grid">
-    {% assign work_items = site.data.work | where: "is_highlight", true | limit: 3 %}
-    {% for item in work_items %}
+    {% assign highlighted_work = site.data.work | where: "is_highlight", true %}
+    {% for item in highlighted_work limit: 3 %}
     <div class="project-card" data-project-url="{{ item.link }}">
       <button class="project-close" aria-label="Close">×</button>
       <div class="project-image" {% if item.image %}style="background-image: url('/assets/images/{{ item.image }}');" data-full-image="/assets/images/{{ item.image }}"{% endif %}>
@@ -72,8 +74,10 @@ title: Dmitriy Logunov - Delivering solutions
     </div>
     {% endfor %}
   </div>
-  <a href="/work" class="timeline-link desktop-only">More...</a>
-  <a href="/work" class="timeline-link-mobile mobile-only">More...</a>
+  <div style="text-align: center; margin-top: 2rem;">
+    <a href="/work" class="timeline-link desktop-only">More...</a>
+    <a href="/work" class="timeline-link-mobile mobile-only">More...</a>
+  </div>
 </div>
 
 {% include image-overlay.html %}
