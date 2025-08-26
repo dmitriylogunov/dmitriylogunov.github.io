@@ -670,5 +670,11 @@ main {
 // Global timeline-link styles (for use outside timeline context)
 .timeline-link {
     display: inline-block;
-    margin-top: 0.5rem;
+    margin-top: $spacing-sm;
+    margin-bottom: $spacing-xl;
+    
+    @media (max-width: $mobile-breakpoint) {
+        display: block;
+        text-align: right;
+    }
 }

@@ -1,5 +1,5 @@
 .projects-section {
-  margin-bottom: 3rem;
+  margin-bottom: $spacing-md;
 
   h2 {
     margin-bottom: 2rem;
@@ -19,31 +19,33 @@
   
   .timeline-link-mobile {
     display: none;
-    margin-top: 2rem;
+    margin-top: $spacing-sm;
+    margin-bottom: $spacing-xl;
     padding: 0.4rem 1rem;
-    background-color: #6b46c1 !important;
+    background-color: $accent-color !important;
     color: white !important;
     text-decoration: none !important;
     font-weight: 600;
-    border-radius: 8px;
-    border: 2px solid #6b46c1;
+    border-radius: $round-corner-radius;
+    border: 2px solid $accent-color;
     text-align: center;
-    width: auto;
+    width: fit-content;
+    margin-left: auto;
     
-    @media (max-width: 768px) {
-      display: inline-block;
+    @media (max-width: $mobile-breakpoint) {
+      display: block;
     }
     
     &:link,
     &:visited {
       color: white !important;
-      background-color: #6b46c1 !important;
+      background-color: $accent-color !important;
       text-decoration: none !important;
     }
     
     &:hover {
-      background-color: #5534a5 !important;
-      border-color: #5534a5 !important;
+      background-color: darken($accent-color, 10%) !important;
+      border-color: darken($accent-color, 10%) !important;
     }
   }
 }
@@ -51,8 +53,8 @@
 .projects-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  gap: $spacing-lg;
+  margin-bottom: $spacing-sm;
 }
 
 .project-card {

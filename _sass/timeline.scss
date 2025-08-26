@@ -4,7 +4,7 @@
 .timeline {
     position: relative;
     max-width: 1200px;
-    margin: $spacing-xxl auto;
+    margin: $spacing-xxl auto $spacing-md;
     padding: $spacing-xl 0;
 
     &::after {
@@ -62,8 +62,8 @@
         }
         
         .timeline-image {
-            margin-top: 1rem;
-            margin-bottom: 0.5rem;
+            margin-top: $spacing-md;
+            margin-bottom: $spacing-sm;
             
             img {
                 max-width: 100%;
@@ -75,7 +75,7 @@
         
         .timeline-link {
             display: inline-block;
-            margin-top: 0.5rem;
+            margin-top: $spacing-sm;
         }
         
         @media (max-width: $mobile-breakpoint) {
@@ -99,8 +99,10 @@
             }
             
             .timeline-link-mobile {
-                display: inline-block;
-                margin-top: 0.5rem;
+                display: block;
+                margin-top: $spacing-sm;
+                margin-bottom: $spacing-xl;
+                margin-left: auto;
                 padding: 0.4rem 1rem;
                 background-color: $accent-color !important;
                 color: white !important;
@@ -108,6 +110,7 @@
                 font-weight: 600;
                 border-radius: $round-corner-radius;
                 border: 2px solid $accent-color;
+                width: fit-content;
                 transition: background-color $transition-base, border-color $transition-base;
                 
                 &:link,
