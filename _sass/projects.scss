@@ -13,19 +13,18 @@
     overflow: hidden;
     transition: max-height 0.5s ease-out, opacity 0.3s ease-out, margin 0.3s ease-out;
     margin-bottom: 0;
-    margin-top: -$spacing-lg; // Compensate for grid gap when collapsed
   }
   
   &.expanded .additional-project {
     max-height: 500px;
     opacity: 1;
     margin-bottom: auto;
-    margin-top: 0; // Restore normal margin when expanded
   }
   
   // Style More links in projects sections
   .timeline-link {
     display: inline-block;
+    margin-top: -$spacing-sm; // Compensate for grid gap
     
     &.desktop-only {
       @media (max-width: 768px) {
@@ -36,7 +35,7 @@
   
   .timeline-link-mobile {
     display: none;
-    margin-top: $spacing-sm;
+    margin-top: -$spacing-xs;
     margin-bottom: $spacing-xl;
     padding: 0.3rem 1rem;
     background-color: $accent-color !important;
