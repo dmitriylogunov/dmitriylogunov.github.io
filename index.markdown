@@ -126,10 +126,14 @@ function toggleProjects() {
     projectsSection.classList.add('expanded');
     expandBtn.innerHTML = 'Collapse <i class="fas fa-chevron-up" id="expand-icon"></i>';
     expandBtnMobile.innerHTML = 'Collapse <i class="fas fa-chevron-up" id="expand-icon-mobile"></i>';
+    expandBtn.style.marginTop = '0.75rem';
+    expandBtnMobile.style.marginTop = '0.75rem';
   } else {
     projectsSection.classList.remove('expanded');
     expandBtn.innerHTML = 'Expand <i class="fas fa-chevron-down" id="expand-icon"></i>';
     expandBtnMobile.innerHTML = 'Expand <i class="fas fa-chevron-down" id="expand-icon-mobile"></i>';
+    expandBtn.style.marginTop = '';
+    expandBtnMobile.style.marginTop = '';
   }
 }
 
