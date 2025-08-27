@@ -6,23 +6,24 @@
     text-align: center;
   }
   
+  // Animation for additional projects
+  .additional-project {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.3s ease-out, margin 0.3s ease-out;
+    margin-bottom: 0;
+  }
+  
+  &.expanded .additional-project {
+    max-height: 500px;
+    opacity: 1;
+    margin-bottom: auto;
+  }
+  
   // Style More links in projects sections
   .timeline-link {
     display: inline-block;
-    background: none;
-    border: 2px solid $accent-color;
-    color: $accent-color;
-    padding: 0.4rem 1rem;
-    border-radius: $round-corner-radius;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all $transition-base;
-    text-decoration: none;
-    
-    &:hover {
-      background-color: $accent-color;
-      color: white;
-    }
     
     &.desktop-only {
       @media (max-width: 768px) {
@@ -36,25 +37,30 @@
     margin-top: $spacing-sm;
     margin-bottom: $spacing-xl;
     padding: 0.4rem 1rem;
-    background: none;
-    border: 2px solid $accent-color;
-    color: $accent-color;
+    background-color: $accent-color !important;
+    color: white !important;
     text-decoration: none !important;
     font-weight: 600;
     border-radius: $round-corner-radius;
+    border: 2px solid $accent-color;
     text-align: center;
     width: fit-content;
     margin-left: auto;
-    cursor: pointer;
-    transition: all $transition-base;
     
     @media (max-width: $mobile-breakpoint) {
       display: block;
     }
     
+    &:link,
+    &:visited {
+      color: white !important;
+      background-color: $accent-color !important;
+      text-decoration: none !important;
+    }
+    
     &:hover {
-      background-color: $accent-color;
-      color: white;
+      background-color: darken($accent-color, 10%) !important;
+      border-color: darken($accent-color, 10%) !important;
     }
   }
 }

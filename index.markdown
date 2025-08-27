@@ -41,7 +41,7 @@ title: Dmitriy Logunov - Delivering solutions
     <!-- Hidden additional projects -->
     {% assign other_projects = site.data.projects | where: "is_highlight", false %}
     {% for project in other_projects %}
-    <div class="project-card additional-project" data-project-url="{{ project.link }}" style="display: none;">
+    <div class="project-card additional-project" data-project-url="{{ project.link }}">
       <button class="project-close" aria-label="Close">×</button>
       <div class="project-image" {% if project.image %}style="background-image: url('/assets/images/projects/{{ project.image }}');" data-full-image="/assets/images/projects/{{ project.image }}"{% endif %}>
         {% if project.overlay_text %}
@@ -114,22 +114,18 @@ title: Dmitriy Logunov - Delivering solutions
 let projectsExpanded = false;
 
 function toggleProjects() {
-  const additionalProjects = document.querySelectorAll('.additional-project');
+  const projectsSection = document.getElementById('projects-section');
   const expandBtn = document.getElementById('expand-projects-btn');
   const expandBtnMobile = document.getElementById('expand-projects-btn-mobile');
   
   projectsExpanded = !projectsExpanded;
   
   if (projectsExpanded) {
-    additionalProjects.forEach(card => {
-      card.style.display = '';
-    });
+    projectsSection.classList.add('expanded');
     expandBtn.textContent = 'Collapse';
     expandBtnMobile.textContent = 'Collapse';
   } else {
-    additionalProjects.forEach(card => {
-      card.style.display = 'none';
-    });
+    projectsSection.classList.remove('expanded');
     expandBtn.textContent = 'Expand';
     expandBtnMobile.textContent = 'Expand';
   }
