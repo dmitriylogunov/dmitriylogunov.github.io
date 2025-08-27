@@ -8,6 +8,7 @@
   
   // Animation for additional projects
   .additional-project {
+    display: none; // Completely hidden when collapsed
     max-height: 0;
     opacity: 0;
     overflow: hidden;
@@ -16,6 +17,7 @@
   }
   
   &.expanded .additional-project {
+    display: block;
     max-height: 500px;
     opacity: 1;
     margin-bottom: auto;
