@@ -5,7 +5,7 @@ title: Dmitriy Logunov - Delivering solutions
 
 # Projects
 
-<div class="projects-section">
+<div class="projects-section" id="projects-section">
   <div class="projects-grid" id="projects-grid">
     {% assign highlighted_projects = site.data.projects | where: "is_highlight", true %}
     {% for project in highlighted_projects limit: 3 %}
@@ -37,9 +37,41 @@ title: Dmitriy Logunov - Delivering solutions
       </div>
     </div>
     {% endfor %}
+    
+    <!-- Hidden additional projects -->
+    {% assign other_projects = site.data.projects | where: "is_highlight", false %}
+    {% for project in other_projects %}
+    <div class="project-card additional-project" data-project-url="{{ project.link }}" style="display: none;">
+      <button class="project-close" aria-label="Close">×</button>
+      <div class="project-image" {% if project.image %}style="background-image: url('/assets/images/projects/{{ project.image }}');" data-full-image="/assets/images/projects/{{ project.image }}"{% endif %}>
+        {% if project.overlay_text %}
+        <div class="project-overlay-text">{{ project.overlay_text }}</div>
+        {% endif %}
+      </div>
+      <div class="project-content">
+        <div class="project-title">{{ project.title }}</div>
+        <div class="project-short-description">{{ project.short_description }}</div>
+        <div class="project-technologies">{{ project.technologies }}</div>
+        <div class="project-description">{{ project.description }}</div>
+        <div class="project-actions">
+          {% if project.link %}
+          <a href="{{ project.link }}" class="project-button visit-btn" target="_blank">
+            {% if project.cta_text %}
+              {{ project.cta_text }}
+            {% elsif project.link contains 'github' %}
+              View on GitHub
+            {% else %}
+              Visit Project
+            {% endif %}
+          </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
   </div>
-  <a href="/projects" class="timeline-link desktop-only">More...</a>
-  <a href="/projects" class="timeline-link-mobile mobile-only">More...</a>
+  <button class="timeline-link desktop-only" id="expand-projects-btn" onclick="toggleProjects()">Expand</button>
+  <button class="timeline-link-mobile mobile-only" id="expand-projects-btn-mobile" onclick="toggleProjects()">Expand</button>
 </div>
 
 # Work
@@ -79,6 +111,30 @@ title: Dmitriy Logunov - Delivering solutions
 {% include image-overlay.html %}
 
 <script>
+let projectsExpanded = false;
+
+function toggleProjects() {
+  const additionalProjects = document.querySelectorAll('.additional-project');
+  const expandBtn = document.getElementById('expand-projects-btn');
+  const expandBtnMobile = document.getElementById('expand-projects-btn-mobile');
+  
+  projectsExpanded = !projectsExpanded;
+  
+  if (projectsExpanded) {
+    additionalProjects.forEach(card => {
+      card.style.display = '';
+    });
+    expandBtn.textContent = 'Collapse';
+    expandBtnMobile.textContent = 'Collapse';
+  } else {
+    additionalProjects.forEach(card => {
+      card.style.display = 'none';
+    });
+    expandBtn.textContent = 'Expand';
+    expandBtnMobile.textContent = 'Expand';
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   const projectCards = document.querySelectorAll('.project-card');
   
