@@ -21,6 +21,15 @@
     margin-bottom: auto;
   }
   
+  // When expanded, add margin to the buttons
+  &.expanded .timeline-link {
+    margin-top: 1rem;
+  }
+  
+  &.expanded .timeline-link-mobile {
+    margin-top: 1rem;
+  }
+  
   // Style More links in projects sections
   .timeline-link {
     display: inline-block;
