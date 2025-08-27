@@ -13,12 +13,14 @@
     overflow: hidden;
     transition: max-height 0.5s ease-out, opacity 0.3s ease-out, margin 0.3s ease-out;
     margin-bottom: 0;
+    margin-top: -$spacing-lg; // Compensate for grid gap when collapsed
   }
   
   &.expanded .additional-project {
     max-height: 500px;
     opacity: 1;
     margin-bottom: auto;
+    margin-top: 0; // Restore normal margin when expanded
   }
   
   // Style More links in projects sections
