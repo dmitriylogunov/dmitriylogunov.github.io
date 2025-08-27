@@ -24,7 +24,7 @@
   // Style More links in projects sections
   .timeline-link {
     display: inline-block;
-    margin-top: -2.5rem; // Compensate for grid gap (1.5rem gap minus desired 0.5rem = -1rem)
+    margin-top: -$spacing-lg; // Compensate for grid gap to get closer spacing
     
     &.desktop-only {
       @media (max-width: 768px) {
@@ -35,7 +35,7 @@
   
   .timeline-link-mobile {
     display: none;
-    margin-top: -2.5rem;
+    margin-top: -$spacing-lg;
     margin-bottom: $spacing-xl;
     padding: 0.3rem 1rem;
     background-color: $accent-color !important;
