@@ -8,7 +8,6 @@
   
   // Animation for additional projects
   .additional-project {
-    display: none; // Completely hidden when collapsed
     max-height: 0;
     opacity: 0;
     overflow: hidden;
@@ -17,7 +16,6 @@
   }
   
   &.expanded .additional-project {
-    display: block;
     max-height: 500px;
     opacity: 1;
     margin-bottom: auto;
@@ -71,12 +69,13 @@
 .projects-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: $spacing-lg;
+  margin: -($spacing-lg / 2); // Negative margin to offset card margins
   margin-bottom: 0; // Remove bottom margin to eliminate gap
 }
 
 .project-card {
-  flex: 0 0 calc(33.333% - 1rem);
+  flex: 0 0 calc(33.333% - #{$spacing-lg});
+  margin: ($spacing-lg / 2); // Add margin to each card
   background: white;
   border-radius: 8px;
   border: 1px solid lighten($accent-color, 30%);
@@ -249,7 +248,7 @@
 
 @media (max-width: 768px) {
   .project-card {
-    flex: 0 0 calc(50% - 0.75rem);
+    flex: 0 0 calc(50% - #{$spacing-lg});
     
     &.expanded {
       flex-direction: column;
@@ -268,11 +267,13 @@
 
 @media (max-width: 480px) {
   .project-card {
-    flex: 0 0 100%;
+    flex: 0 0 calc(100% - #{$spacing-md});
+    margin: ($spacing-md / 2);
   }
   
   .projects-grid {
-    gap: 1rem;
+    margin: -($spacing-md / 2);
+    margin-bottom: 0;
   }
 }
 
