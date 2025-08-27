@@ -70,6 +70,7 @@
                 height: auto;
                 cursor: pointer;
                 border-radius: $round-corner-radius;
+                border: 1px solid lighten($accent-color, 30%);
             }
         }
         
