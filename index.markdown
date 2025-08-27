@@ -104,8 +104,8 @@ title: Dmitriy Logunov - Delivering solutions
     </div>
     {% endfor %}
   </div>
-  <a href="/work" class="timeline-link desktop-only">View All <i class="fas fa-external-link"></i></a>
-  <a href="/work" class="timeline-link-mobile mobile-only">View All <i class="fas fa-external-link"></i></a>
+  <a href="/work" class="timeline-link desktop-only" style="margin-top: 0.75rem;">View All <i class="fas fa-external-link"></i></a>
+  <a href="/work" class="timeline-link-mobile mobile-only" style="margin-top: 0.75rem;">View All <i class="fas fa-external-link"></i></a>
 </div>
 
 {% include image-overlay.html %}

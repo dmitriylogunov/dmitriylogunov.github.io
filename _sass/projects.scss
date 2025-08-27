@@ -24,7 +24,7 @@
   // Style More links in projects sections
   .timeline-link {
     display: inline-block;
-    margin-top: 0.75rem; // Gap between grid and button
+    margin-top: $spacing-sm; // Add small gap between grid and button
     
     &.desktop-only {
       @media (max-width: 768px) {
@@ -35,7 +35,7 @@
   
   .timeline-link-mobile {
     display: none;
-    margin-top: 0.75rem;
+    margin-top: $spacing-sm;
     margin-bottom: $spacing-xl;
     padding: 0.3rem 1rem;
     background-color: $accent-color !important;
