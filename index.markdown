@@ -70,8 +70,8 @@ title: Dmitriy Logunov - Delivering solutions
     </div>
     {% endfor %}
   </div>
-  <button class="timeline-link desktop-only" id="expand-projects-btn" onclick="toggleProjects()">Expand</button>
-  <button class="timeline-link-mobile mobile-only" id="expand-projects-btn-mobile" onclick="toggleProjects()">Expand</button>
+  <a href="javascript:void(0)" class="timeline-link desktop-only" id="expand-projects-btn" onclick="toggleProjects()">Expand <i class="fas fa-chevron-down" id="expand-icon"></i></a>
+  <a href="javascript:void(0)" class="timeline-link-mobile mobile-only" id="expand-projects-btn-mobile" onclick="toggleProjects()">Expand <i class="fas fa-chevron-down" id="expand-icon-mobile"></i></a>
 </div>
 
 # Work
@@ -117,17 +117,19 @@ function toggleProjects() {
   const projectsSection = document.getElementById('projects-section');
   const expandBtn = document.getElementById('expand-projects-btn');
   const expandBtnMobile = document.getElementById('expand-projects-btn-mobile');
+  const expandIcon = document.getElementById('expand-icon');
+  const expandIconMobile = document.getElementById('expand-icon-mobile');
   
   projectsExpanded = !projectsExpanded;
   
   if (projectsExpanded) {
     projectsSection.classList.add('expanded');
-    expandBtn.textContent = 'Collapse';
-    expandBtnMobile.textContent = 'Collapse';
+    expandBtn.innerHTML = 'Collapse <i class="fas fa-chevron-up" id="expand-icon"></i>';
+    expandBtnMobile.innerHTML = 'Collapse <i class="fas fa-chevron-up" id="expand-icon-mobile"></i>';
   } else {
     projectsSection.classList.remove('expanded');
-    expandBtn.textContent = 'Expand';
-    expandBtnMobile.textContent = 'Expand';
+    expandBtn.innerHTML = 'Expand <i class="fas fa-chevron-down" id="expand-icon"></i>';
+    expandBtnMobile.innerHTML = 'Expand <i class="fas fa-chevron-down" id="expand-icon-mobile"></i>';
   }
 }
 
