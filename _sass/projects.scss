@@ -24,7 +24,7 @@
   // Style More links in projects sections
   .timeline-link {
     display: inline-block;
-    margin-top: -$spacing-lg; // -1.5rem to overlap with grid
+    margin-top: $spacing-sm; // Add small gap between grid and button
     
     &.desktop-only {
       @media (max-width: 768px) {
@@ -35,7 +35,7 @@
   
   .timeline-link-mobile {
     display: none;
-    margin-top: -$spacing-lg;
+    margin-top: $spacing-sm;
     margin-bottom: $spacing-xl;
     padding: 0.3rem 1rem;
     background-color: $accent-color !important;
@@ -70,7 +70,6 @@
   display: flex;
   flex-wrap: wrap;
   margin: -($spacing-lg / 2); // Negative margin to offset card margins
-  margin-bottom: 0; // Remove bottom margin to eliminate gap
 }
 
 .project-card {
@@ -273,7 +272,6 @@
   
   .projects-grid {
     margin: -($spacing-md / 2);
-    margin-bottom: 0;
   }
 }
 
