@@ -17,7 +17,7 @@
 
 - title: TallBob
   technologies: React, Redux, Typescript, Laravel Mix, AWS, Jest Testing Library, npm.
-  description: At TallBob, we had legacy software for the customer self-service portal. The company was planning a rebrand and expansion of their business, and the old system was the blocker. Also it posed certain IT security risks. I was the key developer responsible for redesigning it into the modern web application. I worked in collaboration with the back-end developer. The new portal increased existing customer satisfaction, contributing to customer retention as well as bringing new clients in.
+  description: At TallBob, we had legacy software for the customer self-service portal. The company was planning a rebrand and expansion of their business, and the old system was the blocker. I was the key developer responsible for redesigning it into the modern web application. I worked in collaboration with the back-end developer. The new portal increased existing customer satisfaction, contributing to customer retention as well as bringing new clients in.
   date: 2022
   link: "/tallbob"
   image: "tallbob2.png"
