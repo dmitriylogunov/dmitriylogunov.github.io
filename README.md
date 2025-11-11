@@ -7,7 +7,7 @@ Personal portfolio site hosted on Github Pages, built using Jekyll framework
 Install Ruby if not yet installed (instructions below)
 
 Install Jekyll and Bundler:
-`gem install jekyll bundler`
+`sudo gem install jekyll bundler`
 
 Navigate to your Jekyll project directory:
 `cd path/to/your/jekyll/project`
@@ -34,21 +34,25 @@ Make sure you have WSL2 installed and running on your Windows machine.
 ## Installation Steps
 
 ### 1. Update your system
+
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
 
 ### 2. Install required dependencies
+
 ```bash
 sudo apt install -y git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev
 ```
 
 ### 3. Install rbenv
+
 ```bash
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
 ```
 
 ### 4. Configure your shell
+
 ```bash
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
@@ -56,12 +60,14 @@ source ~/.bashrc
 ```
 
 ### 5. Install Ruby
+
 ```bash
 rbenv install 3.1.0
 rbenv global 3.1.0
 ```
 
 ### 6. Verify installation
+
 ```bash
 ruby -v
 gem -v
@@ -70,6 +76,7 @@ gem -v
 You should see Ruby version 3.1.0 and the corresponding gem version.
 
 ### 7. Install Jekyll and Bundler
+
 ```bash
 gem install jekyll bundler
 ```
@@ -107,16 +114,19 @@ The required gems (prawn and caracal) are already included in the Gemfile. Run `
 There are three ways to generate CV files:
 
 #### Method 1: Direct Ruby Script
+
 ```bash
 ruby scripts/generate_cv.rb
 ```
 
 #### Method 2: Using Rake (Recommended)
+
 ```bash
 rake generate_cv
 ```
 
 #### Method 3: Using Bundle Exec
+
 ```bash
 bundle exec ruby scripts/generate_cv.rb
 ```
@@ -124,6 +134,7 @@ bundle exec ruby scripts/generate_cv.rb
 ### Output Files
 
 The generated CV files will be saved in:
+
 - `assets/cv/dmitriy-logunov-cv.pdf` - PDF version
 - `assets/cv/dmitriy-logunov-cv.docx` - Microsoft Word version
 
@@ -132,10 +143,12 @@ The generated CV files will be saved in:
 The CV generation system consists of three main components:
 
 1. **Data Sources**:
+
    - `_data/work.yml` - Contains work experience, education, and career milestones
    - `_config.yml` - Contains personal information (name, email, phone, location, links)
 
 2. **Template Module** (`scripts/templates/cv_template.rb`):
+
    - Loads and parses YAML data from the above sources
    - Provides helper methods to access and format the data
    - Filters work experience from education entries
@@ -150,6 +163,7 @@ The CV generation system consists of three main components:
 ### Customizing the CV
 
 To customize the CV content:
+
 1. Edit `_data/work.yml` for work experience and education
 2. Edit `_config.yml` for personal information and contact details
 3. Modify `scripts/templates/cv_template.rb` for data processing and filtering logic
@@ -186,6 +200,7 @@ convert assets/images/projects/image.png -quality 85 -resize "1200x1200>" assets
 ```
 
 This command uses ImageMagick to:
+
 - Convert PNG to JPEG format
 - Set quality to 85% (good balance between quality and file size)
 - Resize only if larger than 1200px (preserving aspect ratio)
