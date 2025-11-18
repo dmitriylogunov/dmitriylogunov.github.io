@@ -7,9 +7,11 @@ title: Professional Portfolio - Dmitriy Logunov
 
 Need someone who thinks beyond the code? My work isn't just writing software, it's about delivering a holistic approach. Whether it’s updating your web presence, writing an app, or something else, impact comes before the code - technology choice matters, but it is secondary to the result.
 
-<figure class="video-figure about-video" style="margin:24px auto; padding:12px; background:#f8f8f8; border-radius:8px;">
-  <div style="padding:56.25% 0 0 0; position:relative;">
-    <iframe src="https://player.vimeo.com/video/1116036017?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Beyond EV front-end challenge walkthrough"></iframe>
+<figure class="video-figure about-video" style="margin:24px 0; padding:12px; background:#f8f8f8; border-radius:8px;">
+  <div class="about-video-inner">
+    <div style="padding:56.25% 0 0 0; position:relative;">
+      <iframe src="https://player.vimeo.com/video/1116036017?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Beyond EV front-end challenge walkthrough"></iframe>
+    </div>
   </div>
   <script src="https://player.vimeo.com/api/player.js"></script>
   <figcaption style="font-size:0.9em; color:#666; margin-top:8px;">About me</figcaption>

@@ -14,17 +14,6 @@ html {
 }
 
 body {
-
-.about-video {
-    width: 100%;
-    max-width: 100%;
-
-    @media (min-width: $tablet-breakpoint) {
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
     font-family: $font-stack;
     background: linear-gradient(135deg, $off-white 0%, darken($off-white, 3%) 100%);
     background-attachment: fixed;
@@ -32,6 +21,19 @@ body {
     margin: 0;
     overflow-x: hidden;
     // Typography settings are now in typography.scss
+}
+
+.about-video {
+    width: 100%;
+}
+
+.about-video-inner {
+    width: 100%;
+    margin: 0 auto;
+
+    @media (min-width: $tablet-breakpoint) {
+        width: 70%;
+    }
 }
 
 // Modern header with gradient and better spacing
@@ -586,14 +588,9 @@ main {
     background: linear-gradient(135deg, $primary-accent, $accent-color);
     border-radius: $round-corner-radius-lg;
     padding: $spacing-xxl;
-    margin: $spacing-xl auto $spacing-xxl;
+    margin: $spacing-xl 0 $spacing-xxl;
     text-align: center;
     box-shadow: $shadow-lg;
-    max-width: 100%;
-
-    @media (min-width: $tablet-breakpoint) {
-        width: 70%;
-    }
     
     h2 {
         color: $white;
