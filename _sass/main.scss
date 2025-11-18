@@ -14,6 +14,17 @@ html {
 }
 
 body {
+
+.about-video {
+    width: 100%;
+    max-width: 100%;
+
+    @media (min-width: $tablet-breakpoint) {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
     font-family: $font-stack;
     background: linear-gradient(135deg, $off-white 0%, darken($off-white, 3%) 100%);
     background-attachment: fixed;
@@ -575,9 +586,14 @@ main {
     background: linear-gradient(135deg, $primary-accent, $accent-color);
     border-radius: $round-corner-radius-lg;
     padding: $spacing-xxl;
-    margin: $spacing-xl 0 $spacing-xxl;
+    margin: $spacing-xl auto $spacing-xxl;
     text-align: center;
     box-shadow: $shadow-lg;
+    max-width: 100%;
+
+    @media (min-width: $tablet-breakpoint) {
+        width: 70%;
+    }
     
     h2 {
         color: $white;
