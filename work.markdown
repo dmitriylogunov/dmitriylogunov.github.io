@@ -5,7 +5,7 @@ title: Professional Portfolio - Dmitriy Logunov
 
 # Work
 
-Need someone who thinks beyond the code? My work isn't just writing software, it's about delivering a holistic approach. Whether it’s updating your web presence, writing an app, or something else, impact comes before the code - technology choice matters, but it is secondary to the result.
+Need someone who thinks beyond the code? My work is more than just writing software, it's about delivering a holistic approach. Whether it’s updating your web presence, writing an app, or something else, impact comes before the code - technology choice matters, but it is secondary to the result.
 
 <figure class="video-figure about-video" style="margin:24px 0; padding:12px; background:#f8f8f8; border-radius:8px;">
   <div class="about-video-inner">
