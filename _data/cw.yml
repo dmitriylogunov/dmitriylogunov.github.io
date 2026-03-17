@@ -1,0 +1,11 @@
+gallery:
+  - image: "/assets/images/cw/container.svg"
+    description: "Container diagram — Docker Compose deployment"
+  - image: "/assets/images/cw/backend.svg"
+    description: "Backend architecture — layered services and data flow"
+  - image: "/assets/images/cw/erd.svg"
+    description: "Entity relationship diagram — data model"
+  - image: "/assets/images/cw/screenshot-watchlists.png"
+    description: "Watchlists and currency pairs view (placeholder)"
+  - image: "/assets/images/cw/screenshot-alerts.png"
+    description: "Alert rules and evaluation (placeholder)"
