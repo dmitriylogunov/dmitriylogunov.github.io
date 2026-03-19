@@ -3,7 +3,7 @@ layout: main
 title: Currency Watchlist
 ---
 
-A system that allows users to create currency watchlists, add currency pairs, fetch latest exchange rates from a public external API, store rate snapshots, create alert rules, evaluate alerts, and view this information in a simple React frontend. Built with .NET Core Web API, SQLite with EF Core, and React — containerised with Docker Compose.
+A system that allows users to create currency watchlists, add currency pairs, fetch latest exchange rates from a public external API, store rate snapshots, create alert rules, evaluate alerts, and view this information in a simple React frontend. Built with .NET Core Web API, SQLite with EF Core, and React - containerised with Docker Compose.
 
 #### Architectural Decisions
 
