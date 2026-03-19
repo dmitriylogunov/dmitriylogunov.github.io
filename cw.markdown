@@ -13,7 +13,6 @@ A system that allows users to create currency watchlists, add currency pairs, fe
 - Layered Architecture (Controller → Service → EF Core)
 - DTOs for API Contracts
 - Rate Provider Abstraction (`IExchangeRateService`)
-- `AlertEvent` Entity for Evaluation History
 - Input Validation via Data Annotations on DTOs
 - Async/Await Throughout
 
