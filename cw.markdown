@@ -33,13 +33,13 @@ A system that allows users to create currency watchlists, add currency pairs, fe
 - Implement authentication and user isolation on API endpoints - currently any user can edit any watchlists
 - SQLite would be replaced with PostgreSQL or similar for concurrency and scalability
 - Implement rate limiting on incoming requests or outgoing external API calls
-- CORS policy is overly permissive (allows any method/header)
-- Implement structured logging or error monitoring
+- Implement stricter CORS policy
+- Implement logging or error monitoring
 - Handle external API call rejections
-- Database migrations run on startup with no rollback strategy
-- Add configuration
-- Add pagination on list endpoints
-- Validate currency codes against ISO list
+- Remove database migrations from startup and implement rollback strategy
+- Add managed configuration
+- Add pagination to list endpoints
+- Validate currency codes against the ISO codes list
 
 [View on GitHub](https://github.com/dmitriylogunov/currency-watchlist)
 [View online](https://currency-watchlist.onrender.com)
