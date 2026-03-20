@@ -24,7 +24,6 @@ A system that allows users to create currency watchlists, add currency pairs, fe
 - Recharts for Chart Visualisation
 
 **Infrastructure & Testing**
-- Docker Compose with Multi-Stage Builds
 - Backend Tests: xUnit + Moq + EF Core InMemory
 - Frontend Tests: Vitest + React Testing Library
 
