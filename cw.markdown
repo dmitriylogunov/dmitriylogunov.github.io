@@ -29,7 +29,7 @@ A system that allows users to create currency watchlists, add currency pairs, fe
 - Frontend Tests: Vitest + React Testing Library
 
 **Production Considerations**
-- In a production system, a background job would refresh rates on a schedule (e.g. every minute), keeping data fresh so the UI can query rates directly without triggering its own external API call
+- Implement a background job that refreshes rates on a schedule (e.g. every minute), keeping data fresh so the UI can query rates directly without triggering its own external API call
 - Implement authentication and user isolation on API endpoints - currently any user can edit any watchlists
 - SQLite would be replaced with PostgreSQL or similar for concurrency and scalability
 - Implement rate limiting on incoming requests or outgoing external API calls
