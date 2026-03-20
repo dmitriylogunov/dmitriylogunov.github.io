@@ -42,6 +42,7 @@ A system that allows users to create currency watchlists, add currency pairs, fe
 - Validate currency codes against the ISO codes list
 
 [View on GitHub](https://github.com/dmitriylogunov/currency-watchlist)
+
 [View online](https://currency-watchlist.onrender.com)
 
 {% include gallery.html data=site.data.cw %}
