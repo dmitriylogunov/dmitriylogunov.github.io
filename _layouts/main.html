@@ -44,12 +44,12 @@
     </script>
 </head>
 
-<body onclick="document.getElementById('contactPopup').classList.remove('show')">
+<body>
     <header>
         <div class="mobile-header">
             <div class="header-content-mobile">
-                <h1 class="name-scroll" onclick="event.stopPropagation(); var popup = document.getElementById('contactPopup'); if(popup.classList.contains('show')) { popup.classList.remove('show'); } else { popup.style.left = (event.pageX - 160) + 'px'; popup.style.top = (event.pageY - 50) + 'px'; popup.classList.add('show'); }">{{ site.name }}</h1>
-                <div class="header-smile-mobile">
+                <h1 class="name-scroll" data-open-contact-modal>{{ site.name }}</h1>
+                <div class="header-smile-mobile" data-open-contact-modal role="button" tabindex="0" aria-label="Open contact options">
                     <div class="header-smile-mobile-inner">
                         <img src="{{ '/assets/images/profile_picture.png' | relative_url }}?v={{ site.css_version }}" alt="Dmitriy Logunov" class="profile-image" style="width: 80px; height: 80px;">
                     </div>
@@ -64,14 +64,14 @@
         <div class="desktop-header">
             <div class="header-content">
                 <div class="header-text">
-                    <h1 class="name-scroll" onclick="event.stopPropagation(); var popup = document.getElementById('contactPopup'); if(popup.classList.contains('show')) { popup.classList.remove('show'); } else { popup.style.left = (event.pageX - 160) + 'px'; popup.style.top = (event.pageY - 50) + 'px'; popup.classList.add('show'); }">{{ site.name }}</h1>
+                    <h1 class="name-scroll" data-open-contact-modal>{{ site.name }}</h1>
                     <p>
                         {%- for profession in site.profession -%}
                         <span>{{ profession }}</span>
                         {%- endfor -%}
                     </p>
                 </div>
-                <div class="header-smile">
+                <div class="header-smile" data-open-contact-modal role="button" tabindex="0" aria-label="Open contact options">
                     <div class="header-smile-inner">
                         <img src="{{ '/assets/images/profile_picture.png' | relative_url }}?v={{ site.css_version }}" alt="Dmitriy Logunov" class="profile-image" style="width: 120px; height: 120px;">
                     </div>
@@ -79,9 +79,6 @@
             </div>
         </div>
     </header>
-    <div id="contactPopup" class="contact-popup" onclick="event.stopPropagation(); document.getElementById('contactPopup').classList.remove('show'); if (window.openContactModal) { window.openContactModal(); }">
-        <span>Contacts</span>
-    </div>
     <nav class="main-menu">
         <ul>
             <li><a href="{{ '/' | relative_url }}">Home</a></li>

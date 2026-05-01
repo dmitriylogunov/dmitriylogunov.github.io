@@ -1,12 +1,11 @@
 <div id="contact-modal" class="contact-modal" aria-hidden="true">
   <div class="contact-modal-card" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
     <button class="contact-modal-close" type="button" data-close-contact-modal aria-label="Close contact dialog">×</button>
-    <h2 id="contact-modal-title">Contact Me</h2>
-    <p>Let us connect through any of these channels.</p>
+    <h2 id="contact-modal-title">Contact me</h2>
     <ul class="contact-modal-list">
       <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
       <li><a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><a href="{{ site.github }}" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="tel:{{ site.contacts[0] }}">{{ site.contacts[0] }}</a></li>
     </ul>
   </div>
 </div>
@@ -40,6 +39,13 @@ document.addEventListener('DOMContentLoaded', function() {
     button.addEventListener('click', function(e) {
       e.preventDefault();
       openContactModal();
+    });
+
+    button.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openContactModal();
+      }
     });
   });
 

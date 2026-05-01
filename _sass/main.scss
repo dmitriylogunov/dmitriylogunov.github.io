@@ -308,51 +308,6 @@ nav.main-menu {
     }
 }
 
-/* Contact Popup */
-.contact-popup {
-    position: absolute;
-    background: rgba($white, 0.5);
-    backdrop-filter: blur(10px);
-    padding: $spacing-lg $spacing-xl;
-    border-radius: $round-corner-radius;
-    box-shadow: $shadow-xl;
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity $transition-base, visibility $transition-base;
-    cursor: pointer;
-    
-    &.show {
-        opacity: 1;
-        visibility: visible;
-    }
-    
-    &:hover {
-        background: rgba($white, 0.7);
-        
-        span {
-            color: $accent-color;
-        }
-    }
-    
-    span {
-        color: $primary-dark;
-        font-size: 1.25rem;
-        font-weight: 600;
-        display: block;
-        transition: color $transition-base;
-        user-select: none;
-    }
-    
-    @media (max-width: $mobile-breakpoint) {
-        padding: $spacing-md $spacing-lg;
-        
-        span {
-            font-size: 1.125rem;
-        }
-    }
-}
-
 /* Reusable contact modal */
 .contact-modal {
     position: fixed;
@@ -429,6 +384,11 @@ nav.main-menu {
 
 body.contact-modal-open {
     overflow: hidden;
+}
+
+.header-smile[data-open-contact-modal],
+.header-smile-mobile[data-open-contact-modal] {
+    cursor: pointer;
 }
 
 /* Mobile and Desktop Header Visibility */
