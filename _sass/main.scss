@@ -353,6 +353,84 @@ nav.main-menu {
     }
 }
 
+/* Reusable contact modal */
+.contact-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: $spacing-lg;
+    background: rgba($primary-dark, 0.75);
+    z-index: 1200;
+
+    &.active {
+        display: flex;
+    }
+
+    .contact-modal-card {
+        width: 100%;
+        max-width: 540px;
+        background: $white;
+        border-radius: $round-corner-radius;
+        box-shadow: $shadow-xl;
+        padding: $spacing-xl;
+        position: relative;
+
+        h2 {
+            margin: 0 0 $spacing-sm;
+            color: $primary-dark;
+        }
+
+        p {
+            margin: 0 0 $spacing-lg;
+            color: $text-color;
+        }
+    }
+
+    .contact-modal-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 36px;
+        height: 36px;
+        border: 0;
+        border-radius: 50%;
+        background: rgba($primary-dark, 0.08);
+        color: $primary-dark;
+        font-size: 1.4rem;
+        line-height: 1;
+        cursor: pointer;
+        transition: background $transition-base;
+
+        &:hover {
+            background: rgba($primary-dark, 0.16);
+        }
+    }
+
+    .contact-modal-list {
+        margin: 0;
+        padding-left: 1.2rem;
+
+        li + li {
+            margin-top: $spacing-sm;
+        }
+
+        a {
+            color: $link-color;
+            text-decoration: none;
+
+            &:hover {
+                color: darken($link-color, 10%);
+            }
+        }
+    }
+}
+
+body.contact-modal-open {
+    overflow: hidden;
+}
+
 /* Mobile and Desktop Header Visibility */
 .mobile-header {
     display: none;

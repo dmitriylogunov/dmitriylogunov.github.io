@@ -79,7 +79,7 @@
             </div>
         </div>
     </header>
-    <div id="contactPopup" class="contact-popup" onclick="event.stopPropagation(); document.getElementById('contactPopup').classList.remove('show'); document.querySelector('footer').scrollIntoView({behavior: 'smooth'})">
+    <div id="contactPopup" class="contact-popup" onclick="event.stopPropagation(); document.getElementById('contactPopup').classList.remove('show'); if (window.openContactModal) { window.openContactModal(); }">
         <span>Contacts</span>
     </div>
     <nav class="main-menu">
@@ -91,6 +91,7 @@
     <main>
         {{ content }}
     </main>
+    {% include contact-modal.html %}
     <footer id="footer">
         <div class="footer-container">
             <div class="footer-row">

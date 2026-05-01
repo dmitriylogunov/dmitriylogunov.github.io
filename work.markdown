@@ -23,7 +23,7 @@ Need someone who thinks beyond the code? My work is more than just writing softw
     <div class="cta-buttons">
       <a href="/assets/cv/Dmitriy_Logunov_Resume.pdf" class="cta-button" target="_blank" rel="noopener">Download CV (PDF)</a>
       <a href="/assets/cv/Dmitriy_Logunov_Resume.docx" class="cta-button" target="_blank" rel="noopener">Download CV (DOCX)</a>
-        <a href="#" class="cta-button" onclick="event.preventDefault(); document.querySelector('footer').scrollIntoView({behavior: 'smooth'})">Contact Me</a>
+        <a href="#contact-modal" class="cta-button" data-open-contact-modal>Contact Me</a>
     </div>
 </div>
 

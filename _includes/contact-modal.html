@@ -1,0 +1,62 @@
+<div id="contact-modal" class="contact-modal" aria-hidden="true">
+  <div class="contact-modal-card" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
+    <button class="contact-modal-close" type="button" data-close-contact-modal aria-label="Close contact dialog">×</button>
+    <h2 id="contact-modal-title">Contact Me</h2>
+    <p>Let us connect through any of these channels.</p>
+    <ul class="contact-modal-list">
+      <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+      <li><a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="{{ site.github }}" target="_blank" rel="noopener">GitHub</a></li>
+    </ul>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const contactModal = document.getElementById('contact-modal');
+  if (!contactModal) {
+    return;
+  }
+
+  const openButtons = document.querySelectorAll('[data-open-contact-modal]');
+  const closeButton = contactModal.querySelector('[data-close-contact-modal]');
+
+  function openContactModal() {
+    contactModal.classList.add('active');
+    contactModal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('contact-modal-open');
+  }
+
+  function closeContactModal() {
+    contactModal.classList.remove('active');
+    contactModal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('contact-modal-open');
+  }
+
+  window.openContactModal = openContactModal;
+  window.closeContactModal = closeContactModal;
+
+  openButtons.forEach(function(button) {
+    button.addEventListener('click', function(e) {
+      e.preventDefault();
+      openContactModal();
+    });
+  });
+
+  closeButton.addEventListener('click', function() {
+    closeContactModal();
+  });
+
+  contactModal.addEventListener('click', function(e) {
+    if (e.target === contactModal) {
+      closeContactModal();
+    }
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && contactModal.classList.contains('active')) {
+      closeContactModal();
+    }
+  });
+});
+</script>
