@@ -21,8 +21,8 @@ Need someone who thinks beyond the code? My work is more than just writing softw
     <h2>Looking to hire a passionate developer?</h2>
     <p>Get my complete professional background</p>
     <div class="cta-buttons">
-      <a href="/assets/cv/Dmitriy_Logunov_Resume.pdf" class="cta-button" target="_blank" rel="noopener">Download CV (PDF)</a>
-      <a href="/assets/cv/Dmitriy_Logunov_Resume.docx" class="cta-button" target="_blank" rel="noopener">Download CV (DOCX)</a>
+      <a href="/assets/cv/Dmitriy_Logunov_Resume.pdf" class="cta-button" target="_blank" rel="noopener">Download Resume (PDF)</a>
+      <a href="/assets/cv/Dmitriy_Logunov_Resume.docx" class="cta-button" target="_blank" rel="noopener">Download Resume (DOCX)</a>
         <a href="#contact-modal" class="cta-button" data-open-contact-modal>Contact Me</a>
     </div>
 </div>
