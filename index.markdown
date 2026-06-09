@@ -1,9 +1,43 @@
 ---
 layout: main
-title: Dmitriy Logunov - Delivering solutions
+title: Dmitriy Logunov — Senior Full Stack Developer
 ---
 
-# Projects
+# Work
+
+<div class="projects-section">
+  <div class="projects-grid" id="work-grid">
+    {% assign highlighted_work = site.data.work | where: "is_highlight", true %}
+    {% for item in highlighted_work limit: 3 %}
+    <div class="project-card" data-project-url="{{ item.link }}">
+      <button class="project-close" aria-label="Close">×</button>
+      <div class="project-image" {% if item.image %}style="background-image: url('/assets/images/{{ item.image }}');" data-full-image="/assets/images/{{ item.image }}"{% endif %}>
+      </div>
+      <div class="project-content">
+        <div class="project-title">{{ item.title }}</div>
+        <div class="project-short-description">{{ item.date }}{% if item.type %} • {{ item.type }}{% endif %}</div>
+        <div class="project-technologies">{{ item.technologies }}</div>
+        <div class="project-description">{{ item.description | markdownify | strip_html | truncate: 200 }}</div>
+        <div class="project-actions">
+          {% if item.link %}
+          <a href="{{ item.link }}" class="project-button visit-btn" {% if item.link contains 'http' %}target="_blank"{% endif %}>
+            {% if item.link contains 'http' %}
+              Visit Website
+            {% else %}
+              View Details
+            {% endif %}
+          </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <a href="/work" class="timeline-link desktop-only" style="margin-top: 0.75rem;">View All <i class="fas fa-external-link"></i></a>
+  <a href="/work" class="timeline-link-mobile mobile-only" style="margin-top: 0.75rem;">View All <i class="fas fa-external-link"></i></a>
+</div>
+
+# Side projects
 
 <div class="projects-section" id="projects-section">
   <div class="projects-grid" id="projects-grid">
@@ -37,7 +71,7 @@ title: Dmitriy Logunov - Delivering solutions
       </div>
     </div>
     {% endfor %}
-    
+
     <!-- Hidden additional projects -->
     {% assign other_projects = site.data.projects | where: "is_highlight", false %}
     {% for project in other_projects %}
@@ -74,40 +108,6 @@ title: Dmitriy Logunov - Delivering solutions
   <a href="javascript:void(0)" class="timeline-link-mobile mobile-only" id="expand-projects-btn-mobile" onclick="toggleProjects()">Expand <i class="fas fa-chevron-down" id="expand-icon-mobile"></i></a>
 </div>
 
-# Work
-
-<div class="projects-section">
-  <div class="projects-grid" id="work-grid">
-    {% assign highlighted_work = site.data.work | where: "is_highlight", true %}
-    {% for item in highlighted_work limit: 3 %}
-    <div class="project-card" data-project-url="{{ item.link }}">
-      <button class="project-close" aria-label="Close">×</button>
-      <div class="project-image" {% if item.image %}style="background-image: url('/assets/images/{{ item.image }}');" data-full-image="/assets/images/{{ item.image }}"{% endif %}>
-      </div>
-      <div class="project-content">
-        <div class="project-title">{{ item.title }}</div>
-        <div class="project-short-description">{{ item.date }}{% if item.type %} • {{ item.type }}{% endif %}</div>
-        <div class="project-technologies">{{ item.technologies }}</div>
-        <div class="project-description">{{ item.description | markdownify | strip_html | truncate: 200 }}</div>
-        <div class="project-actions">
-          {% if item.link %}
-          <a href="{{ item.link }}" class="project-button visit-btn" {% if item.link contains 'http' %}target="_blank"{% endif %}>
-            {% if item.link contains 'http' %}
-              Visit Website
-            {% else %}
-              View Details
-            {% endif %}
-          </a>
-          {% endif %}
-        </div>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-  <a href="/work" class="timeline-link desktop-only" style="margin-top: 0.75rem;">View All <i class="fas fa-external-link"></i></a>
-  <a href="/work" class="timeline-link-mobile mobile-only" style="margin-top: 0.75rem;">View All <i class="fas fa-external-link"></i></a>
-</div>
-
 {% include image-overlay.html %}
 
 <script>
@@ -119,9 +119,9 @@ function toggleProjects() {
   const expandBtnMobile = document.getElementById('expand-projects-btn-mobile');
   const expandIcon = document.getElementById('expand-icon');
   const expandIconMobile = document.getElementById('expand-icon-mobile');
-  
+
   projectsExpanded = !projectsExpanded;
-  
+
   if (projectsExpanded) {
     projectsSection.classList.add('expanded');
     expandBtn.innerHTML = 'Collapse <i class="fas fa-chevron-up" id="expand-icon"></i>';
@@ -135,17 +135,17 @@ function toggleProjects() {
 
 document.addEventListener('DOMContentLoaded', function() {
   const projectCards = document.querySelectorAll('.project-card');
-  
+
   projectCards.forEach(card => {
     const closeBtn = card.querySelector('.project-close');
-    
+
     // Handle close button click
     closeBtn.addEventListener('click', function(e) {
       e.preventDefault();
       e.stopPropagation();
       card.classList.remove('expanded');
     });
-    
+
     // Handle image click when expanded
     const projectImage = card.querySelector('.project-image');
     if (projectImage) {
@@ -156,19 +156,19 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
     }
-    
+
     // Handle card click to expand/collapse
     card.addEventListener('click', function(e) {
       // Don't handle clicks on buttons, links, or close button
-      if (e.target.classList.contains('project-button') || 
+      if (e.target.classList.contains('project-button') ||
           e.target.classList.contains('project-close') ||
-          e.target.tagName === 'A' || 
+          e.target.tagName === 'A' ||
           e.target.closest('.project-actions')) {
         return;
       }
-      
+
       const isExpanded = card.classList.contains('expanded');
-      
+
       if (isExpanded && !e.target.closest('.project-image')) {
         // Collapse this card if not clicking on image
         card.classList.remove('expanded');
@@ -179,13 +179,13 @@ document.addEventListener('DOMContentLoaded', function() {
             c.classList.remove('expanded');
           }
         });
-        
+
         // Expand this card
         card.classList.add('expanded');
       }
     });
   });
-  
+
   // Handle clicks outside project cards to collapse expanded cards
   document.addEventListener('click', function(e) {
     // Check if the click was outside any project card
@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', function() {
     {% if post.content %}
     <p>{{ post.content }}</p>
     {% endif %}
-    
+
     {% if post.sections %}
       {% for section in post.sections %}
         <p><strong>{{ section.title }}</strong></p>
@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </ul>
       {% endfor %}
     {% endif %}
-    
+
     {% if post.list %}
     <ul>
       {% for item in post.list %}
@@ -229,11 +229,11 @@ document.addEventListener('DOMContentLoaded', function() {
       {% endfor %}
     </ul>
     {% endif %}
-    
+
     {% if post.content_after %}
     <p>{{ post.content_after }}</p>
     {% endif %}
-    
+
     {% if post.link %}
     <p><a href="{{ post.link }}">{{ post.link_text }}</a></p>
     {% endif %}

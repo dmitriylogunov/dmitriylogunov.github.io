@@ -5,7 +5,7 @@ title: Professional Portfolio - Dmitriy Logunov
 
 # Work
 
-Need someone who thinks beyond the code? My work is more than just writing software, it's about delivering a holistic approach. Whether it’s updating your web presence, writing an app, or something else, impact comes before the code - technology choice matters, but it is secondary to the result.
+Senior Full-Stack Developer with 14 years of experience, specialising in React, Next.js, TypeScript, and Vue.js. I build production web applications across regulated industries — fintech, healthcare, education, and gambling. Most recently I shipped a production customer loyalty kiosk system at Onyx Gaming (React / Next.js / TypeScript / Prisma), and built the Advanced Standing Pre-Offer system at La Trobe University (Vue / TypeScript) used by admissions staff to process credit assessments for international students.
 
 <figure class="video-figure about-video" style="margin:24px 0; padding:12px; background:#f8f8f8; border-radius:8px;">
   <div class="about-video-inner">
@@ -18,7 +18,7 @@ Need someone who thinks beyond the code? My work is more than just writing softw
 </figure>
 
 <div class="cta-section">
-    <h2>Looking to hire a passionate developer?</h2>
+    <h2>Looking to hire a senior developer?</h2>
     <p>Get my complete professional background</p>
     <div class="cta-buttons">
       <a href="/assets/cv/Dmitriy_Logunov_Resume.pdf" class="cta-button" target="_blank" rel="noopener">Download Resume (PDF)</a>

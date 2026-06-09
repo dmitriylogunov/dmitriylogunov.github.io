@@ -18,20 +18,18 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-name: Dmitriy Logunov
-title: Dmitriy Logunov
+name: Dmitriy (Dimi) Logunov
+title: Dmitriy Logunov — Senior Full Stack Developer
 profession:
-  - Coding with Purpose and Passion
-  - Delivering solutions
-  - Smile and watch the magic happen
+  - Senior Full Stack Developer
 email: logunovdm@gmail.com
 linkedin: https://www.linkedin.com/in/dmitriylogunov/
 github: https://github.com/dmitriylogunov
 stack_overflow: https://stackoverflow.com/users/6563451/dmitriy
 description: >- # this means to ignore newlines until "baseurl:"
-  Personal portfolio page.
+  Senior Full-Stack Developer with 14 years of experience, specialising in React, Next.js, TypeScript, and Vue.js, building production web applications across regulated industries.
 contacts:
-  - "+61466966828"
+  - "0466 966 828"
   - "Blackburn South"
   - "VIC"
   - "Full working rights in AU"

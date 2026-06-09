@@ -1,5 +1,12 @@
+- title: Onyx Gaming
+  technologies: React, Next.js, TypeScript, Prisma
+  description: I worked on a member loyalty kiosk system deployed across multiple venues, owning the UI architecture in React / Next.js / TypeScript with Prisma on the data layer. The system handles loyalty transactions and reward redemption in a regulated gaming environment, with strict usability standards for older demographics and reliable operation on kiosk hardware. I shipped an MVP to production and contributed to Stage 2 development, extending the backend as needed to support the UI.
+  date: 2026
+  type: Contract
+  is_highlight: true
+
 - title: La Trobe University
-  technologies: Vue, Typescript
+  technologies: Vue.js, TypeScript, Node.js
   description: I started from the specifications document and built the UI for the Advanced Standing Pre-Offer (ASPO) system at La Trobe University to the production and business acceptance stage. The platform handles credit assessments for international students and reduced admissions response times while improving student satisfaction ratings.
   date: 2025
   type: Contract
@@ -8,7 +15,7 @@
   is_highlight: true
 
 - title: JET Charge
-  technologies: React, Typescript, .NET, Azure Cloud
+  technologies: React, TypeScript, C#, .NET
   description: I took the prototype for the EV Charging Management Software ([Illuminate](https://jetcharge.com.au/illuminate/)) from the previous developer and built the UI up to the Early Access testing stage with customers. I worked in close collaboration with the backend team and hardware engineers, and performed usability testing with user interviews and iterative design refinements based on feedback.
   date: 2023
   link: "/jetcharge"
@@ -16,11 +23,18 @@
   is_highlight: true
 
 - title: TallBob
-  technologies: React, Redux, Typescript, Laravel Mix, AWS, Jest Testing Library, npm.
+  technologies: React, Node.js, Laravel, Jenkins
   description: At TallBob, we had legacy software for the customer self-service portal. The company was planning a rebrand and expansion of their business, and the old system was the blocker. I was the key developer responsible for redesigning it into the modern web application. I worked in collaboration with the back-end developer. The new portal increased existing customer satisfaction, contributing to customer retention as well as bringing new clients in.
   date: 2022
   link: "/tallbob"
   image: "tallbob2.png"
+  is_highlight: true
+
+- title: illion
+  technologies: React, TypeScript, Laravel, PHP
+  description: I developed the UI for the Open Banking authorisation flow, in fully remote collaboration with a team based in Adelaide.
+  date: 2021
+  type: Contract
   is_highlight: true
 
 - title: Movember
@@ -68,4 +82,3 @@
   date: 2003
   link: "https://en.wikipedia.org/wiki/Immanuel_Kant_Baltic_Federal_University"
   is_highlight: true
-
