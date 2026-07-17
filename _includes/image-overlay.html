@@ -1,7 +1,8 @@
 <!-- Image overlay -->
 <div id="image-overlay" class="image-overlay">
   <button class="overlay-close" aria-label="Close">×</button>
-  <img class="overlay-image" alt="Full size image">
+  <!-- src is set at runtime by openImageOverlay below, so html-proofer must skip it -->
+  <img class="overlay-image" alt="Full size image" data-proofer-ignore>
 </div>
 
 <script>

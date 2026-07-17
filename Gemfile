@@ -20,6 +20,14 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
 end
 
+group :test do
+  gem "html-proofer", "~> 5.0"
+  # html-proofer 5.2.1 never awaits the Async subtasks it spawns to parse files.
+  # With async >= 2.24 that returns zero elements, so every check silently passes
+  # on nothing. Unpin only once html-proofer > 5.2.1 fixes it.
+  gem "async", "2.23.0"
+end
+
 # Specify the required version of bigdecimal
 gem "bigdecimal", "3.1.8"
 

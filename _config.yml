@@ -50,17 +50,21 @@ plugins:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# Listed explicitly (not relying on Jekyll's defaults) so classic GitHub Pages'
+# Jekyll 3 excludes the same set as local Jekyll 4.
+exclude:
+  - node_modules
+  - package.json
+  - package-lock.json
+  - test
+  - plan
+  - WORKFLOW.md
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - CLAUDE.md
+  - Rakefile
+  - vendor
 sass:
   sass_dir: _sass
   style: compressed

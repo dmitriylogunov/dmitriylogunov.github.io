@@ -50,7 +50,7 @@ Additional freeform tags may follow the primary one but nothing in this plan ren
 | Done | # | Step | Tier | Depends on | Risk |
 |------|---|------|------|------------|------|
 | [ ]  | 1 | Owner-supplied assets and content | H | — | batch prerequisite for 8, 9 |
-| [ ]  | 2 | CI + test scaffolding (Actions, html-proofer, Vitest) | T1 | — | config/env change |
+| [x]  | 2 | CI + test scaffolding (Actions, html-proofer, Vitest) | T1 | — | config/env change |
 | [ ]  | 3 | Migrate posts to `_posts` with permalinks and tags | T3 | 2 | content migration |
 | [ ]  | 4 | Neutral identity + new top menu | T1 | 3 | config change |
 | [ ]  | 5 | Home restructure: compact showcase + feed-dominant | T2 | 4 | — |
