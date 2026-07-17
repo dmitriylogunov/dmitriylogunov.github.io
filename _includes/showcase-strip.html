@@ -1,0 +1,22 @@
+<div class="showcase-strip">
+  {% assign highlighted_work = site.data.work | where: "is_highlight", true %}
+  {% for item in highlighted_work limit: 3 %}
+  <a class="showcase-card" href="/work">
+    {% if item.image %}<div class="showcase-thumb" style="background-image: url('/assets/images/{{ item.image }}');"></div>{% endif %}
+    <div class="showcase-body">
+      <span class="showcase-title">{{ item.title }}</span>
+      <span class="showcase-tech">{{ item.technologies }}</span>
+    </div>
+  </a>
+  {% endfor %}
+  {% assign highlighted_projects = site.data.projects | where: "is_highlight", true %}
+  {% for project in highlighted_projects limit: 3 %}
+  <a class="showcase-card" href="{{ project.link }}"{% if project.link contains 'http' %} target="_blank" rel="noopener"{% endif %}>
+    {% if project.image %}<div class="showcase-thumb" style="background-image: url('/assets/images/projects/{{ project.image }}');"></div>{% endif %}
+    <div class="showcase-body">
+      <span class="showcase-title">{{ project.title }}</span>
+      <span class="showcase-tech">{{ project.technologies }}</span>
+    </div>
+  </a>
+  {% endfor %}
+</div>

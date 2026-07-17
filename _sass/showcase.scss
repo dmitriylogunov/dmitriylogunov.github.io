@@ -1,0 +1,90 @@
+// Compact showcase strip on the home page: a slim horizontal row of small
+// work/project cards above the post feed.
+.showcase-strip {
+    display: flex;
+    gap: $spacing-md;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: $spacing-sm 0;
+    margin: $spacing-lg 0 $spacing-sm;
+
+    .showcase-card {
+        flex: 0 0 auto;
+        width: 260px;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        gap: $spacing-md;
+        padding: $spacing-sm;
+        background: $white;
+        border: 1px solid rgba($primary-dark, 0.1);
+        border-radius: $round-corner-radius;
+        box-shadow: $shadow-sm;
+        text-decoration: none;
+        color: $text-color;
+        overflow: hidden;
+        transition: transform $transition-base, box-shadow $transition-base;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: $shadow-md;
+            border-color: rgba($primary-dark, 0.2);
+        }
+
+        .showcase-thumb {
+            flex: 0 0 auto;
+            width: 72px;
+            height: 72px;
+            border-radius: $round-corner-radius;
+            background-color: $gray-light;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .showcase-body {
+            display: flex;
+            flex-direction: column;
+            gap: $spacing-xs;
+            min-width: 0;
+        }
+
+        .showcase-title {
+            color: $primary-dark;
+            font-weight: 600;
+            font-size: 0.95rem;
+            line-height: 1.2;
+        }
+
+        .showcase-tech {
+            color: $gray-medium;
+            font-size: 0.8rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+.showcase-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: $spacing-lg;
+    margin-bottom: $spacing-lg;
+
+    a {
+        color: $primary-accent;
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-decoration: none;
+
+        &:hover {
+            color: $primary-dark;
+        }
+    }
+}
+
+@media (max-width: $mobile-breakpoint) {
+    .showcase-strip .showcase-card {
+        width: 220px;
+    }
+}

@@ -57,3 +57,13 @@ step forbids rewording the posts.
 `jekyll build` leaves the previous `_site` in place — so locally the suite can pass green
 against a stale build. CI is not exposed to this (its `jekyll build` is a separate step
 that fails the job), but when running the tests by hand, check the build succeeded.
+
+## Step 05
+
+**Deviation — projects-page test threshold.** Step 05's test spec asks the "projects
+page untouched" check to assert `project-card count ≥ 6`, but `_data/projects.yml`
+currently holds only 4 projects, so the built `/projects` grid has 4 cards. The real
+invariant this step must protect is that step 5 does not touch the /projects grid, so
+the test asserts `≥ 4` and that all four project titles are still present, rather than an
+unreachable `≥ 6`. No projects were added (out of scope); this is a stale number in the
+plan, not a regression.

@@ -86,7 +86,7 @@ sass:
     - color-functions
 
 # Cache busting version - update this when CSS changes
-css_version: "2.7"
+css_version: "2.8"
 
 # Color scheme configuration
 colors:

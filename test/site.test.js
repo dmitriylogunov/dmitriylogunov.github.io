@@ -117,3 +117,52 @@ describe("step 04 — neutral identity + top menu", () => {
     expect(workHtml()).toContain("Looking to hire a senior developer?");
   });
 });
+
+describe("step 05 — home restructure (showcase + feed-dominant)", () => {
+  it("showcase strip present with six compact cards", () => {
+    const html = indexHtml();
+    const anchors = [
+      ...html.matchAll(/<a class="showcase-card" href="([^"]*)"/g),
+    ].map((m) => m[1]);
+    expect(anchors.length).toBe(6);
+    expect(anchors.filter((h) => h === "/work").length).toBe(3);
+    // remaining three are the highlighted projects' external links
+    expect(anchors.filter((h) => h !== "/work").length).toBe(3);
+  });
+
+  it("no expandable grid on home", () => {
+    const html = indexHtml();
+    expect(html).not.toContain("additional-project");
+    expect(html).not.toContain("toggleProjects");
+    expect(html).not.toContain("expand-projects-btn");
+  });
+
+  it("feed intact below the strip", () => {
+    const html = indexHtml();
+    expect(html.split('<article class="post-card"').length - 1).toBe(10);
+    const stripAt = html.indexOf('class="showcase-card"');
+    const firstArticleAt = html.indexOf('<article class="post-card"');
+    expect(stripAt).toBeGreaterThan(-1);
+    expect(stripAt).toBeLessThan(firstArticleAt);
+  });
+
+  it("projects page untouched (full card grid intact)", () => {
+    const html = projectsHtml();
+    // NOTE: step-05 spec says ">= 6" but _data/projects.yml has 4 entries;
+    // the real invariant is that step 5 leaves the /projects grid untouched.
+    expect(html.split('class="project-card"').length - 1).toBeGreaterThanOrEqual(4);
+    for (const title of [
+      "Guitar Practice Assistant",
+      "Mahjong Solitaire Remastered",
+      "Koenig Bicycle",
+      "Mahjong Solitaire",
+    ]) {
+      expect(html).toContain(title);
+    }
+  });
+
+  it("showcase styles compiled into the stylesheet", () => {
+    const css = readFileSync(join(siteDir, "assets", "css", "styles.css"), "utf8");
+    expect(css).toContain("showcase-card");
+  });
+});
