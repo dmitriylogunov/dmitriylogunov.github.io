@@ -42,6 +42,18 @@ github_username: dmitriylogunov
 plugins:
   - jekyll-feed
 
+permalink: /posts/:title/
+defaults:
+  - scope: {path: "", type: "posts"}
+    values: {layout: post}
+
+# Post bodies mix markdown paragraphs with raw HTML blocks. Kramdown smartifies the
+# former and passes the latter through, which would leave curly and straight
+# apostrophes side by side in one post. Straight everywhere matches how the feed has
+# rendered since it was built from _data/posts.yml.
+kramdown:
+  smart_quotes: apos,apos,quot,quot
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

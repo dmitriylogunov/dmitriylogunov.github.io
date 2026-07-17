@@ -30,3 +30,30 @@ step 02's stated scope ("OUT: any site content/markup change"):
 
 **Note on Ruby version.** CI pins ruby 3.2 per the step file; local dev here is ruby
 3.1.0. Both resolve the same lockfile.
+
+## Step 03 (stabilise)
+
+**All tests passed on the first run; no implementation fixes were needed.** The tests,
+html-proofer and the build were green as committed.
+
+**Deviation — kramdown smart quotes disabled to preserve verbatim rendering.** The step's
+"Done when" requires the rendered home feed to match production with the same bodies. A
+diff of the feed rendered from the pre-migration commit against the migrated one showed
+the posts, their order and their bodies are identical — but 24 apostrophes had turned
+curly. Cause: post bodies are markdown paragraphs wrapping raw HTML blocks (lists, Vimeo
+figures); kramdown applies smart quotes to the paragraphs and passes the raw HTML through
+untouched, so a single post ended up with both (`I’m happy` and `I've got it working` in
+Vibe Coding). Rendering from `_data/posts.yml` had never smartified anything. Fixed with
+`kramdown: {smart_quotes: apos,apos,quot,quot}` in `_config.yml`, which restores straight
+apostrophes everywhere; the feed text is now byte-identical to the production render.
+
+**Owner decision needed:** this keeps today's straight-quote typography. If you would
+rather have proper curly apostrophes site-wide, that is a content change, not a config
+one — the raw HTML lists inside the posts would need converting to markdown so kramdown
+smartifies them too, otherwise the mixed rendering comes back. Left as-is here since the
+step forbids rewording the posts.
+
+**Testing caveat worth knowing.** `test/site.test.js` reads `_site/`, and a failed
+`jekyll build` leaves the previous `_site` in place — so locally the suite can pass green
+against a stale build. CI is not exposed to this (its `jekyll build` is a separate step
+that fails the job), but when running the tests by hand, check the build succeeded.

@@ -202,43 +202,7 @@ document.addEventListener('DOMContentLoaded', function() {
 # What's new
 
 <div class="posts-ribbon">
-  {% assign posts = site.data.posts %}
-  {% for post in posts %}
-  <article class="post-card">
-    <time datetime="{{ post.date }}">{{ post.date | date: "%B %-d, %Y" }}</time>
-    <h2>{{ post.title }}</h2>
-    {% if post.content %}
-    <p>{{ post.content }}</p>
-    {% endif %}
-
-    {% if post.sections %}
-      {% for section in post.sections %}
-        <p><strong>{{ section.title }}</strong></p>
-        <ul>
-          {% for item in section.list %}
-          <li>{{ item }}</li>
-          {% endfor %}
-        </ul>
-      {% endfor %}
-    {% endif %}
-
-    {% if post.list %}
-    <ul>
-      {% for item in post.list %}
-      <li>{{ item }}</li>
-      {% endfor %}
-    </ul>
-    {% endif %}
-
-    {% if post.content_after %}
-    <p>{{ post.content_after }}</p>
-    {% endif %}
-
-    {% if post.link %}
-    <p><a href="{{ post.link }}">{{ post.link_text }}</a></p>
-    {% endif %}
-  </article>
-  {% endfor %}
+  {% for post in site.posts %}{% include post-card.html post=post %}{% endfor %}
 </div>
 
 <div class="page-links">
