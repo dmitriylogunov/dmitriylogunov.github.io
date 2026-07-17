@@ -39,7 +39,7 @@
 
 - title: Movember
   technologies: PHP, Zend Framework, HTML, CSS, JavaScript, MySQL
-  description: Worked on the platform supporting Movember's global men's health campaigns. The work contributed to broader awareness around prostate cancer and mental health.
+  description: Working for Movember is special for me. Our team's efforts have made a real difference in men's health. We've helped raise awareness of important issues like prostate cancer and mental health. It's amazing to see more men talking openly about their health because of our work. Knowing that we've helped save lives and improve men's well-being makes me feel my job truly matters.
   date: 2015
   link: "https://movember.com/"
   is_highlight: true
@@ -76,7 +76,7 @@
   link: "https://herocraft.com/"
   is_highlight: true
 
-- title: Immanuel Kant Baltic Federal University
+- title: Baltic Federal University
   technologies: Computer programming theory, C++, SQL, Databases theory, Python, Assembly language, Computer graphics, Algorithms and data structures
   description: Masters degree in the Applied mathematics with a focus on the informational technology, numerical methods and mathematical modeling.
   date: 2003
