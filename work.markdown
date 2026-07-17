@@ -1,6 +1,6 @@
 ---
 layout: main
-title: Professional Portfolio - Dmitriy Logunov
+title: Work — Dmitriy Logunov
 ---
 
 # Work

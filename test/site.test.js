@@ -22,6 +22,11 @@ const posts = [
 ];
 
 const indexHtml = () => readFileSync(join(siteDir, "index.html"), "utf8");
+const workHtml = () => readFileSync(join(siteDir, "work", "index.html"), "utf8");
+const projectsHtml = () => readFileSync(join(siteDir, "projects", "index.html"), "utf8");
+
+const NEW_DESCRIPTION =
+  "Personal site of Dmitriy Logunov — things I make and thoughts I share.";
 
 describe("posts migration", () => {
   it("all ten permalink pages exist", () => {
@@ -65,5 +70,50 @@ describe("posts migration", () => {
     const feed = readFileSync(join(siteDir, "feed.xml"), "utf8");
     const entries = feed.match(/<entry>/g) || [];
     expect(entries.length).toBeGreaterThanOrEqual(10);
+  });
+});
+
+describe("step 04 — neutral identity + top menu", () => {
+  const navBlock = (html) =>
+    html.match(/<nav class="main-menu">[\s\S]*?<\/nav>/)[0];
+
+  it("menu has four items", () => {
+    const nav = navBlock(indexHtml());
+    const links = [...nav.matchAll(/<a href="([^"]*)">([^<]*)<\/a>/g)].map((m) => [
+      m[1],
+      m[2].trim(),
+    ]);
+    expect(links).toEqual([
+      ["/", "Home"],
+      ["/work", "Work"],
+      ["/projects", "Projects"],
+      ["/#footer", "Contacts"],
+    ]);
+  });
+
+  it("no job title in header", () => {
+    const html = indexHtml();
+    const header = html.match(/<header>[\s\S]*?<\/header>/)[0];
+    expect(header).not.toContain("Senior Full Stack Developer");
+    expect(header).toContain("Coding with Purpose and Passion");
+  });
+
+  it("neutral metas", () => {
+    const html = indexHtml();
+    const og = html.match(/<meta property="og:description" content="([^"]*)">/)[1];
+    expect(og).toBe(NEW_DESCRIPTION);
+    const title = html.match(/<title>([^<]*)<\/title>/)[1];
+    expect(title).toBe("Dmitriy Logunov");
+  });
+
+  it("work page label renamed", () => {
+    for (const html of [indexHtml(), workHtml(), projectsHtml()]) {
+      const nav = navBlock(html);
+      expect(nav).not.toContain("Work and Education");
+    }
+  });
+
+  it("work page body untouched", () => {
+    expect(workHtml()).toContain("Looking to hire a senior developer?");
   });
 });

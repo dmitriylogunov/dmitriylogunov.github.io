@@ -1,6 +1,6 @@
 ---
 layout: main
-title: All Projects - Dmitriy Logunov
+title: Projects — Dmitriy Logunov
 ---
 
 # Projects
@@ -108,5 +108,5 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <div class="page-links">
-  <p>Looking for my work? Check out my <a href="/work">work and education</a> history.</p>
+  <p>Looking for my work? Check out my <a href="/work">work</a> history.</p>
 </div>

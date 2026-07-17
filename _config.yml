@@ -19,15 +19,14 @@
 # in the templates via {{ site.myvariable }}.
 
 name: Dmitriy (Dimi) Logunov
-title: Dmitriy Logunov — Senior Full Stack Developer
+title: Dmitriy Logunov
 profession:
-  - Senior Full Stack Developer
+  - Coding with Purpose and Passion
 email: logunovdm@gmail.com
 linkedin: https://www.linkedin.com/in/dmitriylogunov/
 github: https://github.com/dmitriylogunov
 stack_overflow: https://stackoverflow.com/users/6563451/dmitriy
-description: >- # this means to ignore newlines until "baseurl:"
-  Senior Full-Stack Developer with 14 years of experience, specialising in React, Next.js, TypeScript, and Vue.js, building production web applications across regulated industries.
+description: "Personal site of Dmitriy Logunov — things I make and thoughts I share."
 contacts:
   - "0466 966 828"
   - "Blackburn South"

@@ -1,6 +1,6 @@
 ---
 layout: main
-title: Dmitriy Logunov — Senior Full Stack Developer
+title: Dmitriy Logunov
 ---
 
 # Work
@@ -206,5 +206,5 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <div class="page-links">
-  <p>Looking for my work? Check out my <a href="/work">work and education</a> history.</p>
+  <p>Looking for my work? Check out my <a href="/work">work</a> history.</p>
 </div>

@@ -5,21 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ page.title }}</title>
-    <meta name="description" content="Senior Full-Stack Developer with 14 years of experience, specialising in React, Next.js, TypeScript, and Vue.js, building production web applications across regulated industries.">
-    <meta name="keywords" content="Dmitriy Logunov, Melbourne, Blackburn South, VIC, Senior Full Stack Developer, React, Next.js, TypeScript, Vue.js, Web developer, Software engineer, Front-End developer">
+    <meta name="description" content="{{ site.description }}">
+    <meta name="keywords" content="Dmitriy Logunov, Melbourne, software, projects, blog, React, TypeScript, game development">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:title" content="{{ page.title | default: site.title }}">
-    <meta property="og:description" content="Senior Full-Stack Developer with 14 years of experience, specialising in React, Next.js, TypeScript, and Vue.js, building production web applications across regulated industries.">
+    <meta property="og:description" content="{{ site.description }}">
     <meta property="og:image" content="{{ site.url }}/assets/images/profile_picture.jpg?v={{ site.css_version }}">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="{{ site.url }}{{ page.url }}">
     <meta property="twitter:title" content="{{ page.title | default: site.title }}">
-    <meta property="twitter:description" content="Senior Full-Stack Developer with 14 years of experience, specialising in React, Next.js, TypeScript, and Vue.js, building production web applications across regulated industries.">
+    <meta property="twitter:description" content="{{ site.description }}">
     <meta property="twitter:image" content="{{ site.url }}/assets/images/profile_picture.jpg?v={{ site.css_version }}">
     
     <link rel="stylesheet" href="{{ "/assets/css/styles.css" | relative_url }}?v={{ site.css_version }}">
@@ -82,7 +82,9 @@
     <nav class="main-menu">
         <ul>
             <li><a href="{{ '/' | relative_url }}">Home</a></li>
-            <li><a href="{{ '/work' | relative_url }}">Work and Education</a></li>
+            <li><a href="{{ '/work' | relative_url }}">Work</a></li>
+            <li><a href="{{ '/projects' | relative_url }}">Projects</a></li>
+            <li><a href="{{ '/#footer' | relative_url }}">Contacts</a></li>
         </ul>
     </nav>
     <main>
