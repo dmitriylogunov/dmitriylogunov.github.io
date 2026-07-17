@@ -4,6 +4,7 @@ Workflow rules for every step live in `../WORKFLOW.md` (invariant; read once).
 
 ## Revision log
 
+- **Rev 3 (2026-07-17):** Light strip controller dropped from the plan by the owner — step 09 SUPERSEDED (no light strip post, no project card, no owner text/photo needed). Step 01 thereby lost its last pending required output and is COMPLETE (pegasus images on `main`; meme image stays optional). Affected: step-01, step-09, step index.
 - **Rev 2 (2026-07-17):** Branching strategy changed by the owner: one feature branch `site-reframe` for the whole plan, one commit per step, a single PR to `main` after the final step (WORKFLOW.md rewritten accordingly). Steps 08/09 are no longer parallel-safe (single branch — strictly sequential). Step 02's CI trigger widened to all-branch pushes so step commits get checks without PRs. Step 01 updated with partial completion status.
 
 ## Overview
@@ -42,6 +43,7 @@ Additional freeform tags may follow the primary one but nothing in this plan ren
 ## Out of scope (do not touch)
 
 - About page; the Godot walking game ("Sable"); dog/beach photo; LinkedIn posting.
+- Light strip controller — dropped in rev 3; no post, card, or mention anywhere on the site.
 - Portrait replacement is an owner task — keep the current `profile_picture.jpg` everywhere until a new one appears.
 - Work page's professional content beyond what step 08 specifies (the CTA section, resume links, and Vimeo figure stay).
 
@@ -49,7 +51,7 @@ Additional freeform tags may follow the primary one but nothing in this plan ren
 
 | Done | # | Step | Tier | Depends on | Risk |
 |------|---|------|------|------------|------|
-| [ ]  | 1 | Owner-supplied assets and content | H | — | batch prerequisite for 8, 9 |
+| [x]  | 1 | Owner-supplied assets and content | H | — | batch prerequisite for 8 |
 | [ ]  | 2 | CI + test scaffolding (Actions, html-proofer, Vitest) | T1 | — | config/env change |
 | [ ]  | 3 | Migrate posts to `_posts` with permalinks and tags | T3 | 2 | content migration |
 | [ ]  | 4 | Neutral identity + new top menu | T1 | 3 | config change |
@@ -57,7 +59,7 @@ Additional freeform tags may follow the primary one but nothing in this plan ren
 | [ ]  | 6 | Tag chips + client-side feed filter | T2 | 5 | — |
 | [ ]  | 7 | Author-notes feature + first note on Game Asset Creation | T2 | 6 | — |
 | [ ]  | 8 | Content edits: Test Assignment post, Onyx images/current role | T1 | 3, 1 | — |
-| [ ]  | 9 | Light strip controller: post + project card | T1 | 3, 1 | — |
+| [ ]  | 9 | ~~Light strip controller: post + project card~~ SUPERSEDED (rev 3) | — | — | — |
 | [ ]  | 10 | Cleanup, responsive pass, docs | T1 | all | — |
 
-Step 1 is human-only and front-loaded; steps 2–7 do not consume its outputs, so an unattended batch can run 2→7 while step 1 is pending, but 8 and 9 must not start until step 1 is ticked. Step 3 is T3: its implement phase ends a batch; the orchestrator runs "Stabilise step 03" (which amends the step commit, per WORKFLOW.md rule 4) before continuing. All steps are strictly sequential commits on `site-reframe`; the single PR to `main` opens after step 10.
+Step 1 is human-only and COMPLETE (rev 3). Step 9 is SUPERSEDED — agents skip from 8 straight to 10. Step 3 is T3: its implement phase ends a batch; the orchestrator runs "Stabilise step 03" (which amends the step commit, per WORKFLOW.md rule 4) before continuing. All steps are strictly sequential commits on `site-reframe`; the single PR to `main` opens after step 10.
