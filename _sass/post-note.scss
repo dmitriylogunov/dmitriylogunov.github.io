@@ -1,0 +1,65 @@
+// Author notes: dated addenda the author attaches to their own past post.
+// Reads as the author leaning back in — not a visitor comment, not a grey quote.
+.post-note {
+    margin: $spacing-lg 0 0 $spacing-md;
+    padding: $spacing-md $spacing-lg;
+    background: lighten($gray-light, 4%);
+    border-left: 4px solid $accent-color;
+    border-radius: 0 $round-corner-radius $round-corner-radius 0;
+
+    .post-note-header {
+        display: flex;
+        align-items: center;
+        gap: $spacing-sm;
+        margin-bottom: $spacing-sm;
+    }
+
+    .post-note-avatar {
+        flex: 0 0 auto;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .post-note-label {
+        color: $accent-color;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    .post-note-body {
+        color: $text-color;
+        line-height: 1.6;
+
+        p {
+            margin: 0;
+        }
+
+        p + p {
+            margin-top: $spacing-sm;
+        }
+    }
+
+    .post-note-image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin-top: $spacing-sm;
+        border-radius: $round-corner-radius;
+    }
+}
+
+// Override the ribbon's uppercase <time> styling for the muted note date.
+// Specificity must beat `.posts-ribbon .post-card time`.
+.posts-ribbon .post-card .post-note .post-note-header time {
+    display: inline;
+    margin: 0;
+    color: $gray-medium;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: normal;
+    text-transform: none;
+}

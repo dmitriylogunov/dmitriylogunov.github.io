@@ -57,7 +57,7 @@ Additional freeform tags may follow the primary one but nothing in this plan ren
 | [x]  | 4 | Neutral identity + new top menu | T1 | 3 | config change |
 | [x]  | 5 | Home restructure: compact showcase + feed-dominant | T2 | 4 | — |
 | [x]  | 6 | Tag chips + client-side feed filter | T2 | 5 | — |
-| [ ]  | 7 | Author-notes feature + first note on Game Asset Creation | T2 | 6 | — |
+| [x]  | 7 | Author-notes feature + first note on Game Asset Creation | T2 | 6 | — |
 | [ ]  | 8 | Content edits: Test Assignment post, Onyx images/current role | T1 | 3, 1 | — |
 | [ ]  | 9 | ~~Light strip controller: post + project card~~ SUPERSEDED (rev 3) | — | — | — |
 | [ ]  | 10 | Cleanup, responsive pass, docs | T1 | all | — |

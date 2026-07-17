@@ -191,3 +191,48 @@ describe("step 06 — tag chips + feed filter", () => {
     expect(indexHtml()).toContain("feed-filter.js");
   });
 });
+
+describe("step 07 — author notes", () => {
+  const NOTE_DATE = "July 18, 2026";
+
+  const gameAssetArticle = (html) => {
+    const chunks = html.split('<article class="post-card"');
+    return chunks.find((c) => c.includes("Game Asset Creation"));
+  };
+
+  it("note renders on the home feed inside the Game Asset Creation article", () => {
+    const article = gameAssetArticle(indexHtml());
+    expect(article).toBeDefined();
+    expect(article).toContain('<aside class="post-note">');
+    expect(article).toContain('class="post-note-label">Note<');
+    expect(article).toContain(NOTE_DATE);
+  });
+
+  it("note renders on the permalink page", () => {
+    const page = readFileSync(
+      join(siteDir, "posts", "game-asset-creation", "index.html"),
+      "utf8"
+    );
+    expect(page).toContain('<aside class="post-note">');
+    expect(page).toContain('class="post-note-label">Note<');
+    expect(page).toContain(NOTE_DATE);
+  });
+
+  it("no notes elsewhere on the home feed", () => {
+    expect(indexHtml().split('<aside class="post-note"').length - 1).toBe(1);
+  });
+
+  it("note is an aside, not a sibling article", () => {
+    const html = indexHtml();
+    // still exactly ten post articles — the note added no new <article>
+    expect(html.split('<article class="post-card"').length - 1).toBe(10);
+    // the aside lives inside the Game Asset article chunk
+    const article = gameAssetArticle(html);
+    expect(article.indexOf('<aside class="post-note"')).toBeGreaterThan(-1);
+  });
+
+  it("post-note styles compiled", () => {
+    const css = readFileSync(join(siteDir, "assets", "css", "styles.css"), "utf8");
+    expect(css).toContain("post-note");
+  });
+});
