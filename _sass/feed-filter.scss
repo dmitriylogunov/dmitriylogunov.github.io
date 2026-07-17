@@ -1,0 +1,59 @@
+// Tag-filter chips above the home feed and the per-card primary tag label.
+.tag-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-sm;
+    margin: $spacing-lg 0;
+
+    .tag-chip {
+        appearance: none;
+        font: inherit;
+        font-size: 0.9rem;
+        font-weight: 600;
+        padding: $spacing-xs $spacing-md;
+        border: 1px solid $accent-light;
+        border-radius: 999px;
+        background: $white;
+        color: $accent-color;
+        cursor: pointer;
+        transition: all $transition-base;
+
+        &:hover {
+            border-color: $accent-color;
+            color: $primary-dark;
+        }
+
+        &.active,
+        &[aria-pressed="true"] {
+            background: $highlight;
+            border-color: $highlight;
+            color: $gray-dark;
+        }
+    }
+}
+
+.post-tag {
+    display: inline-block;
+    margin-left: $spacing-sm;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.post-tag--thoughts {
+    background: lighten($accent-color, 38%);
+    color: darken($accent-color, 10%);
+}
+
+.post-tag--making {
+    background: lighten($highlight, 35%);
+    color: darken($highlight, 28%);
+}
+
+.posts-ribbon .post-card[hidden] {
+    display: none;
+}

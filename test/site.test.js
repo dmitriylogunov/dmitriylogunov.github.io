@@ -166,3 +166,28 @@ describe("step 05 — home restructure (showcase + feed-dominant)", () => {
     expect(css).toContain("showcase-card");
   });
 });
+
+describe("step 06 — tag chips + feed filter", () => {
+  it("chip bar rendered", () => {
+    const html = indexHtml();
+    for (const tag of ["all", "thoughts", "making"]) {
+      expect(html).toMatch(
+        new RegExp(`<button class="tag-chip" data-tag="${tag}"`)
+      );
+    }
+    expect(html.split('class="tag-chip"').length - 1).toBe(3);
+  });
+
+  it("tag labels rendered on every feed card", () => {
+    const chunks = indexHtml().split('<article class="post-card"').slice(1);
+    expect(chunks.length).toBe(10);
+    for (const chunk of chunks) {
+      const label = chunk.match(/<span class="post-tag[^"]*">(thoughts|making)<\/span>/);
+      expect(label, "each card should carry a primary tag label").not.toBeNull();
+    }
+  });
+
+  it("feed-filter module loaded", () => {
+    expect(indexHtml()).toContain("feed-filter.js");
+  });
+});
