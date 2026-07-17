@@ -2,6 +2,10 @@
 
 Workflow rules for every step live in `../WORKFLOW.md` (invariant; read once).
 
+## Revision log
+
+- **Rev 2 (2026-07-17):** Branching strategy changed by the owner: one feature branch `site-reframe` for the whole plan, one commit per step, a single PR to `main` after the final step (WORKFLOW.md rewritten accordingly). Steps 08/09 are no longer parallel-safe (single branch — strictly sequential). Step 02's CI trigger widened to all-branch pushes so step commits get checks without PRs. Step 01 updated with partial completion status.
+
 ## Overview
 
 Personal site of Dmitriy Logunov at dmitriylogunov.info, currently portfolio/job-seeker shaped. This plan reframes it as **"the place where all my creations and thoughts live"**: posts become first-class citizens (real Jekyll posts with permalinks, tags, one unified chronological stream), the home page becomes feed-dominant with a compact showcase strip of work/project cards above it, and job-search signalling is removed from the header (the Work page stays professional, including its hire-me CTA and resume downloads).
@@ -25,7 +29,7 @@ Writing-style rule for ALL content edits in this plan (from `CLAUDE.md`): re-wor
   - `plan/`, `WORKFLOW.md` — this plan (excluded from the Jekyll build)
 - Conventions: one-line imperative commit messages. SASS: `@import` only, legacy color functions only. Bump `css_version` in `_config.yml` in any step that changes CSS (cache busting). Match existing template idiom (Liquid loops over data, inline `<script>` blocks where the page already does that).
 - Testing: **Vitest** (latest 3.x) for JS units AND for built-site assertions (tests read files from `_site/` with node `fs`); **html-proofer ~> 5** validates the built site. No browser E2E (decided with owner). CI runs: `jekyll build` → `htmlproofer` → `vitest run`.
-- Base branch: `main`.
+- Base branch: `main`; all step commits land on the single feature branch `site-reframe` (see WORKFLOW.md).
 
 ## Tag taxonomy (fixed — do not invent new primary tags)
 
@@ -52,8 +56,8 @@ Additional freeform tags may follow the primary one but nothing in this plan ren
 | [ ]  | 5 | Home restructure: compact showcase + feed-dominant | T2 | 4 | — |
 | [ ]  | 6 | Tag chips + client-side feed filter | T2 | 5 | — |
 | [ ]  | 7 | Author-notes feature + first note on Game Asset Creation | T2 | 6 | — |
-| [ ]  | 8 | Content edits: Test Assignment post, Onyx images/current role | T1 | 3, 1 — parallel-safe with 9 | — |
-| [ ]  | 9 | Light strip controller: post + project card | T1 | 3, 1 — parallel-safe with 8 | — |
+| [ ]  | 8 | Content edits: Test Assignment post, Onyx images/current role | T1 | 3, 1 | — |
+| [ ]  | 9 | Light strip controller: post + project card | T1 | 3, 1 | — |
 | [ ]  | 10 | Cleanup, responsive pass, docs | T1 | all | — |
 
-Step 1 is human-only and front-loaded; steps 2–7 do not consume its outputs, so an unattended batch can run 2→7 while step 1 is pending, but 8 and 9 must not start until step 1 is ticked. Step 3 is T3: its implement phase ends a batch; the orchestrator runs "Stabilise step 03" before continuing.
+Step 1 is human-only and front-loaded; steps 2–7 do not consume its outputs, so an unattended batch can run 2→7 while step 1 is pending, but 8 and 9 must not start until step 1 is ticked. Step 3 is T3: its implement phase ends a batch; the orchestrator runs "Stabilise step 03" (which amends the step commit, per WORKFLOW.md rule 4) before continuing. All steps are strictly sequential commits on `site-reframe`; the single PR to `main` opens after step 10.

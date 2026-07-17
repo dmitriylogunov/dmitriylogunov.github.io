@@ -16,14 +16,14 @@
 - **Docs:**
   - `CLAUDE.md`: update the File Structure section — add `_posts/` (posts with `notes:` front matter, tag taxonomy thoughts/making), `_includes/post-card.html`, `assets/js/feed-filter.js`, `test/`; note the CI commands. Keep the SASS compatibility section untouched.
   - `README.md`: one short paragraph on how to add a post (file naming, front matter, tags) and how to add a note to an existing post (the step-07 schema, copied exactly).
-- **Final verification:** full build + htmlproofer + all Vitest suites; also run htmlproofer once WITHOUT `--ignore-missing-alt` and list (not fix) any remaining alt gaps in the PR description as a follow-up note.
+- **Final verification:** full build + htmlproofer + all Vitest suites; also run htmlproofer once WITHOUT `--ignore-missing-alt` and list (not fix) any remaining alt gaps in `plan/notes-for-pr.md` under `## Step 10` as follow-ups (WORKFLOW.md rule 9).
 
 **Test cases:**
 - Site: `no stale data source` — repo grep for `data.posts` returns nothing; `_data/posts.yml` absent.
 - Site: `full suite green` — every existing test file (`sample`, `site`, `feed-filter`) passes unchanged (this step must not break earlier steps' assertions).
 - Site: `htmlproofer clean` — the standard htmlproofer command exits 0.
 
-**Done when:** all Test cases green, docs updated, and the PR lists the alt-text gaps (if any) as follow-ups.
+**Done when:** all Test cases green, docs updated, and the alt-text gaps (if any) are recorded in `plan/notes-for-pr.md`.
 
 **Verification commands:**
 ```bash

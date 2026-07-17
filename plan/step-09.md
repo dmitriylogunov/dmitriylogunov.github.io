@@ -1,5 +1,5 @@
 ### Step 09 — Light strip controller: post + project card
-**Tier:** T1  **Depends on:** 3 and 1 — parallel-safe with step 08 (disjoint files)
+**Tier:** T1  **Depends on:** 3 and 1
 **Risk flags:** none
 
 **Goal:** The light strip controller exists as a `making` post in the feed, and as a project card whose "View" action points to that post (card → post, per the resolved duplication rule).
