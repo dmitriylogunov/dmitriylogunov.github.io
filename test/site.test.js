@@ -236,3 +236,46 @@ describe("step 07 — author notes", () => {
     expect(css).toContain("post-note");
   });
 });
+
+describe("step 08 — content edits (test assignment + onyx)", () => {
+  const testAssignmentPage = () =>
+    readFileSync(
+      join(siteDir, "posts", "test-assignment-walkthrough", "index.html"),
+      "utf8"
+    );
+
+  it("job-search intro gone", () => {
+    expect(indexHtml()).not.toContain("I'm currently looking for a new role");
+    expect(testAssignmentPage()).not.toContain(
+      "I'm currently looking for a new role"
+    );
+  });
+
+  it("permission folded into the opening sentence", () => {
+    expect(testAssignmentPage()).toContain(
+      "I'm sharing, with permission from the company, a walkthrough"
+    );
+  });
+
+  it("figcaption gone but the Vimeo iframe stays", () => {
+    const page = testAssignmentPage();
+    expect(page).not.toContain("Walkthrough: component structure");
+    expect(page).toContain("player.vimeo.com/video/1132866645");
+  });
+
+  it("onyx images live", () => {
+    const work = workHtml();
+    expect(work).toContain("pegasus_kiosk_card.png");
+    expect(work).toContain("pegasus_kiosk.png");
+    expect(existsSync(join(siteDir, "assets", "images", "pegasus_kiosk_card.png"))).toBe(true);
+    expect(existsSync(join(siteDir, "assets", "images", "pegasus_kiosk.png"))).toBe(true);
+  });
+
+  it("onyx reads as the current role", () => {
+    // Owner-confirmed start year is 2026 (the step's prose guide, not its stale
+    // "2024" test string). See plan/notes-for-pr.md, Step 08.
+    const work = workHtml();
+    expect(work).toContain("2026 — present");
+    expect(work).toContain("am now contributing to Stage 2");
+  });
+});

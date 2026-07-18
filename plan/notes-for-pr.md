@@ -67,3 +67,22 @@ invariant this step must protect is that step 5 does not touch the /projects gri
 the test asserts `≥ 4` and that all four project titles are still present, rather than an
 unreachable `≥ 6`. No projects were added (out of scope); this is a stale number in the
 plan, not a regression.
+
+## Step 08
+
+**JET Charge duplication check — no duplication found.** Grepping `jetcharge`/`JET Charge`
+across `_data/work.yml`, `work.markdown` and `jetcharge.markdown` shows a single Onyx-adjacent
+JET Charge entry in `work.yml` (title + one description) and its dedicated detail page
+`jetcharge.markdown`. The detail page repeating the description is by design, not the
+duplicated paragraph the original brief flagged. Nothing was deleted.
+
+**Deviation (owner-confirmed) — Onyx start year.** Step-08 contradicted itself: its prose
+implementation guide says set the Onyx `date` to "2026 — present", while its test-case
+section asserts the built page shows "2024 — present". The owner confirmed **2026 — present**
+is correct, so the data and the test both use "2026 — present"; the step's "2024" test string
+was the stale side of the contradiction and is not used.
+
+**Note — second Onyx image placement.** The timeline include supports a single `image:` per
+entry, so the card thumbnail uses `pegasus_kiosk_card.png` and the full kiosk photo
+`pegasus_kiosk.png` is embedded as a markdown image at the end of the Onyx description (the
+timeline markdownifies descriptions). Both images therefore appear on /work.

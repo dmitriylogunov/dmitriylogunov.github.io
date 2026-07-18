@@ -1,8 +1,12 @@
 - title: Onyx Gaming
   technologies: React, Next.js, TypeScript, Prisma
-  description: I worked on a member loyalty kiosk system deployed across multiple venues, owning the UI architecture in React / Next.js / TypeScript with Prisma on the data layer. The system handles loyalty transactions and reward redemption in a regulated gaming environment, with strict usability standards for older demographics and reliable operation on kiosk hardware. I shipped an MVP to production and contributed to Stage 2 development, extending the backend as needed to support the UI.
-  date: 2026
+  description: |
+    I am working on a member loyalty kiosk system deployed across multiple venues, owning the UI architecture in React / Next.js / TypeScript with Prisma on the data layer. The system handles loyalty transactions and reward redemption in a regulated gaming environment, with strict usability standards for older demographics and reliable operation on kiosk hardware. I shipped an MVP to production and am now contributing to Stage 2 development, extending the backend as needed to support the UI.
+
+    ![Pegasus kiosk](/assets/images/pegasus_kiosk.png)
+  date: "2026 — present"
   type: Contract
+  image: "pegasus_kiosk_card.png"
   is_highlight: true
 
 - title: La Trobe University
