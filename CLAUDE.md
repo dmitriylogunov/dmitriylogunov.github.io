@@ -72,8 +72,26 @@ This is a Jekyll site hosted on GitHub Pages with custom styling.
   - `footer.scss` - Footer specific styles
   - `gallery.scss` - Gallery component styles
   - `timeline.scss` - Timeline component styles
+  - `posts.scss` - Post feed (`.posts-ribbon`) styles
+  - `showcase.scss` - Home compact work/project showcase strip
+  - `feed-filter.scss` - Tag chips and per-card tag labels
+  - `post-note.scss` - Author-note (addendum) styling
 - `assets/css/styles.scss` - Main SCSS file that imports all partials
+- `assets/js/feed-filter.js` - Dependency-free ES module: client-side tag filtering of the home feed (pure functions unit-tested by Vitest)
 - `_config.yml` - Jekyll configuration (includes SASS settings)
+
+### Content model: posts and notes
+
+- `_posts/YYYY-MM-DD-slug.md` - all posts. Front matter: `layout: post` (applied by default via `_config.yml`), `title`, `tags`, and an optional `notes:` list. Each post's first tag is its **primary tag** and must be one of the fixed taxonomy values `thoughts` or `making`; freeform tags may follow but nothing renders them.
+- `_includes/post-card.html` - one post rendered as a feed card, shared by the home feed and the single-post `post` layout. It renders the tag label and any author notes.
+- `_layouts/post.html` - single-post permalink page (`/posts/:title/`), reuses `post-card.html`.
+- Posts render from `site.posts` (newest first); there is no `_data/posts.yml` any more.
+
+### CI and tests
+
+CI (`.github/workflows/ci.yml`) runs on every push and PR: `bundle exec jekyll build` → `bundle exec htmlproofer _site ...` → `npm test`. It validates and tests but does **not** deploy (classic GitHub Pages deploys from `main`).
+
+- `test/` - Vitest suites: `feed-filter.test.js` (JS units for the filter's pure functions) and `site.test.js` (assertions against the built `_site/`). Run `npm test` after a build (the site tests read `_site/`, so build first).
 
 ### Deprecation Warnings
 

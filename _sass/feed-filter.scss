@@ -57,3 +57,11 @@
 .posts-ribbon .post-card[hidden] {
     display: none;
 }
+
+// Roomier tap targets for the chips on touch widths.
+@media (max-width: $mobile-breakpoint) {
+    .tag-chips .tag-chip {
+        min-height: 40px;
+        padding: $spacing-sm $spacing-md;
+    }
+}

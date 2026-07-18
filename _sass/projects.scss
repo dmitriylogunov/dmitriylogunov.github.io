@@ -5,31 +5,7 @@
     margin-bottom: 2rem;
     text-align: center;
   }
-  
-  // Animation for additional projects
-  .additional-project {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out, opacity 0.3s ease-out, margin 0.3s ease-out;
-    margin-bottom: 0;
-  }
-  
-  &.expanded .additional-project {
-    max-height: 500px;
-    opacity: 1;
-    margin-bottom: auto;
-  }
-  
-  // When expanded, add margin to the buttons
-  &.expanded .timeline-link {
-    margin-top: 1rem;
-  }
-  
-  &.expanded .timeline-link-mobile {
-    margin-top: 1rem;
-  }
-  
+
   // Style More links in projects sections
   .timeline-link {
     display: inline-block;

@@ -86,3 +86,30 @@ was the stale side of the contradiction and is not used.
 entry, so the card thumbnail uses `pegasus_kiosk_card.png` and the full kiosk photo
 `pegasus_kiosk.png` is embedded as a markdown image at the end of the Onyx description (the
 timeline markdownifies descriptions). Both images therefore appear on /work.
+
+## Step 10
+
+**Alt-text gap listing — none.** Running htmlproofer WITHOUT `--ignore-missing-alt`
+(`bundle exec htmlproofer _site --disable-external --allow-hash-href --no-enforce-https`)
+exits 0 with no missing-alt findings across all 19 pages. The note avatar intentionally
+uses `alt=""` (decorative; the "Note" label carries meaning), the Onyx kiosk photo has
+alt text, and the runtime lightbox placeholder keeps its `data-proofer-ignore`. No
+follow-ups.
+
+**Dead-code sweep results.** `_data/posts.yml` absent and no build source references
+`site.data.posts` (only `plan/` docs and one explanatory `_config.yml` comment mention
+the retired source; both are outside the build). Removed the orphaned `.additional-project`
+and `.projects-section.expanded` rules from `_sass/projects.scss` — these belonged to the
+home expand/collapse feature deleted in step 5; the `/projects` grid uses the separate
+`.project-card.expanded` selector, which is untouched. `.page-links` SCSS kept (still used
+by `projects.markdown`); `profession`/`contacts` config kept (still used by header/footer).
+
+**`no stale data source` test scoping.** The step's grep-for-`data.posts`-returns-nothing
+intent is implemented as: `_data/posts.yml` absent AND no build source file
+(`index.markdown`, `_layouts/*`, `_includes/post-card.html`) contains `site.data.posts`.
+A literal whole-repo grep would match `plan/` docs and a historical config comment, which
+are not live references.
+
+**htmlproofer HTTPS flag.** Verification here uses `--no-enforce-https` (matching CI in
+`.github/workflows/ci.yml`) because of the pre-existing `http://koenigbicycle.ru` link
+flagged in the Step 02 note; that owner decision is still open and untouched by this plan.

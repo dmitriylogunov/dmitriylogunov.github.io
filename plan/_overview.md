@@ -60,6 +60,6 @@ Additional freeform tags may follow the primary one but nothing in this plan ren
 | [x]  | 7 | Author-notes feature + first note on Game Asset Creation | T2 | 6 | — |
 | [x]  | 8 | Content edits: Test Assignment post, Onyx images/current role | T1 | 3, 1 | — |
 | [ ]  | 9 | ~~Light strip controller: post + project card~~ SUPERSEDED (rev 3) | — | — | — |
-| [ ]  | 10 | Cleanup, responsive pass, docs | T1 | all | — |
+| [x]  | 10 | Cleanup, responsive pass, docs | T1 | all | — |
 
 Step 1 is human-only and COMPLETE (rev 3). Step 9 is SUPERSEDED — agents skip from 8 straight to 10. Step 3 is T3: its implement phase ends a batch; the orchestrator runs "Stabilise step 03" (which amends the step commit, per WORKFLOW.md rule 4) before continuing. All steps are strictly sequential commits on `site-reframe`; the single PR to `main` opens after step 10.

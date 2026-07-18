@@ -128,3 +128,35 @@ This command uses ImageMagick to:
 - Set quality to 85% (good balance between quality and file size)
 - Resize only if larger than 1200px (preserving aspect ratio)
 - The `\>` flag ensures images smaller than 1200px are not upscaled
+
+## Content: adding a post
+
+Posts live in `_posts/` and drive the home feed and per-post permalink pages.
+
+1. Create `_posts/YYYY-MM-DD-slug.md` (the date and slug in the filename set the date and the `/posts/slug/` URL).
+2. Front matter:
+
+   ```yaml
+   ---
+   title: "Your Post Title"
+   tags: [thoughts]   # first tag is the primary tag: `thoughts` or `making`
+   ---
+   ```
+
+   The `layout: post` is applied automatically. The primary (first) tag must be `thoughts` or `making` — it drives the tag label and the home feed's filter chips. Extra tags may follow but are not rendered.
+3. Write the body in Markdown (raw HTML is allowed, as several existing posts do for embeds).
+
+## Content: adding a note to an existing post
+
+Notes are dated addenda the author attaches to their own past post; they render under the post body on both the feed and the permalink page. Add a `notes:` list to that post's front matter:
+
+```yaml
+notes:
+  - date: 2026-07-17
+    body: >
+      Markdown/HTML allowed here.
+    image: /assets/images/posts/example.png   # optional
+    image_alt: short alt text                  # required iff image present
+```
+
+Each note needs a `date` and a `body`; `image`/`image_alt` are optional (supply `image_alt` whenever `image` is set). Multiple notes are listed newest-relevant first under `notes:`.

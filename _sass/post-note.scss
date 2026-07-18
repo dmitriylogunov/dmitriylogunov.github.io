@@ -63,3 +63,11 @@
     letter-spacing: normal;
     text-transform: none;
 }
+
+// Drop the indent on narrow widths so the note keeps its accent without squeezing.
+@media (max-width: $mobile-breakpoint) {
+    .post-note {
+        margin-left: 0;
+        padding: $spacing-sm $spacing-md;
+    }
+}

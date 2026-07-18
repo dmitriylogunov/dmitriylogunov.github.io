@@ -279,3 +279,28 @@ describe("step 08 — content edits (test assignment + onyx)", () => {
     expect(work).toContain("am now contributing to Stage 2");
   });
 });
+
+describe("step 10 — cleanup", () => {
+  it("no stale post data source", () => {
+    // _data/posts.yml is gone and no build source still references site.data.posts.
+    // (plan/ docs legitimately mention the retired source; they are excluded from the build.)
+    expect(existsSync(join(repoDir, "_data", "posts.yml"))).toBe(false);
+    const buildSources = [
+      "index.markdown",
+      join("_layouts", "post.html"),
+      join("_layouts", "main.html"),
+      join("_includes", "post-card.html"),
+    ];
+    for (const rel of buildSources) {
+      expect(readFileSync(join(repoDir, rel), "utf8")).not.toContain(
+        "site.data.posts"
+      );
+    }
+  });
+
+  it("no orphaned expand/collapse markup remains on home", () => {
+    const html = indexHtml();
+    expect(html).not.toContain("additional-project");
+    expect(html).not.toContain("toggleProjects");
+  });
+});
